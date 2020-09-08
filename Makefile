@@ -1,5 +1,12 @@
-all:
+.PHONY: polygon
+all: polygon
 
+
+
+polygon:
+	protoc ./polygon/greetings.proto --go_out=./
+	protoc ./polygon/forex.proto --go_out=./
+	protoc ./polygon/rest.proto --go_out=./
 
 
 
