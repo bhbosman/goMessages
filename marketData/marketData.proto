@@ -1,0 +1,16 @@
+syntax = "proto3";
+//import "google/protobuf/descriptor.proto";
+//import "google/protobuf/timestamp.proto";
+option go_package = "/stream";
+
+message Point{
+  double Price = 1;
+  double volume = 2;
+};
+
+
+message PublishTop5{
+  string Instrument = 1;
+  repeated Point Bid = 2;
+  repeated Point Ask = 3;
+};
