@@ -1,0 +1,52 @@
+syntax = "proto3";
+import "google/protobuf/descriptor.proto";
+package golang.example.policy;
+option go_package = "/stream";
+
+message Credentials{
+    string api_key_id = 1 [json_name="api_key_id"];
+    string api_key_secret = 2 [json_name="api_key_secret"];
+};
+
+
+message Order{
+    string id = 1 [json_name="id"];
+    double Price=2 [json_name="price"];
+    double Volume=3 [json_name="volume"];
+}
+
+
+message TradeUpdate {
+    double base = 1             [json_name = "base"];
+    double counter = 2          [json_name = "counter"];
+    string maker_order_id = 3   [json_name = "maker_order_id"];
+    string taker_order_id = 4   [json_name = "taker_order_id"];
+    string Id = 5         [json_name = "order_id"];
+};
+
+
+message DeleteUpdate {
+    string order_id = 5         [json_name = "order_id"];
+};
+
+message CreateUpdate{
+    string Id = 1 [json_name = "order_id"];
+    string type = 2 [json_name = "type"];
+    double Price = 3 [json_name = "price"];
+    double Volume = 4 [json_name = "volume"];
+};
+
+
+message LunoStreamData{
+    string instrument_name = 2              [json_name="instrument_name"];
+    int64 sequence = 3                      [json_name="sequence"];
+    repeated Order asks = 4                 [json_name="asks"];
+    repeated Order bids = 5                 [json_name="bids"];
+    string status = 6                       [json_name="status"];
+    int64 timestamp= 7                      [json_name="timestamp"];
+    repeated TradeUpdate trade_updates = 8  [json_name="trade_updates"];
+    CreateUpdate create_update = 9          [json_name="create_update"];
+    DeleteUpdate delete_update = 10         [json_name="delete_update"];
+    string status_update = 11               [json_name="status_update"];
+}
+
