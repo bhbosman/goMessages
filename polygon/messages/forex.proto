@@ -31,7 +31,6 @@ message PolygonForexAggregate
 
 message PolygonForexCombined
 {
-
   string EventType = 1                      [json_name="ev"];
   // Status Message
   string StatusStatus = 2                   [json_name="status"];
