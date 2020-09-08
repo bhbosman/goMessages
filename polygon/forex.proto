@@ -4,7 +4,7 @@ package golang.example.policy;
 //extend google.protobuf.FieldOptions {
 //  bool non_sensitive = 50000;
 //}
-option go_package = "/forex";
+option go_package = "/stream";
 
 // https://polygon.io/sockets for forex
 message PolygonForexQuote

@@ -5,7 +5,7 @@ package golang.example.policy;
 //  bool non_sensitive = 50000;
 //}
 
-option go_package = "/greetings";
+option go_package = "/stream";
 
 // https://polygon.io/sockets for forex
 message PolygonMessageReceived
