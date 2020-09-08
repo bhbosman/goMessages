@@ -7,14 +7,38 @@ package golang.example.policy;
 option go_package = "/stream";
 
 // https://polygon.io/sockets for forex
+message PolygonMessageReceived
+{
+  string EventType = 1    [json_name="ev"];
+  string Status = 2       [json_name="status"];
+  string Message = 3      [json_name="message"];
+};
+
+message PolygonMessageSend
+{
+  string Action = 1       [json_name="action"];
+  string Params = 2       [json_name="params"];
+};
+
+
+
+
+
+
+
+
+
+
+
+// https://polygon.io/sockets for forex
 message PolygonForexQuote
 {
-    string EventType = 1      [json_name="ev"];
-    string CurrencyPair = 2   [json_name="p"];
-    string FXExchangeId = 3   [json_name="x"];
-    double AskPrice = 4       [json_name="a"];
-    double BidPrice = 5       [json_name="b"];
-    int64 QuoteTimestamp = 6  [json_name="t"];
+  string EventType = 1      [json_name="ev"];
+  string CurrencyPair = 2   [json_name="p"];
+  string FXExchangeId = 3   [json_name="x"];
+  double AskPrice = 4       [json_name="a"];
+  double BidPrice = 5       [json_name="b"];
+  int64 QuoteTimestamp = 6  [json_name="t"];
 };
 
 message PolygonForexAggregate
@@ -50,4 +74,5 @@ message PolygonForexCombined
   int64  AggregateVolume = 14               [json_name="v"];
   int64  AggregateTickStartTimestamp = 15   [json_name="s"];
 }
+
 
