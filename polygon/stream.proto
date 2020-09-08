@@ -21,15 +21,6 @@ message PolygonMessageSend
 };
 
 
-
-
-
-
-
-
-
-
-
 // https://polygon.io/sockets for forex
 message PolygonForexQuote
 {
