@@ -1,0 +1,24 @@
+syntax = "proto3";
+import "google/protobuf/descriptor.proto";
+package golang.example.policy;
+//extend google.protobuf.FieldOptions {
+//  bool non_sensitive = 50000;
+//}
+
+option go_package = "/greetings";
+
+// https://polygon.io/sockets for forex
+message PolygonMessageReceived
+{
+  string EventType = 1    [json_name="ev"];
+  string Status = 2       [json_name="status"];
+  string Message = 3      [json_name="message"];
+};
+
+message PolygonMessageSend
+{
+  string Action = 1       [json_name="action"];
+  string Params = 2       [json_name="params"];
+};
+
+

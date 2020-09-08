@@ -1,0 +1,379 @@
+syntax = "proto3";
+import "google/protobuf/descriptor.proto";
+import "google/protobuf/timestamp.proto";
+option go_package = "/rest";
+
+message GetErrorResponse{
+  string status = 1;
+  string errorMessage = 2;
+  string requestId = 3;
+}
+
+//https://polygon.io/docs/#get_v2_reference_tickers_anchor
+message GetTickerQueryRequest{
+    string sort = 1;
+    string type = 2;
+    string market = 3;
+    string locale = 4;
+    int64  perpage = 5;
+    int64  page = 6;
+    bool   active = 7;
+}
+message Symbol {
+    string ticker = 1;
+    string name = 2;
+    string market = 3;
+    string locale = 4;
+    string currency = 5;
+    bool   active = 6;
+    string primaryExch = 7;
+    string type = 8;
+    map<string,string>  codes = 9;
+    google.protobuf.Timestamp updated = 10;
+    string url = 11;
+    map<string,string> attrs = 12;
+};
+message GetTickerResponse{
+  repeated Symbol Symbols = 1;
+}
+
+//https://polygon.io/docs/#get_v2_reference_types_anchor
+message GetTickerTypesResponse{
+  map<string,string> types = 1;
+  map<string,string> indexTypes = 2;
+};
+
+//https://polygon.io/docs/#get_v1_meta_symbols__symbol__company_anchor
+message GetTickerDetailsResponse{
+      string logo = 1;
+      string exchange = 2;
+      string name = 3;
+      string symbol = 4;
+      string cik = 5;
+      string bloomberg = 6;
+      string lei = 7;
+      int64  sic = 8;
+      string country = 9;
+      string industry = 10;
+      string sector = 11;
+      int64  marketcap = 12;
+      int64  employees = 13;
+      string phone = 14;
+      string ceo = 15;
+      string url = 16;
+      string description = 17;
+      repeated string similar = 18;
+      repeated string tags = 19;
+      string listdate = 20;
+      string updated = 21;
+};
+
+//https://polygon.io/docs/#get_v1_meta_symbols__symbol__news_anchor
+message GetTickerNewsQueryRequest{
+  string symbol=1;
+  int32 perpage=2;
+  int32 page=3;
+};
+message News{
+}
+message GetTickerNewsResponse{
+  repeated News News = 1;
+};
+
+//https://polygon.io/docs/#get_v2_reference_markets_anchor
+message Market{
+    string market = 1;
+    string desc = 2;
+};
+message GetMarketsResponse{
+  repeated Market Markets = 1;
+};
+
+//https://polygon.io/docs/#get_v2_reference_locales_anchor
+message Locale{
+    string locale = 1;
+    string name = 2;
+};
+message GetLocalesResponse{
+  repeated Locale Locales = 1;
+};
+
+//https://polygon.io/docs/#get_v2_reference_splits__symbol__anchor
+message Split {
+  string ticker=1;
+  string exDate=2;
+  string paymentDate=3;
+  string recordDate=4;
+  string declaredDate=5;
+  double ratio=6;
+  double tofactor=7;
+  double forfactor=8;
+};
+message GetStockSplitsResponse{
+  repeated Split Splits = 1;
+};
+
+//https://polygon.io/docs/#get_v2_reference_dividends__symbol__anchor
+message Dividend {
+  string symbol=1;
+  string type=2;
+  string exDate=3;
+  string paymentDate=4;
+  string recordDate=5;
+  string declaredDate=6;
+  double amount=7;
+  string qualified=8;
+  string flag=9;
+};
+message GetStockDividendsResponse{
+  repeated Dividend Dividends=1;
+};
+
+//https://polygon.io/docs/#get_v2_reference_financials__symbol__anchor
+message GetStockFinancialsQueryRequest{
+  int32 limit=1;
+  string type=2;
+  string sort=3;
+};
+message Financial{
+  string ticker=1;
+  string period=2;
+  string calendarDate=3;
+  string reportPeriod=4;
+  string updated=5;
+  int64 accumulatedOtherComprehensiveIncome=6;
+  int64 assets=7;
+  int64 assetsAverage=8;
+  int64 assetsCurrent=9;
+  int64 assetTurnover=10;
+  int64 assetsNonCurrent=11;
+  int64 bookValuePerShare=12;
+  int64 capitalExpenditure=13;
+  int64 cashAndEquivalents=14;
+  int64 cashAndEquivalentsUSD=15;
+  int64 costOfRevenue=16;
+  int64 consolidatedIncome=17;
+  int64 currentRatio=18;
+  int64 debtToEquityRatio=19;
+  int64 debt=20;
+  int64 debtCurrent =21;
+  int64 debtNonCurrent=22;
+  int64 debtUSD=23;
+  int64 deferredRevenue=24;
+  int64 depreciationAmortizationAndAccretion=25;
+  int64 deposits=26;
+  int64 dividendYield=27;
+  int64 dividendsPerBasicCommonShare=28;
+  int64 earningBeforeInterestTaxes=29;
+  int64 earningsBeforeInterestTaxesDepreciationAmortization=30;
+  int64 EBITDAMargin =31;
+  int64 earningsBeforeInterestTaxesDepreciationAmortizationUSD=32;
+  int64 earningBeforeInterestTaxesUSD=33;
+  int64 earningsBeforeTax=34;
+  int64 earningsPerBasicShare=35;
+  int64 earningsPerDilutedShare=36;
+  int64 earningsPerBasicShareUSD=37;
+  int64 shareholdersEquity=38;
+  int64 averageEquity=39;
+  int64 shareholdersEquityUSD=40;
+  int64 enterpriseValue =41;
+  int64 enterpriseValueOverEBIT=42;
+  int64 enterpriseValueOverEBITDA=43;
+  int64 freeCashFlow=44;
+  int64 freeCashFlowPerShare=45;
+  int64 foreignCurrencyUSDExchangeRate=46;
+  int64 grossProfit=47;
+  int64 grossMargin=48;
+  int64 goodwillAndIntangibleAssets=49;
+  int64 interestExpense=50;
+  int64 investedCapital =51;
+  int64 investedCapitalAverage=52;
+  int64 inventory=53;
+  int64 investments=54;
+  int64 investmentsCurrent=55;
+  int64 investmentsNonCurrent=56;
+  int64 totalLiabilities=57;
+  int64 currentLiabilities=58;
+  int64 liabilitiesNonCurrent=59;
+  int64 marketCapitalization=60;
+  int64 netCashFlow =61;
+  int64 netCashFlowBusinessAcquisitionsDisposals=62;
+  int64 issuanceEquityShares=63;
+  int64 issuanceDebtSecurities=64;
+  int64 paymentDividendsOtherCashDistributions=65;
+  int64 netCashFlowFromFinancing=66;
+  int64 netCashFlowFromInvesting=67;
+  int64 netCashFlowInvestmentAcquisitionsDisposals=68;
+  int64 netCashFlowFromOperations=69;
+  int64 effectOfExchangeRateChangesOnCash=70;
+  int64 netIncome =71;
+  int64 netIncomeCommonStock=72;
+  int64 netIncomeCommonStockUSD=73;
+  int64 netLossIncomeFromDiscontinuedOperations=74;
+  int64 netIncomeToNonControllingInterests=75;
+  int64 profitMargin=76;
+  int64 operatingExpenses=77;
+  int64 operatingIncome=78;
+  int64 tradeAndNonTradePayables=79;
+  int64 payoutRatio=80;
+  int64 priceToBookValue =81;
+  int64 priceEarnings=82;
+  int64 priceToEarningsRatio=83;
+  int64 propertyPlantEquipmentNet=84;
+  int64 preferredDividendsIncomeStatementImpact=85;
+  int64 sharePriceAdjustedClose=86;
+  int64 priceSales=87;
+  int64 priceToSalesRatio=88;
+  int64 tradeAndNonTradeReceivables=89;
+  int64 accumulatedRetainedEarningsDeficit=90;
+  int64 revenues =91;
+  int64 revenuesUSD=92;
+  int64 researchAndDevelopmentExpense=93;
+  int64 returnOnAverageAssets=94;
+  int64 returnOnAverageEquity=95;
+  int64 returnOnInvestedCapital=96;
+  int64 returnOnSales=97;
+  int64 shareBasedCompensation=98;
+  int64 sellingGeneralAndAdministrativeExpense=99;
+  int64 shareFactor=100;
+  int64 shares =101;
+  int64 weightedAverageShares =102;
+  int64 weightedAverageSharesDiluted =103;
+  int64 salesPerShare =104;
+  int64 tangibleAssetValue=105;
+  int64 taxAssets =106;
+  int64 incomeTaxExpense =107;
+  int64 taxLiabilities =108;
+  int64 tangibleAssetsBookValuePerShare =109;
+  int64 workingCapital =110;
+};
+message GetStockFinancialsResponse{
+  repeated Financial Financials = 1;
+};
+
+//https://polygon.io/docs/#get_v1_marketstatus_now_anchor
+message GetMarketStatusResponse{
+  string market=1;
+  string serverTime=2;
+  map<string, string> exchanges=3;
+  map<string, string> currencies=4;
+};
+
+//https://polygon.io/docs/#get_v1_marketstatus_upcoming_anchor
+message MarketHoliday{
+  string exchange=1;
+  string name=2;
+  string status=3;
+  string date=4;
+  string open=5;
+  string close=6;
+};
+message GetMarketHolidaysResponse{
+  repeated MarketHoliday MarketHolidays = 1;
+};
+
+
+
+
+
+
+message GetEquityExchangesQueryRequest{};
+message GetEquityExchangesResponse{};
+message GetEquityPreviousCloseQueryRequest{};
+message GetEquityPreviousCloseResponse{};
+message GetEquityAggregatesBarsQueryRequest{};
+message GetEquityAggregatesBarsResponse{};
+message GetEquityGroupedDailyBarsQueryRequest{};
+message GetEquityGroupedDailyBarsResponse{};
+message GetEquityHistoricTradesQueryRequest{};
+message GetEquityHistoricTradesResponse{};
+message GetEquityHistoricQuotesNBBOQueryRequest{};
+message GetEquityHistoricQuotesNBBOResponse{};
+message GetEquityLastTradeForSymbolQueryRequest{};
+message GetEquityLastTradeForSymbolResponse{};
+message GetEquityLastQuoteForSymbolQueryRequest{};
+message GetEquityLastQuoteForSymbolResponse{};
+message GetEquityDailyOpenCloseQueryRequest{};
+message GetEquityDailyOpenCloseResponse{};
+message GetEquityConditionMappingsQueryRequest{};
+message GetEquityConditionMappingsResponse{};
+message GetEquitySnapshotAllTickersQueryRequest{};
+message GetEquitySnapshotAllTickersResponse{};
+message GetEquitySnapshotSingleTickerQueryRequest{};
+message GetEquitySnapshotSingleTickerResponse{};
+message GetEquitySnapshotGainersLosersQueryRequest{};
+message GetEquitySnapshotGainersLosersResponse{};
+
+
+
+
+
+message GetForexPreviousCloseQueryRequest{};
+message GetForexPreviousCloseResponse{};
+
+message GetForexAggregatesBarsQueryRequest{};
+message GetForexAggregatesBarsResponse{};
+
+message GetForexGroupedDailyBarsQueryRequest{};
+message GetForexGroupedDailyBarsResponse{};
+
+message GetForexHistoricForexTicksQueryRequest{};
+message GetForexHistoricForexTicksResponse{};
+
+message GetForexRealTimeCurrencyConversionQueryRequest{};
+message GetForexRealTimeCurrencyConversionResponse{};
+
+message GetForexLastQuoteForCurrencyPairQueryRequest{};
+message GetForexLastQuoteForCurrencyPairResponse{};
+message GetForexSnapshotAllTickersQueryRequest{};
+message GetForexSnapshotAllTickersResponse{};
+message GetForexSnapshotGainersLosersQueryRequest{};
+message GetForexSnapshotGainersLosersResponse{};
+
+
+
+
+
+
+
+
+message GetCryptoPreviousCloseQueryRequest{};
+message GetCryptoPreviousCloseResponse{};
+message GetCryptoAggregatesBarsQueryRequest{};
+message GetCryptoAggregatesBarsResponse{};
+message GetCryptoGroupedDailyBarsQueryRequest{};
+message GetCryptoGroupedDailyBarsResponse{};
+message GetCryptoCryptoExchangesQueryRequest{};
+message GetCryptoCryptoExchangesResponse{};
+message GetCryptoLastTradeForCryptoPairQueryRequest{};
+message GetCryptoLastTradeForCryptoPairResponse{};
+message GetCryptoDailyOpenCloseQueryRequest{};
+message GetCryptoDailyOpenCloseResponse{};
+message GetCryptoHistoricCryptoTradesQueryRequest{};
+message GetCryptoHistoricCryptoTradesResponse{};
+message GetCryptoSnapshotAllTickersQueryRequest{};
+message GetCryptoSnapshotAllTickersResponse{};
+message GetCryptoSnapshotSingleTickerQueryRequest{};
+message GetCryptoSnapshotSingleTickerResponse{};
+message GetCryptoSnapshotSingleTickerFullBookL2QueryRequest{};
+message GetCryptoSnapshotSingleTickerFullBookL2Response{};
+message GetCryptoSnapshotGainersLosersQueryRequest{};
+message GetCryptoSnapshotGainersLosersResponse{};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
