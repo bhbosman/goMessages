@@ -11,6 +11,10 @@ message Point{
 
 message PublishTop5{
   string Instrument = 1;
-  repeated Point Bid = 2;
-  repeated Point Ask = 3;
+  double Spread = 2;
+  int64 SourceTimeStamp = 3;
+  int64 SourceMessage = 4;
+  int64 UpdateCount = 5;
+  repeated Point Bid = 6;
+  repeated Point Ask = 7;
 };

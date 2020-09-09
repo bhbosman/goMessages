@@ -1,5 +1,5 @@
 .PHONY: polygon marketData luno
-all: polygon
+all: polygon luno marketData
 
 polygon:
 	protoc ./polygon/rest.proto --go_out=./polygon
