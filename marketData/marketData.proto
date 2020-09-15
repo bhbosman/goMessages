@@ -1,6 +1,7 @@
 syntax = "proto3";
 //import "google/protobuf/descriptor.proto";
 //import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
 option go_package = "/stream";
 
 message Point{
@@ -18,3 +19,11 @@ message PublishTop5{
   repeated Point Bid = 6;
   repeated Point Ask = 7;
 };
+
+
+
+
+
+service MyService {
+  rpc Check(PublishTop5) returns (google.protobuf.Empty);
+}
