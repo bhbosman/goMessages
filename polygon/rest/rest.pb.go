@@ -9,7 +9,7 @@ package rest
 import (
 	context "context"
 	constants "github.com/bhbosman/gocommon/constants"
-	"github.com/bhbosman/gocommon/stream"
+	stream "github.com/bhbosman/gocommon/stream"
 	goprotoextra "github.com/bhbosman/goprotoextra"
 	proto "github.com/golang/protobuf/proto"
 	_ "github.com/golang/protobuf/protoc-gen-go/descriptor"
@@ -7362,7 +7362,7 @@ func (self *GetErrorResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetErrorResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetErrorResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -7418,7 +7418,7 @@ func (self *GetTickerQueryRequestWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetTickerQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetTickerQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -7474,7 +7474,7 @@ func (self *SymbolWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *SymbolWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *SymbolWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -7530,7 +7530,7 @@ func (self *GetTickerResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetTickerResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetTickerResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -7586,7 +7586,7 @@ func (self *GetTickerTypesResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetTickerTypesResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetTickerTypesResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -7642,7 +7642,7 @@ func (self *GetTickerDetailsResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetTickerDetailsResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetTickerDetailsResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -7698,7 +7698,7 @@ func (self *GetTickerNewsQueryRequestWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetTickerNewsQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetTickerNewsQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -7754,7 +7754,7 @@ func (self *NewsWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *NewsWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *NewsWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -7810,7 +7810,7 @@ func (self *GetTickerNewsResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetTickerNewsResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetTickerNewsResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -7866,7 +7866,7 @@ func (self *MarketWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *MarketWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *MarketWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -7922,7 +7922,7 @@ func (self *GetMarketsResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetMarketsResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetMarketsResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -7978,7 +7978,7 @@ func (self *LocaleWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *LocaleWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *LocaleWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -8034,7 +8034,7 @@ func (self *GetLocalesResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetLocalesResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetLocalesResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -8090,7 +8090,7 @@ func (self *SplitWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *SplitWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *SplitWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -8146,7 +8146,7 @@ func (self *GetStockSplitsResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetStockSplitsResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetStockSplitsResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -8202,7 +8202,7 @@ func (self *DividendWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *DividendWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *DividendWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -8258,7 +8258,7 @@ func (self *GetStockDividendsResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetStockDividendsResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetStockDividendsResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -8314,7 +8314,7 @@ func (self *GetStockFinancialsQueryRequestWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetStockFinancialsQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetStockFinancialsQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -8370,7 +8370,7 @@ func (self *FinancialWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *FinancialWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *FinancialWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -8426,7 +8426,7 @@ func (self *GetStockFinancialsResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetStockFinancialsResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetStockFinancialsResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -8482,7 +8482,7 @@ func (self *GetMarketStatusResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetMarketStatusResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetMarketStatusResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -8538,7 +8538,7 @@ func (self *MarketHolidayWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *MarketHolidayWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *MarketHolidayWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -8594,7 +8594,7 @@ func (self *GetMarketHolidaysResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetMarketHolidaysResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetMarketHolidaysResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -8650,7 +8650,7 @@ func (self *GetEquityExchangesQueryRequestWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetEquityExchangesQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityExchangesQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -8706,7 +8706,7 @@ func (self *GetEquityExchangesResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetEquityExchangesResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityExchangesResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -8762,7 +8762,7 @@ func (self *GetEquityPreviousCloseQueryRequestWrapper) Message() proto1.Message 
 	return self.Data
 }
 
-func (self *GetEquityPreviousCloseQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityPreviousCloseQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -8818,7 +8818,7 @@ func (self *GetEquityPreviousCloseResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetEquityPreviousCloseResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityPreviousCloseResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -8874,7 +8874,7 @@ func (self *GetEquityAggregatesBarsQueryRequestWrapper) Message() proto1.Message
 	return self.Data
 }
 
-func (self *GetEquityAggregatesBarsQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityAggregatesBarsQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -8930,7 +8930,7 @@ func (self *GetEquityAggregatesBarsResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetEquityAggregatesBarsResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityAggregatesBarsResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -8986,7 +8986,7 @@ func (self *GetEquityGroupedDailyBarsQueryRequestWrapper) Message() proto1.Messa
 	return self.Data
 }
 
-func (self *GetEquityGroupedDailyBarsQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityGroupedDailyBarsQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -9042,7 +9042,7 @@ func (self *GetEquityGroupedDailyBarsResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetEquityGroupedDailyBarsResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityGroupedDailyBarsResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -9098,7 +9098,7 @@ func (self *GetEquityHistoricTradesQueryRequestWrapper) Message() proto1.Message
 	return self.Data
 }
 
-func (self *GetEquityHistoricTradesQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityHistoricTradesQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -9154,7 +9154,7 @@ func (self *GetEquityHistoricTradesResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetEquityHistoricTradesResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityHistoricTradesResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -9210,7 +9210,7 @@ func (self *GetEquityHistoricQuotesNBBOQueryRequestWrapper) Message() proto1.Mes
 	return self.Data
 }
 
-func (self *GetEquityHistoricQuotesNBBOQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityHistoricQuotesNBBOQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -9266,7 +9266,7 @@ func (self *GetEquityHistoricQuotesNBBOResponseWrapper) Message() proto1.Message
 	return self.Data
 }
 
-func (self *GetEquityHistoricQuotesNBBOResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityHistoricQuotesNBBOResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -9322,7 +9322,7 @@ func (self *GetEquityLastTradeForSymbolQueryRequestWrapper) Message() proto1.Mes
 	return self.Data
 }
 
-func (self *GetEquityLastTradeForSymbolQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityLastTradeForSymbolQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -9378,7 +9378,7 @@ func (self *GetEquityLastTradeForSymbolResponseWrapper) Message() proto1.Message
 	return self.Data
 }
 
-func (self *GetEquityLastTradeForSymbolResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityLastTradeForSymbolResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -9434,7 +9434,7 @@ func (self *GetEquityLastQuoteForSymbolQueryRequestWrapper) Message() proto1.Mes
 	return self.Data
 }
 
-func (self *GetEquityLastQuoteForSymbolQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityLastQuoteForSymbolQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -9490,7 +9490,7 @@ func (self *GetEquityLastQuoteForSymbolResponseWrapper) Message() proto1.Message
 	return self.Data
 }
 
-func (self *GetEquityLastQuoteForSymbolResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityLastQuoteForSymbolResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -9546,7 +9546,7 @@ func (self *GetEquityDailyOpenCloseQueryRequestWrapper) Message() proto1.Message
 	return self.Data
 }
 
-func (self *GetEquityDailyOpenCloseQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityDailyOpenCloseQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -9602,7 +9602,7 @@ func (self *GetEquityDailyOpenCloseResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetEquityDailyOpenCloseResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityDailyOpenCloseResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -9658,7 +9658,7 @@ func (self *GetEquityConditionMappingsQueryRequestWrapper) Message() proto1.Mess
 	return self.Data
 }
 
-func (self *GetEquityConditionMappingsQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityConditionMappingsQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -9714,7 +9714,7 @@ func (self *GetEquityConditionMappingsResponseWrapper) Message() proto1.Message 
 	return self.Data
 }
 
-func (self *GetEquityConditionMappingsResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquityConditionMappingsResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -9770,7 +9770,7 @@ func (self *GetEquitySnapshotAllTickersQueryRequestWrapper) Message() proto1.Mes
 	return self.Data
 }
 
-func (self *GetEquitySnapshotAllTickersQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquitySnapshotAllTickersQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -9826,7 +9826,7 @@ func (self *GetEquitySnapshotAllTickersResponseWrapper) Message() proto1.Message
 	return self.Data
 }
 
-func (self *GetEquitySnapshotAllTickersResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquitySnapshotAllTickersResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -9882,7 +9882,7 @@ func (self *GetEquitySnapshotSingleTickerQueryRequestWrapper) Message() proto1.M
 	return self.Data
 }
 
-func (self *GetEquitySnapshotSingleTickerQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquitySnapshotSingleTickerQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -9938,7 +9938,7 @@ func (self *GetEquitySnapshotSingleTickerResponseWrapper) Message() proto1.Messa
 	return self.Data
 }
 
-func (self *GetEquitySnapshotSingleTickerResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquitySnapshotSingleTickerResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -9994,7 +9994,7 @@ func (self *GetEquitySnapshotGainersLosersQueryRequestWrapper) Message() proto1.
 	return self.Data
 }
 
-func (self *GetEquitySnapshotGainersLosersQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquitySnapshotGainersLosersQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -10050,7 +10050,7 @@ func (self *GetEquitySnapshotGainersLosersResponseWrapper) Message() proto1.Mess
 	return self.Data
 }
 
-func (self *GetEquitySnapshotGainersLosersResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetEquitySnapshotGainersLosersResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -10106,7 +10106,7 @@ func (self *GetForexPreviousCloseQueryRequestWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetForexPreviousCloseQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetForexPreviousCloseQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -10162,7 +10162,7 @@ func (self *GetForexPreviousCloseResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetForexPreviousCloseResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetForexPreviousCloseResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -10218,7 +10218,7 @@ func (self *GetForexAggregatesBarsQueryRequestWrapper) Message() proto1.Message 
 	return self.Data
 }
 
-func (self *GetForexAggregatesBarsQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetForexAggregatesBarsQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -10274,7 +10274,7 @@ func (self *GetForexAggregatesBarsResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetForexAggregatesBarsResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetForexAggregatesBarsResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -10330,7 +10330,7 @@ func (self *GetForexGroupedDailyBarsQueryRequestWrapper) Message() proto1.Messag
 	return self.Data
 }
 
-func (self *GetForexGroupedDailyBarsQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetForexGroupedDailyBarsQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -10386,7 +10386,7 @@ func (self *GetForexGroupedDailyBarsResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetForexGroupedDailyBarsResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetForexGroupedDailyBarsResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -10442,7 +10442,7 @@ func (self *GetForexHistoricForexTicksQueryRequestWrapper) Message() proto1.Mess
 	return self.Data
 }
 
-func (self *GetForexHistoricForexTicksQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetForexHistoricForexTicksQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -10498,7 +10498,7 @@ func (self *GetForexHistoricForexTicksResponseWrapper) Message() proto1.Message 
 	return self.Data
 }
 
-func (self *GetForexHistoricForexTicksResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetForexHistoricForexTicksResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -10554,7 +10554,7 @@ func (self *GetForexRealTimeCurrencyConversionQueryRequestWrapper) Message() pro
 	return self.Data
 }
 
-func (self *GetForexRealTimeCurrencyConversionQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetForexRealTimeCurrencyConversionQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -10610,7 +10610,7 @@ func (self *GetForexRealTimeCurrencyConversionResponseWrapper) Message() proto1.
 	return self.Data
 }
 
-func (self *GetForexRealTimeCurrencyConversionResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetForexRealTimeCurrencyConversionResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -10666,7 +10666,7 @@ func (self *GetForexLastQuoteForCurrencyPairQueryRequestWrapper) Message() proto
 	return self.Data
 }
 
-func (self *GetForexLastQuoteForCurrencyPairQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetForexLastQuoteForCurrencyPairQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -10722,7 +10722,7 @@ func (self *GetForexLastQuoteForCurrencyPairResponseWrapper) Message() proto1.Me
 	return self.Data
 }
 
-func (self *GetForexLastQuoteForCurrencyPairResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetForexLastQuoteForCurrencyPairResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -10778,7 +10778,7 @@ func (self *GetForexSnapshotAllTickersQueryRequestWrapper) Message() proto1.Mess
 	return self.Data
 }
 
-func (self *GetForexSnapshotAllTickersQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetForexSnapshotAllTickersQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -10834,7 +10834,7 @@ func (self *GetForexSnapshotAllTickersResponseWrapper) Message() proto1.Message 
 	return self.Data
 }
 
-func (self *GetForexSnapshotAllTickersResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetForexSnapshotAllTickersResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -10890,7 +10890,7 @@ func (self *GetForexSnapshotGainersLosersQueryRequestWrapper) Message() proto1.M
 	return self.Data
 }
 
-func (self *GetForexSnapshotGainersLosersQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetForexSnapshotGainersLosersQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -10946,7 +10946,7 @@ func (self *GetForexSnapshotGainersLosersResponseWrapper) Message() proto1.Messa
 	return self.Data
 }
 
-func (self *GetForexSnapshotGainersLosersResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetForexSnapshotGainersLosersResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -11002,7 +11002,7 @@ func (self *GetCryptoPreviousCloseQueryRequestWrapper) Message() proto1.Message 
 	return self.Data
 }
 
-func (self *GetCryptoPreviousCloseQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoPreviousCloseQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -11058,7 +11058,7 @@ func (self *GetCryptoPreviousCloseResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetCryptoPreviousCloseResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoPreviousCloseResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -11114,7 +11114,7 @@ func (self *GetCryptoAggregatesBarsQueryRequestWrapper) Message() proto1.Message
 	return self.Data
 }
 
-func (self *GetCryptoAggregatesBarsQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoAggregatesBarsQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -11170,7 +11170,7 @@ func (self *GetCryptoAggregatesBarsResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetCryptoAggregatesBarsResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoAggregatesBarsResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -11226,7 +11226,7 @@ func (self *GetCryptoGroupedDailyBarsQueryRequestWrapper) Message() proto1.Messa
 	return self.Data
 }
 
-func (self *GetCryptoGroupedDailyBarsQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoGroupedDailyBarsQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -11282,7 +11282,7 @@ func (self *GetCryptoGroupedDailyBarsResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetCryptoGroupedDailyBarsResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoGroupedDailyBarsResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -11338,7 +11338,7 @@ func (self *GetCryptoCryptoExchangesQueryRequestWrapper) Message() proto1.Messag
 	return self.Data
 }
 
-func (self *GetCryptoCryptoExchangesQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoCryptoExchangesQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -11394,7 +11394,7 @@ func (self *GetCryptoCryptoExchangesResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetCryptoCryptoExchangesResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoCryptoExchangesResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -11450,7 +11450,7 @@ func (self *GetCryptoLastTradeForCryptoPairQueryRequestWrapper) Message() proto1
 	return self.Data
 }
 
-func (self *GetCryptoLastTradeForCryptoPairQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoLastTradeForCryptoPairQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -11506,7 +11506,7 @@ func (self *GetCryptoLastTradeForCryptoPairResponseWrapper) Message() proto1.Mes
 	return self.Data
 }
 
-func (self *GetCryptoLastTradeForCryptoPairResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoLastTradeForCryptoPairResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -11562,7 +11562,7 @@ func (self *GetCryptoDailyOpenCloseQueryRequestWrapper) Message() proto1.Message
 	return self.Data
 }
 
-func (self *GetCryptoDailyOpenCloseQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoDailyOpenCloseQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -11618,7 +11618,7 @@ func (self *GetCryptoDailyOpenCloseResponseWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *GetCryptoDailyOpenCloseResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoDailyOpenCloseResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -11674,7 +11674,7 @@ func (self *GetCryptoHistoricCryptoTradesQueryRequestWrapper) Message() proto1.M
 	return self.Data
 }
 
-func (self *GetCryptoHistoricCryptoTradesQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoHistoricCryptoTradesQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -11730,7 +11730,7 @@ func (self *GetCryptoHistoricCryptoTradesResponseWrapper) Message() proto1.Messa
 	return self.Data
 }
 
-func (self *GetCryptoHistoricCryptoTradesResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoHistoricCryptoTradesResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -11786,7 +11786,7 @@ func (self *GetCryptoSnapshotAllTickersQueryRequestWrapper) Message() proto1.Mes
 	return self.Data
 }
 
-func (self *GetCryptoSnapshotAllTickersQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoSnapshotAllTickersQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -11842,7 +11842,7 @@ func (self *GetCryptoSnapshotAllTickersResponseWrapper) Message() proto1.Message
 	return self.Data
 }
 
-func (self *GetCryptoSnapshotAllTickersResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoSnapshotAllTickersResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -11898,7 +11898,7 @@ func (self *GetCryptoSnapshotSingleTickerQueryRequestWrapper) Message() proto1.M
 	return self.Data
 }
 
-func (self *GetCryptoSnapshotSingleTickerQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoSnapshotSingleTickerQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -11954,7 +11954,7 @@ func (self *GetCryptoSnapshotSingleTickerResponseWrapper) Message() proto1.Messa
 	return self.Data
 }
 
-func (self *GetCryptoSnapshotSingleTickerResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoSnapshotSingleTickerResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -12010,7 +12010,7 @@ func (self *GetCryptoSnapshotSingleTickerFullBookL2QueryRequestWrapper) Message(
 	return self.Data
 }
 
-func (self *GetCryptoSnapshotSingleTickerFullBookL2QueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoSnapshotSingleTickerFullBookL2QueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -12066,7 +12066,7 @@ func (self *GetCryptoSnapshotSingleTickerFullBookL2ResponseWrapper) Message() pr
 	return self.Data
 }
 
-func (self *GetCryptoSnapshotSingleTickerFullBookL2ResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoSnapshotSingleTickerFullBookL2ResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -12122,7 +12122,7 @@ func (self *GetCryptoSnapshotGainersLosersQueryRequestWrapper) Message() proto1.
 	return self.Data
 }
 
-func (self *GetCryptoSnapshotGainersLosersQueryRequestWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoSnapshotGainersLosersQueryRequestWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -12178,7 +12178,7 @@ func (self *GetCryptoSnapshotGainersLosersResponseWrapper) Message() proto1.Mess
 	return self.Data
 }
 
-func (self *GetCryptoSnapshotGainersLosersResponseWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *GetCryptoSnapshotGainersLosersResponseWrapper) messageWrapper() interface{} {
 	return self
 }
 

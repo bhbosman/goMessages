@@ -9,7 +9,7 @@ package stream
 import (
 	context "context"
 	constants "github.com/bhbosman/gocommon/constants"
-	"github.com/bhbosman/gocommon/stream"
+	stream "github.com/bhbosman/gocommon/stream"
 	goprotoextra "github.com/bhbosman/goprotoextra"
 	proto "github.com/golang/protobuf/proto"
 	_ "github.com/golang/protobuf/protoc-gen-go/descriptor"
@@ -714,7 +714,7 @@ func (self *CredentialsWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *CredentialsWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *CredentialsWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -770,7 +770,7 @@ func (self *OrderWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *OrderWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *OrderWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -826,7 +826,7 @@ func (self *TradeUpdateWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *TradeUpdateWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *TradeUpdateWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -882,7 +882,7 @@ func (self *DeleteUpdateWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *DeleteUpdateWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *DeleteUpdateWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -938,7 +938,7 @@ func (self *CreateUpdateWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *CreateUpdateWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *CreateUpdateWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -994,7 +994,7 @@ func (self *LunoStreamDataWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *LunoStreamDataWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *LunoStreamDataWrapper) messageWrapper() interface{} {
 	return self
 }
 

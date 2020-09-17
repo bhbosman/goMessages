@@ -9,7 +9,7 @@ package stream
 import (
 	context "context"
 	constants "github.com/bhbosman/gocommon/constants"
-	"github.com/bhbosman/gocommon/stream"
+	stream "github.com/bhbosman/gocommon/stream"
 	goprotoextra "github.com/bhbosman/goprotoextra"
 	proto "github.com/golang/protobuf/proto"
 	empty "github.com/golang/protobuf/ptypes/empty"
@@ -319,7 +319,7 @@ func (self *PointWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *PointWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *PointWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -375,7 +375,7 @@ func (self *PublishTop5Wrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *PublishTop5Wrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *PublishTop5Wrapper) messageWrapper() interface{} {
 	return self
 }
 

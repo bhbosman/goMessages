@@ -9,7 +9,7 @@ package stream
 import (
 	context "context"
 	constants "github.com/bhbosman/gocommon/constants"
-	"github.com/bhbosman/gocommon/stream"
+	stream "github.com/bhbosman/gocommon/stream"
 	goprotoextra "github.com/bhbosman/goprotoextra"
 	proto "github.com/golang/protobuf/proto"
 	_ "github.com/golang/protobuf/protoc-gen-go/descriptor"
@@ -733,7 +733,7 @@ func (self *PolygonMessageReceivedWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *PolygonMessageReceivedWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *PolygonMessageReceivedWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -789,7 +789,7 @@ func (self *PolygonMessageSendWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *PolygonMessageSendWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *PolygonMessageSendWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -845,7 +845,7 @@ func (self *PolygonForexQuoteWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *PolygonForexQuoteWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *PolygonForexQuoteWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -901,7 +901,7 @@ func (self *PolygonForexAggregateWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *PolygonForexAggregateWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *PolygonForexAggregateWrapper) messageWrapper() interface{} {
 	return self
 }
 
@@ -957,7 +957,7 @@ func (self *PolygonForexCombinedWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *PolygonForexCombinedWrapper) messageWrapper() goprotoextra.IMessageWrapper {
+func (self *PolygonForexCombinedWrapper) messageWrapper() interface{} {
 	return self
 }
 
