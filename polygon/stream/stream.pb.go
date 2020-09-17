@@ -9,6 +9,7 @@ package stream
 import (
 	context "context"
 	constants "github.com/bhbosman/gocommon/constants"
+	"github.com/bhbosman/gocommon/stream"
 	goprotoextra "github.com/bhbosman/goprotoextra"
 	proto "github.com/golang/protobuf/proto"
 	_ "github.com/golang/protobuf/protoc-gen-go/descriptor"
@@ -752,9 +753,9 @@ func NewPolygonMessageReceivedWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	PolygonMessageReceivedTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &PolygonMessageReceived{}
 		},
@@ -808,9 +809,9 @@ func NewPolygonMessageSendWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	PolygonMessageSendTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &PolygonMessageSend{}
 		},
@@ -864,9 +865,9 @@ func NewPolygonForexQuoteWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	PolygonForexQuoteTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &PolygonForexQuote{}
 		},
@@ -920,9 +921,9 @@ func NewPolygonForexAggregateWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	PolygonForexAggregateTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &PolygonForexAggregate{}
 		},
@@ -976,9 +977,9 @@ func NewPolygonForexCombinedWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	PolygonForexCombinedTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &PolygonForexCombined{}
 		},

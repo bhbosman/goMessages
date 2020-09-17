@@ -9,6 +9,7 @@ package stream
 import (
 	context "context"
 	constants "github.com/bhbosman/gocommon/constants"
+	"github.com/bhbosman/gocommon/stream"
 	goprotoextra "github.com/bhbosman/goprotoextra"
 	proto "github.com/golang/protobuf/proto"
 	_ "github.com/golang/protobuf/protoc-gen-go/descriptor"
@@ -733,9 +734,9 @@ func NewCredentialsWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	CredentialsTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &Credentials{}
 		},
@@ -789,9 +790,9 @@ func NewOrderWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	OrderTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &Order{}
 		},
@@ -845,9 +846,9 @@ func NewTradeUpdateWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	TradeUpdateTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &TradeUpdate{}
 		},
@@ -901,9 +902,9 @@ func NewDeleteUpdateWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	DeleteUpdateTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &DeleteUpdate{}
 		},
@@ -957,9 +958,9 @@ func NewCreateUpdateWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	CreateUpdateTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &CreateUpdate{}
 		},
@@ -1013,9 +1014,9 @@ func NewLunoStreamDataWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	LunoStreamDataTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &LunoStreamData{}
 		},

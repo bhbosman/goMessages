@@ -9,6 +9,7 @@ package rest
 import (
 	context "context"
 	constants "github.com/bhbosman/gocommon/constants"
+	"github.com/bhbosman/gocommon/stream"
 	goprotoextra "github.com/bhbosman/goprotoextra"
 	proto "github.com/golang/protobuf/proto"
 	_ "github.com/golang/protobuf/protoc-gen-go/descriptor"
@@ -7381,9 +7382,9 @@ func NewGetErrorResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetErrorResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetErrorResponse{}
 		},
@@ -7437,9 +7438,9 @@ func NewGetTickerQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetTickerQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetTickerQueryRequest{}
 		},
@@ -7493,9 +7494,9 @@ func NewSymbolWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	SymbolTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &Symbol{}
 		},
@@ -7549,9 +7550,9 @@ func NewGetTickerResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetTickerResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetTickerResponse{}
 		},
@@ -7605,9 +7606,9 @@ func NewGetTickerTypesResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetTickerTypesResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetTickerTypesResponse{}
 		},
@@ -7661,9 +7662,9 @@ func NewGetTickerDetailsResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetTickerDetailsResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetTickerDetailsResponse{}
 		},
@@ -7717,9 +7718,9 @@ func NewGetTickerNewsQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetTickerNewsQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetTickerNewsQueryRequest{}
 		},
@@ -7773,9 +7774,9 @@ func NewNewsWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	NewsTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &News{}
 		},
@@ -7829,9 +7830,9 @@ func NewGetTickerNewsResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetTickerNewsResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetTickerNewsResponse{}
 		},
@@ -7885,9 +7886,9 @@ func NewMarketWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	MarketTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &Market{}
 		},
@@ -7941,9 +7942,9 @@ func NewGetMarketsResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetMarketsResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetMarketsResponse{}
 		},
@@ -7997,9 +7998,9 @@ func NewLocaleWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	LocaleTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &Locale{}
 		},
@@ -8053,9 +8054,9 @@ func NewGetLocalesResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetLocalesResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetLocalesResponse{}
 		},
@@ -8109,9 +8110,9 @@ func NewSplitWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	SplitTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &Split{}
 		},
@@ -8165,9 +8166,9 @@ func NewGetStockSplitsResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetStockSplitsResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetStockSplitsResponse{}
 		},
@@ -8221,9 +8222,9 @@ func NewDividendWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	DividendTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &Dividend{}
 		},
@@ -8277,9 +8278,9 @@ func NewGetStockDividendsResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetStockDividendsResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetStockDividendsResponse{}
 		},
@@ -8333,9 +8334,9 @@ func NewGetStockFinancialsQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetStockFinancialsQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetStockFinancialsQueryRequest{}
 		},
@@ -8389,9 +8390,9 @@ func NewFinancialWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	FinancialTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &Financial{}
 		},
@@ -8445,9 +8446,9 @@ func NewGetStockFinancialsResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetStockFinancialsResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetStockFinancialsResponse{}
 		},
@@ -8501,9 +8502,9 @@ func NewGetMarketStatusResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetMarketStatusResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetMarketStatusResponse{}
 		},
@@ -8557,9 +8558,9 @@ func NewMarketHolidayWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	MarketHolidayTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &MarketHoliday{}
 		},
@@ -8613,9 +8614,9 @@ func NewGetMarketHolidaysResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetMarketHolidaysResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetMarketHolidaysResponse{}
 		},
@@ -8669,9 +8670,9 @@ func NewGetEquityExchangesQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityExchangesQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityExchangesQueryRequest{}
 		},
@@ -8725,9 +8726,9 @@ func NewGetEquityExchangesResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityExchangesResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityExchangesResponse{}
 		},
@@ -8781,9 +8782,9 @@ func NewGetEquityPreviousCloseQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityPreviousCloseQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityPreviousCloseQueryRequest{}
 		},
@@ -8837,9 +8838,9 @@ func NewGetEquityPreviousCloseResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityPreviousCloseResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityPreviousCloseResponse{}
 		},
@@ -8893,9 +8894,9 @@ func NewGetEquityAggregatesBarsQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityAggregatesBarsQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityAggregatesBarsQueryRequest{}
 		},
@@ -8949,9 +8950,9 @@ func NewGetEquityAggregatesBarsResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityAggregatesBarsResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityAggregatesBarsResponse{}
 		},
@@ -9005,9 +9006,9 @@ func NewGetEquityGroupedDailyBarsQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityGroupedDailyBarsQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityGroupedDailyBarsQueryRequest{}
 		},
@@ -9061,9 +9062,9 @@ func NewGetEquityGroupedDailyBarsResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityGroupedDailyBarsResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityGroupedDailyBarsResponse{}
 		},
@@ -9117,9 +9118,9 @@ func NewGetEquityHistoricTradesQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityHistoricTradesQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityHistoricTradesQueryRequest{}
 		},
@@ -9173,9 +9174,9 @@ func NewGetEquityHistoricTradesResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityHistoricTradesResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityHistoricTradesResponse{}
 		},
@@ -9229,9 +9230,9 @@ func NewGetEquityHistoricQuotesNBBOQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityHistoricQuotesNBBOQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityHistoricQuotesNBBOQueryRequest{}
 		},
@@ -9285,9 +9286,9 @@ func NewGetEquityHistoricQuotesNBBOResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityHistoricQuotesNBBOResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityHistoricQuotesNBBOResponse{}
 		},
@@ -9341,9 +9342,9 @@ func NewGetEquityLastTradeForSymbolQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityLastTradeForSymbolQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityLastTradeForSymbolQueryRequest{}
 		},
@@ -9397,9 +9398,9 @@ func NewGetEquityLastTradeForSymbolResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityLastTradeForSymbolResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityLastTradeForSymbolResponse{}
 		},
@@ -9453,9 +9454,9 @@ func NewGetEquityLastQuoteForSymbolQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityLastQuoteForSymbolQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityLastQuoteForSymbolQueryRequest{}
 		},
@@ -9509,9 +9510,9 @@ func NewGetEquityLastQuoteForSymbolResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityLastQuoteForSymbolResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityLastQuoteForSymbolResponse{}
 		},
@@ -9565,9 +9566,9 @@ func NewGetEquityDailyOpenCloseQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityDailyOpenCloseQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityDailyOpenCloseQueryRequest{}
 		},
@@ -9621,9 +9622,9 @@ func NewGetEquityDailyOpenCloseResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityDailyOpenCloseResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityDailyOpenCloseResponse{}
 		},
@@ -9677,9 +9678,9 @@ func NewGetEquityConditionMappingsQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityConditionMappingsQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityConditionMappingsQueryRequest{}
 		},
@@ -9733,9 +9734,9 @@ func NewGetEquityConditionMappingsResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquityConditionMappingsResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquityConditionMappingsResponse{}
 		},
@@ -9789,9 +9790,9 @@ func NewGetEquitySnapshotAllTickersQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquitySnapshotAllTickersQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquitySnapshotAllTickersQueryRequest{}
 		},
@@ -9845,9 +9846,9 @@ func NewGetEquitySnapshotAllTickersResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquitySnapshotAllTickersResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquitySnapshotAllTickersResponse{}
 		},
@@ -9901,9 +9902,9 @@ func NewGetEquitySnapshotSingleTickerQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquitySnapshotSingleTickerQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquitySnapshotSingleTickerQueryRequest{}
 		},
@@ -9957,9 +9958,9 @@ func NewGetEquitySnapshotSingleTickerResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquitySnapshotSingleTickerResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquitySnapshotSingleTickerResponse{}
 		},
@@ -10013,9 +10014,9 @@ func NewGetEquitySnapshotGainersLosersQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquitySnapshotGainersLosersQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquitySnapshotGainersLosersQueryRequest{}
 		},
@@ -10069,9 +10070,9 @@ func NewGetEquitySnapshotGainersLosersResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetEquitySnapshotGainersLosersResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetEquitySnapshotGainersLosersResponse{}
 		},
@@ -10125,9 +10126,9 @@ func NewGetForexPreviousCloseQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetForexPreviousCloseQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetForexPreviousCloseQueryRequest{}
 		},
@@ -10181,9 +10182,9 @@ func NewGetForexPreviousCloseResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetForexPreviousCloseResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetForexPreviousCloseResponse{}
 		},
@@ -10237,9 +10238,9 @@ func NewGetForexAggregatesBarsQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetForexAggregatesBarsQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetForexAggregatesBarsQueryRequest{}
 		},
@@ -10293,9 +10294,9 @@ func NewGetForexAggregatesBarsResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetForexAggregatesBarsResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetForexAggregatesBarsResponse{}
 		},
@@ -10349,9 +10350,9 @@ func NewGetForexGroupedDailyBarsQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetForexGroupedDailyBarsQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetForexGroupedDailyBarsQueryRequest{}
 		},
@@ -10405,9 +10406,9 @@ func NewGetForexGroupedDailyBarsResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetForexGroupedDailyBarsResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetForexGroupedDailyBarsResponse{}
 		},
@@ -10461,9 +10462,9 @@ func NewGetForexHistoricForexTicksQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetForexHistoricForexTicksQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetForexHistoricForexTicksQueryRequest{}
 		},
@@ -10517,9 +10518,9 @@ func NewGetForexHistoricForexTicksResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetForexHistoricForexTicksResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetForexHistoricForexTicksResponse{}
 		},
@@ -10573,9 +10574,9 @@ func NewGetForexRealTimeCurrencyConversionQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetForexRealTimeCurrencyConversionQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetForexRealTimeCurrencyConversionQueryRequest{}
 		},
@@ -10629,9 +10630,9 @@ func NewGetForexRealTimeCurrencyConversionResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetForexRealTimeCurrencyConversionResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetForexRealTimeCurrencyConversionResponse{}
 		},
@@ -10685,9 +10686,9 @@ func NewGetForexLastQuoteForCurrencyPairQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetForexLastQuoteForCurrencyPairQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetForexLastQuoteForCurrencyPairQueryRequest{}
 		},
@@ -10741,9 +10742,9 @@ func NewGetForexLastQuoteForCurrencyPairResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetForexLastQuoteForCurrencyPairResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetForexLastQuoteForCurrencyPairResponse{}
 		},
@@ -10797,9 +10798,9 @@ func NewGetForexSnapshotAllTickersQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetForexSnapshotAllTickersQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetForexSnapshotAllTickersQueryRequest{}
 		},
@@ -10853,9 +10854,9 @@ func NewGetForexSnapshotAllTickersResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetForexSnapshotAllTickersResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetForexSnapshotAllTickersResponse{}
 		},
@@ -10909,9 +10910,9 @@ func NewGetForexSnapshotGainersLosersQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetForexSnapshotGainersLosersQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetForexSnapshotGainersLosersQueryRequest{}
 		},
@@ -10965,9 +10966,9 @@ func NewGetForexSnapshotGainersLosersResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetForexSnapshotGainersLosersResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetForexSnapshotGainersLosersResponse{}
 		},
@@ -11021,9 +11022,9 @@ func NewGetCryptoPreviousCloseQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoPreviousCloseQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoPreviousCloseQueryRequest{}
 		},
@@ -11077,9 +11078,9 @@ func NewGetCryptoPreviousCloseResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoPreviousCloseResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoPreviousCloseResponse{}
 		},
@@ -11133,9 +11134,9 @@ func NewGetCryptoAggregatesBarsQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoAggregatesBarsQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoAggregatesBarsQueryRequest{}
 		},
@@ -11189,9 +11190,9 @@ func NewGetCryptoAggregatesBarsResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoAggregatesBarsResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoAggregatesBarsResponse{}
 		},
@@ -11245,9 +11246,9 @@ func NewGetCryptoGroupedDailyBarsQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoGroupedDailyBarsQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoGroupedDailyBarsQueryRequest{}
 		},
@@ -11301,9 +11302,9 @@ func NewGetCryptoGroupedDailyBarsResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoGroupedDailyBarsResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoGroupedDailyBarsResponse{}
 		},
@@ -11357,9 +11358,9 @@ func NewGetCryptoCryptoExchangesQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoCryptoExchangesQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoCryptoExchangesQueryRequest{}
 		},
@@ -11413,9 +11414,9 @@ func NewGetCryptoCryptoExchangesResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoCryptoExchangesResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoCryptoExchangesResponse{}
 		},
@@ -11469,9 +11470,9 @@ func NewGetCryptoLastTradeForCryptoPairQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoLastTradeForCryptoPairQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoLastTradeForCryptoPairQueryRequest{}
 		},
@@ -11525,9 +11526,9 @@ func NewGetCryptoLastTradeForCryptoPairResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoLastTradeForCryptoPairResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoLastTradeForCryptoPairResponse{}
 		},
@@ -11581,9 +11582,9 @@ func NewGetCryptoDailyOpenCloseQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoDailyOpenCloseQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoDailyOpenCloseQueryRequest{}
 		},
@@ -11637,9 +11638,9 @@ func NewGetCryptoDailyOpenCloseResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoDailyOpenCloseResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoDailyOpenCloseResponse{}
 		},
@@ -11693,9 +11694,9 @@ func NewGetCryptoHistoricCryptoTradesQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoHistoricCryptoTradesQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoHistoricCryptoTradesQueryRequest{}
 		},
@@ -11749,9 +11750,9 @@ func NewGetCryptoHistoricCryptoTradesResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoHistoricCryptoTradesResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoHistoricCryptoTradesResponse{}
 		},
@@ -11805,9 +11806,9 @@ func NewGetCryptoSnapshotAllTickersQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoSnapshotAllTickersQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoSnapshotAllTickersQueryRequest{}
 		},
@@ -11861,9 +11862,9 @@ func NewGetCryptoSnapshotAllTickersResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoSnapshotAllTickersResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoSnapshotAllTickersResponse{}
 		},
@@ -11917,9 +11918,9 @@ func NewGetCryptoSnapshotSingleTickerQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoSnapshotSingleTickerQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoSnapshotSingleTickerQueryRequest{}
 		},
@@ -11973,9 +11974,9 @@ func NewGetCryptoSnapshotSingleTickerResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoSnapshotSingleTickerResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoSnapshotSingleTickerResponse{}
 		},
@@ -12029,9 +12030,9 @@ func NewGetCryptoSnapshotSingleTickerFullBookL2QueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoSnapshotSingleTickerFullBookL2QueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoSnapshotSingleTickerFullBookL2QueryRequest{}
 		},
@@ -12085,9 +12086,9 @@ func NewGetCryptoSnapshotSingleTickerFullBookL2ResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoSnapshotSingleTickerFullBookL2ResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoSnapshotSingleTickerFullBookL2Response{}
 		},
@@ -12141,9 +12142,9 @@ func NewGetCryptoSnapshotGainersLosersQueryRequestWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoSnapshotGainersLosersQueryRequestTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoSnapshotGainersLosersQueryRequest{}
 		},
@@ -12197,9 +12198,9 @@ func NewGetCryptoSnapshotGainersLosersResponseWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	GetCryptoSnapshotGainersLosersResponseTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &GetCryptoSnapshotGainersLosersResponse{}
 		},

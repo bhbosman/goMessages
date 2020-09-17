@@ -9,6 +9,7 @@ package stream
 import (
 	context "context"
 	constants "github.com/bhbosman/gocommon/constants"
+	"github.com/bhbosman/gocommon/stream"
 	goprotoextra "github.com/bhbosman/goprotoextra"
 	proto "github.com/golang/protobuf/proto"
 	empty "github.com/golang/protobuf/ptypes/empty"
@@ -338,9 +339,9 @@ func NewPointWrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	PointTypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &Point{}
 		},
@@ -394,9 +395,9 @@ func NewPublishTop5Wrapper(
 	}
 }
 
-var _ = goprotoextra.Register(
+var _ = stream.Register(
 	PublishTop5TypeCode,
-	goprotoextra.TypeCodeData{
+	stream.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &PublishTop5{}
 		},
