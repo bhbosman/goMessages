@@ -710,7 +710,7 @@ type CredentialsWrapper struct {
 	Data *Credentials
 }
 
-func (self *CredentialsWrapper) Message() proto1.Message {
+func (self *CredentialsWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -766,7 +766,7 @@ type OrderWrapper struct {
 	Data *Order
 }
 
-func (self *OrderWrapper) Message() proto1.Message {
+func (self *OrderWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -822,7 +822,7 @@ type TradeUpdateWrapper struct {
 	Data *TradeUpdate
 }
 
-func (self *TradeUpdateWrapper) Message() proto1.Message {
+func (self *TradeUpdateWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -878,7 +878,7 @@ type DeleteUpdateWrapper struct {
 	Data *DeleteUpdate
 }
 
-func (self *DeleteUpdateWrapper) Message() proto1.Message {
+func (self *DeleteUpdateWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -934,7 +934,7 @@ type CreateUpdateWrapper struct {
 	Data *CreateUpdate
 }
 
-func (self *CreateUpdateWrapper) Message() proto1.Message {
+func (self *CreateUpdateWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -990,7 +990,7 @@ type LunoStreamDataWrapper struct {
 	Data *LunoStreamData
 }
 
-func (self *LunoStreamDataWrapper) Message() proto1.Message {
+func (self *LunoStreamDataWrapper) Message() interface{} {
 	return self.Data
 }
 

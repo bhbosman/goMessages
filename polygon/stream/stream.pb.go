@@ -729,7 +729,7 @@ type PolygonMessageReceivedWrapper struct {
 	Data *PolygonMessageReceived
 }
 
-func (self *PolygonMessageReceivedWrapper) Message() proto1.Message {
+func (self *PolygonMessageReceivedWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -785,7 +785,7 @@ type PolygonMessageSendWrapper struct {
 	Data *PolygonMessageSend
 }
 
-func (self *PolygonMessageSendWrapper) Message() proto1.Message {
+func (self *PolygonMessageSendWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -841,7 +841,7 @@ type PolygonForexQuoteWrapper struct {
 	Data *PolygonForexQuote
 }
 
-func (self *PolygonForexQuoteWrapper) Message() proto1.Message {
+func (self *PolygonForexQuoteWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -897,7 +897,7 @@ type PolygonForexAggregateWrapper struct {
 	Data *PolygonForexAggregate
 }
 
-func (self *PolygonForexAggregateWrapper) Message() proto1.Message {
+func (self *PolygonForexAggregateWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -953,7 +953,7 @@ type PolygonForexCombinedWrapper struct {
 	Data *PolygonForexCombined
 }
 
-func (self *PolygonForexCombinedWrapper) Message() proto1.Message {
+func (self *PolygonForexCombinedWrapper) Message() interface{} {
 	return self.Data
 }
 

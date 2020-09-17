@@ -315,7 +315,7 @@ type PointWrapper struct {
 	Data *Point
 }
 
-func (self *PointWrapper) Message() proto1.Message {
+func (self *PointWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -371,7 +371,7 @@ type PublishTop5Wrapper struct {
 	Data *PublishTop5
 }
 
-func (self *PublishTop5Wrapper) Message() proto1.Message {
+func (self *PublishTop5Wrapper) Message() interface{} {
 	return self.Data
 }
 

@@ -7358,7 +7358,7 @@ type GetErrorResponseWrapper struct {
 	Data *GetErrorResponse
 }
 
-func (self *GetErrorResponseWrapper) Message() proto1.Message {
+func (self *GetErrorResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -7414,7 +7414,7 @@ type GetTickerQueryRequestWrapper struct {
 	Data *GetTickerQueryRequest
 }
 
-func (self *GetTickerQueryRequestWrapper) Message() proto1.Message {
+func (self *GetTickerQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -7470,7 +7470,7 @@ type SymbolWrapper struct {
 	Data *Symbol
 }
 
-func (self *SymbolWrapper) Message() proto1.Message {
+func (self *SymbolWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -7526,7 +7526,7 @@ type GetTickerResponseWrapper struct {
 	Data *GetTickerResponse
 }
 
-func (self *GetTickerResponseWrapper) Message() proto1.Message {
+func (self *GetTickerResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -7582,7 +7582,7 @@ type GetTickerTypesResponseWrapper struct {
 	Data *GetTickerTypesResponse
 }
 
-func (self *GetTickerTypesResponseWrapper) Message() proto1.Message {
+func (self *GetTickerTypesResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -7638,7 +7638,7 @@ type GetTickerDetailsResponseWrapper struct {
 	Data *GetTickerDetailsResponse
 }
 
-func (self *GetTickerDetailsResponseWrapper) Message() proto1.Message {
+func (self *GetTickerDetailsResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -7694,7 +7694,7 @@ type GetTickerNewsQueryRequestWrapper struct {
 	Data *GetTickerNewsQueryRequest
 }
 
-func (self *GetTickerNewsQueryRequestWrapper) Message() proto1.Message {
+func (self *GetTickerNewsQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -7750,7 +7750,7 @@ type NewsWrapper struct {
 	Data *News
 }
 
-func (self *NewsWrapper) Message() proto1.Message {
+func (self *NewsWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -7806,7 +7806,7 @@ type GetTickerNewsResponseWrapper struct {
 	Data *GetTickerNewsResponse
 }
 
-func (self *GetTickerNewsResponseWrapper) Message() proto1.Message {
+func (self *GetTickerNewsResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -7862,7 +7862,7 @@ type MarketWrapper struct {
 	Data *Market
 }
 
-func (self *MarketWrapper) Message() proto1.Message {
+func (self *MarketWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -7918,7 +7918,7 @@ type GetMarketsResponseWrapper struct {
 	Data *GetMarketsResponse
 }
 
-func (self *GetMarketsResponseWrapper) Message() proto1.Message {
+func (self *GetMarketsResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -7974,7 +7974,7 @@ type LocaleWrapper struct {
 	Data *Locale
 }
 
-func (self *LocaleWrapper) Message() proto1.Message {
+func (self *LocaleWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -8030,7 +8030,7 @@ type GetLocalesResponseWrapper struct {
 	Data *GetLocalesResponse
 }
 
-func (self *GetLocalesResponseWrapper) Message() proto1.Message {
+func (self *GetLocalesResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -8086,7 +8086,7 @@ type SplitWrapper struct {
 	Data *Split
 }
 
-func (self *SplitWrapper) Message() proto1.Message {
+func (self *SplitWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -8142,7 +8142,7 @@ type GetStockSplitsResponseWrapper struct {
 	Data *GetStockSplitsResponse
 }
 
-func (self *GetStockSplitsResponseWrapper) Message() proto1.Message {
+func (self *GetStockSplitsResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -8198,7 +8198,7 @@ type DividendWrapper struct {
 	Data *Dividend
 }
 
-func (self *DividendWrapper) Message() proto1.Message {
+func (self *DividendWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -8254,7 +8254,7 @@ type GetStockDividendsResponseWrapper struct {
 	Data *GetStockDividendsResponse
 }
 
-func (self *GetStockDividendsResponseWrapper) Message() proto1.Message {
+func (self *GetStockDividendsResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -8310,7 +8310,7 @@ type GetStockFinancialsQueryRequestWrapper struct {
 	Data *GetStockFinancialsQueryRequest
 }
 
-func (self *GetStockFinancialsQueryRequestWrapper) Message() proto1.Message {
+func (self *GetStockFinancialsQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -8366,7 +8366,7 @@ type FinancialWrapper struct {
 	Data *Financial
 }
 
-func (self *FinancialWrapper) Message() proto1.Message {
+func (self *FinancialWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -8422,7 +8422,7 @@ type GetStockFinancialsResponseWrapper struct {
 	Data *GetStockFinancialsResponse
 }
 
-func (self *GetStockFinancialsResponseWrapper) Message() proto1.Message {
+func (self *GetStockFinancialsResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -8478,7 +8478,7 @@ type GetMarketStatusResponseWrapper struct {
 	Data *GetMarketStatusResponse
 }
 
-func (self *GetMarketStatusResponseWrapper) Message() proto1.Message {
+func (self *GetMarketStatusResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -8534,7 +8534,7 @@ type MarketHolidayWrapper struct {
 	Data *MarketHoliday
 }
 
-func (self *MarketHolidayWrapper) Message() proto1.Message {
+func (self *MarketHolidayWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -8590,7 +8590,7 @@ type GetMarketHolidaysResponseWrapper struct {
 	Data *GetMarketHolidaysResponse
 }
 
-func (self *GetMarketHolidaysResponseWrapper) Message() proto1.Message {
+func (self *GetMarketHolidaysResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -8646,7 +8646,7 @@ type GetEquityExchangesQueryRequestWrapper struct {
 	Data *GetEquityExchangesQueryRequest
 }
 
-func (self *GetEquityExchangesQueryRequestWrapper) Message() proto1.Message {
+func (self *GetEquityExchangesQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -8702,7 +8702,7 @@ type GetEquityExchangesResponseWrapper struct {
 	Data *GetEquityExchangesResponse
 }
 
-func (self *GetEquityExchangesResponseWrapper) Message() proto1.Message {
+func (self *GetEquityExchangesResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -8758,7 +8758,7 @@ type GetEquityPreviousCloseQueryRequestWrapper struct {
 	Data *GetEquityPreviousCloseQueryRequest
 }
 
-func (self *GetEquityPreviousCloseQueryRequestWrapper) Message() proto1.Message {
+func (self *GetEquityPreviousCloseQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -8814,7 +8814,7 @@ type GetEquityPreviousCloseResponseWrapper struct {
 	Data *GetEquityPreviousCloseResponse
 }
 
-func (self *GetEquityPreviousCloseResponseWrapper) Message() proto1.Message {
+func (self *GetEquityPreviousCloseResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -8870,7 +8870,7 @@ type GetEquityAggregatesBarsQueryRequestWrapper struct {
 	Data *GetEquityAggregatesBarsQueryRequest
 }
 
-func (self *GetEquityAggregatesBarsQueryRequestWrapper) Message() proto1.Message {
+func (self *GetEquityAggregatesBarsQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -8926,7 +8926,7 @@ type GetEquityAggregatesBarsResponseWrapper struct {
 	Data *GetEquityAggregatesBarsResponse
 }
 
-func (self *GetEquityAggregatesBarsResponseWrapper) Message() proto1.Message {
+func (self *GetEquityAggregatesBarsResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -8982,7 +8982,7 @@ type GetEquityGroupedDailyBarsQueryRequestWrapper struct {
 	Data *GetEquityGroupedDailyBarsQueryRequest
 }
 
-func (self *GetEquityGroupedDailyBarsQueryRequestWrapper) Message() proto1.Message {
+func (self *GetEquityGroupedDailyBarsQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -9038,7 +9038,7 @@ type GetEquityGroupedDailyBarsResponseWrapper struct {
 	Data *GetEquityGroupedDailyBarsResponse
 }
 
-func (self *GetEquityGroupedDailyBarsResponseWrapper) Message() proto1.Message {
+func (self *GetEquityGroupedDailyBarsResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -9094,7 +9094,7 @@ type GetEquityHistoricTradesQueryRequestWrapper struct {
 	Data *GetEquityHistoricTradesQueryRequest
 }
 
-func (self *GetEquityHistoricTradesQueryRequestWrapper) Message() proto1.Message {
+func (self *GetEquityHistoricTradesQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -9150,7 +9150,7 @@ type GetEquityHistoricTradesResponseWrapper struct {
 	Data *GetEquityHistoricTradesResponse
 }
 
-func (self *GetEquityHistoricTradesResponseWrapper) Message() proto1.Message {
+func (self *GetEquityHistoricTradesResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -9206,7 +9206,7 @@ type GetEquityHistoricQuotesNBBOQueryRequestWrapper struct {
 	Data *GetEquityHistoricQuotesNBBOQueryRequest
 }
 
-func (self *GetEquityHistoricQuotesNBBOQueryRequestWrapper) Message() proto1.Message {
+func (self *GetEquityHistoricQuotesNBBOQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -9262,7 +9262,7 @@ type GetEquityHistoricQuotesNBBOResponseWrapper struct {
 	Data *GetEquityHistoricQuotesNBBOResponse
 }
 
-func (self *GetEquityHistoricQuotesNBBOResponseWrapper) Message() proto1.Message {
+func (self *GetEquityHistoricQuotesNBBOResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -9318,7 +9318,7 @@ type GetEquityLastTradeForSymbolQueryRequestWrapper struct {
 	Data *GetEquityLastTradeForSymbolQueryRequest
 }
 
-func (self *GetEquityLastTradeForSymbolQueryRequestWrapper) Message() proto1.Message {
+func (self *GetEquityLastTradeForSymbolQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -9374,7 +9374,7 @@ type GetEquityLastTradeForSymbolResponseWrapper struct {
 	Data *GetEquityLastTradeForSymbolResponse
 }
 
-func (self *GetEquityLastTradeForSymbolResponseWrapper) Message() proto1.Message {
+func (self *GetEquityLastTradeForSymbolResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -9430,7 +9430,7 @@ type GetEquityLastQuoteForSymbolQueryRequestWrapper struct {
 	Data *GetEquityLastQuoteForSymbolQueryRequest
 }
 
-func (self *GetEquityLastQuoteForSymbolQueryRequestWrapper) Message() proto1.Message {
+func (self *GetEquityLastQuoteForSymbolQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -9486,7 +9486,7 @@ type GetEquityLastQuoteForSymbolResponseWrapper struct {
 	Data *GetEquityLastQuoteForSymbolResponse
 }
 
-func (self *GetEquityLastQuoteForSymbolResponseWrapper) Message() proto1.Message {
+func (self *GetEquityLastQuoteForSymbolResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -9542,7 +9542,7 @@ type GetEquityDailyOpenCloseQueryRequestWrapper struct {
 	Data *GetEquityDailyOpenCloseQueryRequest
 }
 
-func (self *GetEquityDailyOpenCloseQueryRequestWrapper) Message() proto1.Message {
+func (self *GetEquityDailyOpenCloseQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -9598,7 +9598,7 @@ type GetEquityDailyOpenCloseResponseWrapper struct {
 	Data *GetEquityDailyOpenCloseResponse
 }
 
-func (self *GetEquityDailyOpenCloseResponseWrapper) Message() proto1.Message {
+func (self *GetEquityDailyOpenCloseResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -9654,7 +9654,7 @@ type GetEquityConditionMappingsQueryRequestWrapper struct {
 	Data *GetEquityConditionMappingsQueryRequest
 }
 
-func (self *GetEquityConditionMappingsQueryRequestWrapper) Message() proto1.Message {
+func (self *GetEquityConditionMappingsQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -9710,7 +9710,7 @@ type GetEquityConditionMappingsResponseWrapper struct {
 	Data *GetEquityConditionMappingsResponse
 }
 
-func (self *GetEquityConditionMappingsResponseWrapper) Message() proto1.Message {
+func (self *GetEquityConditionMappingsResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -9766,7 +9766,7 @@ type GetEquitySnapshotAllTickersQueryRequestWrapper struct {
 	Data *GetEquitySnapshotAllTickersQueryRequest
 }
 
-func (self *GetEquitySnapshotAllTickersQueryRequestWrapper) Message() proto1.Message {
+func (self *GetEquitySnapshotAllTickersQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -9822,7 +9822,7 @@ type GetEquitySnapshotAllTickersResponseWrapper struct {
 	Data *GetEquitySnapshotAllTickersResponse
 }
 
-func (self *GetEquitySnapshotAllTickersResponseWrapper) Message() proto1.Message {
+func (self *GetEquitySnapshotAllTickersResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -9878,7 +9878,7 @@ type GetEquitySnapshotSingleTickerQueryRequestWrapper struct {
 	Data *GetEquitySnapshotSingleTickerQueryRequest
 }
 
-func (self *GetEquitySnapshotSingleTickerQueryRequestWrapper) Message() proto1.Message {
+func (self *GetEquitySnapshotSingleTickerQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -9934,7 +9934,7 @@ type GetEquitySnapshotSingleTickerResponseWrapper struct {
 	Data *GetEquitySnapshotSingleTickerResponse
 }
 
-func (self *GetEquitySnapshotSingleTickerResponseWrapper) Message() proto1.Message {
+func (self *GetEquitySnapshotSingleTickerResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -9990,7 +9990,7 @@ type GetEquitySnapshotGainersLosersQueryRequestWrapper struct {
 	Data *GetEquitySnapshotGainersLosersQueryRequest
 }
 
-func (self *GetEquitySnapshotGainersLosersQueryRequestWrapper) Message() proto1.Message {
+func (self *GetEquitySnapshotGainersLosersQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -10046,7 +10046,7 @@ type GetEquitySnapshotGainersLosersResponseWrapper struct {
 	Data *GetEquitySnapshotGainersLosersResponse
 }
 
-func (self *GetEquitySnapshotGainersLosersResponseWrapper) Message() proto1.Message {
+func (self *GetEquitySnapshotGainersLosersResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -10102,7 +10102,7 @@ type GetForexPreviousCloseQueryRequestWrapper struct {
 	Data *GetForexPreviousCloseQueryRequest
 }
 
-func (self *GetForexPreviousCloseQueryRequestWrapper) Message() proto1.Message {
+func (self *GetForexPreviousCloseQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -10158,7 +10158,7 @@ type GetForexPreviousCloseResponseWrapper struct {
 	Data *GetForexPreviousCloseResponse
 }
 
-func (self *GetForexPreviousCloseResponseWrapper) Message() proto1.Message {
+func (self *GetForexPreviousCloseResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -10214,7 +10214,7 @@ type GetForexAggregatesBarsQueryRequestWrapper struct {
 	Data *GetForexAggregatesBarsQueryRequest
 }
 
-func (self *GetForexAggregatesBarsQueryRequestWrapper) Message() proto1.Message {
+func (self *GetForexAggregatesBarsQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -10270,7 +10270,7 @@ type GetForexAggregatesBarsResponseWrapper struct {
 	Data *GetForexAggregatesBarsResponse
 }
 
-func (self *GetForexAggregatesBarsResponseWrapper) Message() proto1.Message {
+func (self *GetForexAggregatesBarsResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -10326,7 +10326,7 @@ type GetForexGroupedDailyBarsQueryRequestWrapper struct {
 	Data *GetForexGroupedDailyBarsQueryRequest
 }
 
-func (self *GetForexGroupedDailyBarsQueryRequestWrapper) Message() proto1.Message {
+func (self *GetForexGroupedDailyBarsQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -10382,7 +10382,7 @@ type GetForexGroupedDailyBarsResponseWrapper struct {
 	Data *GetForexGroupedDailyBarsResponse
 }
 
-func (self *GetForexGroupedDailyBarsResponseWrapper) Message() proto1.Message {
+func (self *GetForexGroupedDailyBarsResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -10438,7 +10438,7 @@ type GetForexHistoricForexTicksQueryRequestWrapper struct {
 	Data *GetForexHistoricForexTicksQueryRequest
 }
 
-func (self *GetForexHistoricForexTicksQueryRequestWrapper) Message() proto1.Message {
+func (self *GetForexHistoricForexTicksQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -10494,7 +10494,7 @@ type GetForexHistoricForexTicksResponseWrapper struct {
 	Data *GetForexHistoricForexTicksResponse
 }
 
-func (self *GetForexHistoricForexTicksResponseWrapper) Message() proto1.Message {
+func (self *GetForexHistoricForexTicksResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -10550,7 +10550,7 @@ type GetForexRealTimeCurrencyConversionQueryRequestWrapper struct {
 	Data *GetForexRealTimeCurrencyConversionQueryRequest
 }
 
-func (self *GetForexRealTimeCurrencyConversionQueryRequestWrapper) Message() proto1.Message {
+func (self *GetForexRealTimeCurrencyConversionQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -10606,7 +10606,7 @@ type GetForexRealTimeCurrencyConversionResponseWrapper struct {
 	Data *GetForexRealTimeCurrencyConversionResponse
 }
 
-func (self *GetForexRealTimeCurrencyConversionResponseWrapper) Message() proto1.Message {
+func (self *GetForexRealTimeCurrencyConversionResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -10662,7 +10662,7 @@ type GetForexLastQuoteForCurrencyPairQueryRequestWrapper struct {
 	Data *GetForexLastQuoteForCurrencyPairQueryRequest
 }
 
-func (self *GetForexLastQuoteForCurrencyPairQueryRequestWrapper) Message() proto1.Message {
+func (self *GetForexLastQuoteForCurrencyPairQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -10718,7 +10718,7 @@ type GetForexLastQuoteForCurrencyPairResponseWrapper struct {
 	Data *GetForexLastQuoteForCurrencyPairResponse
 }
 
-func (self *GetForexLastQuoteForCurrencyPairResponseWrapper) Message() proto1.Message {
+func (self *GetForexLastQuoteForCurrencyPairResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -10774,7 +10774,7 @@ type GetForexSnapshotAllTickersQueryRequestWrapper struct {
 	Data *GetForexSnapshotAllTickersQueryRequest
 }
 
-func (self *GetForexSnapshotAllTickersQueryRequestWrapper) Message() proto1.Message {
+func (self *GetForexSnapshotAllTickersQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -10830,7 +10830,7 @@ type GetForexSnapshotAllTickersResponseWrapper struct {
 	Data *GetForexSnapshotAllTickersResponse
 }
 
-func (self *GetForexSnapshotAllTickersResponseWrapper) Message() proto1.Message {
+func (self *GetForexSnapshotAllTickersResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -10886,7 +10886,7 @@ type GetForexSnapshotGainersLosersQueryRequestWrapper struct {
 	Data *GetForexSnapshotGainersLosersQueryRequest
 }
 
-func (self *GetForexSnapshotGainersLosersQueryRequestWrapper) Message() proto1.Message {
+func (self *GetForexSnapshotGainersLosersQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -10942,7 +10942,7 @@ type GetForexSnapshotGainersLosersResponseWrapper struct {
 	Data *GetForexSnapshotGainersLosersResponse
 }
 
-func (self *GetForexSnapshotGainersLosersResponseWrapper) Message() proto1.Message {
+func (self *GetForexSnapshotGainersLosersResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -10998,7 +10998,7 @@ type GetCryptoPreviousCloseQueryRequestWrapper struct {
 	Data *GetCryptoPreviousCloseQueryRequest
 }
 
-func (self *GetCryptoPreviousCloseQueryRequestWrapper) Message() proto1.Message {
+func (self *GetCryptoPreviousCloseQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -11054,7 +11054,7 @@ type GetCryptoPreviousCloseResponseWrapper struct {
 	Data *GetCryptoPreviousCloseResponse
 }
 
-func (self *GetCryptoPreviousCloseResponseWrapper) Message() proto1.Message {
+func (self *GetCryptoPreviousCloseResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -11110,7 +11110,7 @@ type GetCryptoAggregatesBarsQueryRequestWrapper struct {
 	Data *GetCryptoAggregatesBarsQueryRequest
 }
 
-func (self *GetCryptoAggregatesBarsQueryRequestWrapper) Message() proto1.Message {
+func (self *GetCryptoAggregatesBarsQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -11166,7 +11166,7 @@ type GetCryptoAggregatesBarsResponseWrapper struct {
 	Data *GetCryptoAggregatesBarsResponse
 }
 
-func (self *GetCryptoAggregatesBarsResponseWrapper) Message() proto1.Message {
+func (self *GetCryptoAggregatesBarsResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -11222,7 +11222,7 @@ type GetCryptoGroupedDailyBarsQueryRequestWrapper struct {
 	Data *GetCryptoGroupedDailyBarsQueryRequest
 }
 
-func (self *GetCryptoGroupedDailyBarsQueryRequestWrapper) Message() proto1.Message {
+func (self *GetCryptoGroupedDailyBarsQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -11278,7 +11278,7 @@ type GetCryptoGroupedDailyBarsResponseWrapper struct {
 	Data *GetCryptoGroupedDailyBarsResponse
 }
 
-func (self *GetCryptoGroupedDailyBarsResponseWrapper) Message() proto1.Message {
+func (self *GetCryptoGroupedDailyBarsResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -11334,7 +11334,7 @@ type GetCryptoCryptoExchangesQueryRequestWrapper struct {
 	Data *GetCryptoCryptoExchangesQueryRequest
 }
 
-func (self *GetCryptoCryptoExchangesQueryRequestWrapper) Message() proto1.Message {
+func (self *GetCryptoCryptoExchangesQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -11390,7 +11390,7 @@ type GetCryptoCryptoExchangesResponseWrapper struct {
 	Data *GetCryptoCryptoExchangesResponse
 }
 
-func (self *GetCryptoCryptoExchangesResponseWrapper) Message() proto1.Message {
+func (self *GetCryptoCryptoExchangesResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -11446,7 +11446,7 @@ type GetCryptoLastTradeForCryptoPairQueryRequestWrapper struct {
 	Data *GetCryptoLastTradeForCryptoPairQueryRequest
 }
 
-func (self *GetCryptoLastTradeForCryptoPairQueryRequestWrapper) Message() proto1.Message {
+func (self *GetCryptoLastTradeForCryptoPairQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -11502,7 +11502,7 @@ type GetCryptoLastTradeForCryptoPairResponseWrapper struct {
 	Data *GetCryptoLastTradeForCryptoPairResponse
 }
 
-func (self *GetCryptoLastTradeForCryptoPairResponseWrapper) Message() proto1.Message {
+func (self *GetCryptoLastTradeForCryptoPairResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -11558,7 +11558,7 @@ type GetCryptoDailyOpenCloseQueryRequestWrapper struct {
 	Data *GetCryptoDailyOpenCloseQueryRequest
 }
 
-func (self *GetCryptoDailyOpenCloseQueryRequestWrapper) Message() proto1.Message {
+func (self *GetCryptoDailyOpenCloseQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -11614,7 +11614,7 @@ type GetCryptoDailyOpenCloseResponseWrapper struct {
 	Data *GetCryptoDailyOpenCloseResponse
 }
 
-func (self *GetCryptoDailyOpenCloseResponseWrapper) Message() proto1.Message {
+func (self *GetCryptoDailyOpenCloseResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -11670,7 +11670,7 @@ type GetCryptoHistoricCryptoTradesQueryRequestWrapper struct {
 	Data *GetCryptoHistoricCryptoTradesQueryRequest
 }
 
-func (self *GetCryptoHistoricCryptoTradesQueryRequestWrapper) Message() proto1.Message {
+func (self *GetCryptoHistoricCryptoTradesQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -11726,7 +11726,7 @@ type GetCryptoHistoricCryptoTradesResponseWrapper struct {
 	Data *GetCryptoHistoricCryptoTradesResponse
 }
 
-func (self *GetCryptoHistoricCryptoTradesResponseWrapper) Message() proto1.Message {
+func (self *GetCryptoHistoricCryptoTradesResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -11782,7 +11782,7 @@ type GetCryptoSnapshotAllTickersQueryRequestWrapper struct {
 	Data *GetCryptoSnapshotAllTickersQueryRequest
 }
 
-func (self *GetCryptoSnapshotAllTickersQueryRequestWrapper) Message() proto1.Message {
+func (self *GetCryptoSnapshotAllTickersQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -11838,7 +11838,7 @@ type GetCryptoSnapshotAllTickersResponseWrapper struct {
 	Data *GetCryptoSnapshotAllTickersResponse
 }
 
-func (self *GetCryptoSnapshotAllTickersResponseWrapper) Message() proto1.Message {
+func (self *GetCryptoSnapshotAllTickersResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -11894,7 +11894,7 @@ type GetCryptoSnapshotSingleTickerQueryRequestWrapper struct {
 	Data *GetCryptoSnapshotSingleTickerQueryRequest
 }
 
-func (self *GetCryptoSnapshotSingleTickerQueryRequestWrapper) Message() proto1.Message {
+func (self *GetCryptoSnapshotSingleTickerQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -11950,7 +11950,7 @@ type GetCryptoSnapshotSingleTickerResponseWrapper struct {
 	Data *GetCryptoSnapshotSingleTickerResponse
 }
 
-func (self *GetCryptoSnapshotSingleTickerResponseWrapper) Message() proto1.Message {
+func (self *GetCryptoSnapshotSingleTickerResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -12006,7 +12006,7 @@ type GetCryptoSnapshotSingleTickerFullBookL2QueryRequestWrapper struct {
 	Data *GetCryptoSnapshotSingleTickerFullBookL2QueryRequest
 }
 
-func (self *GetCryptoSnapshotSingleTickerFullBookL2QueryRequestWrapper) Message() proto1.Message {
+func (self *GetCryptoSnapshotSingleTickerFullBookL2QueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -12062,7 +12062,7 @@ type GetCryptoSnapshotSingleTickerFullBookL2ResponseWrapper struct {
 	Data *GetCryptoSnapshotSingleTickerFullBookL2Response
 }
 
-func (self *GetCryptoSnapshotSingleTickerFullBookL2ResponseWrapper) Message() proto1.Message {
+func (self *GetCryptoSnapshotSingleTickerFullBookL2ResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -12118,7 +12118,7 @@ type GetCryptoSnapshotGainersLosersQueryRequestWrapper struct {
 	Data *GetCryptoSnapshotGainersLosersQueryRequest
 }
 
-func (self *GetCryptoSnapshotGainersLosersQueryRequestWrapper) Message() proto1.Message {
+func (self *GetCryptoSnapshotGainersLosersQueryRequestWrapper) Message() interface{} {
 	return self.Data
 }
 
@@ -12174,7 +12174,7 @@ type GetCryptoSnapshotGainersLosersResponseWrapper struct {
 	Data *GetCryptoSnapshotGainersLosersResponse
 }
 
-func (self *GetCryptoSnapshotGainersLosersResponseWrapper) Message() proto1.Message {
+func (self *GetCryptoSnapshotGainersLosersResponseWrapper) Message() interface{} {
 	return self.Data
 }
 
