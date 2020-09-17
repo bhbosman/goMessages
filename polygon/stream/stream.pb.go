@@ -9,7 +9,7 @@ package stream
 import (
 	context "context"
 	constants "github.com/bhbosman/gocommon/constants"
-	stream "github.com/bhbosman/gocommon/stream"
+	goprotoextra "github.com/bhbosman/goprotoextra"
 	proto "github.com/golang/protobuf/proto"
 	_ "github.com/golang/protobuf/protoc-gen-go/descriptor"
 	proto1 "google.golang.org/protobuf/proto"
@@ -724,7 +724,7 @@ const PolygonForexCombinedTypeCode uint32 = 2532026489
 //false
 //false
 type PolygonMessageReceivedWrapper struct {
-	stream.BaseMessageWrapper
+	goprotoextra.BaseMessageWrapper
 	Data *PolygonMessageReceived
 }
 
@@ -732,18 +732,18 @@ func (self *PolygonMessageReceivedWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *PolygonMessageReceivedWrapper) messageWrapper() stream.IMessageWrapper {
+func (self *PolygonMessageReceivedWrapper) messageWrapper() goprotoextra.IMessageWrapper {
 	return self
 }
 
 func NewPolygonMessageReceivedWrapper(
 	cancelCtx context.Context,
 	cancelFunc context.CancelFunc,
-	toReactor stream.ToReactorFunc,
-	toConnection stream.ToConnectionFunc,
+	toReactor goprotoextra.ToReactorFunc,
+	toConnection goprotoextra.ToConnectionFunc,
 	data *PolygonMessageReceived) *PolygonMessageReceivedWrapper {
 	return &PolygonMessageReceivedWrapper{
-		BaseMessageWrapper: stream.NewBaseMessageWrapper(
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
 			cancelCtx,
 			cancelFunc,
 			toReactor,
@@ -752,18 +752,18 @@ func NewPolygonMessageReceivedWrapper(
 	}
 }
 
-var _ = stream.Register(
+var _ = goprotoextra.Register(
 	PolygonMessageReceivedTypeCode,
-	stream.TypeCodeData{
+	goprotoextra.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &PolygonMessageReceived{}
 		},
 		CreateWrapper: func(
 			cancelCtx context.Context,
 			cancelFunc context.CancelFunc,
-			toReactor stream.ToReactorFunc,
-			toConnection stream.ToConnectionFunc,
-			data proto1.Message) (stream.IMessageWrapper, error) {
+			toReactor goprotoextra.ToReactorFunc,
+			toConnection goprotoextra.ToConnectionFunc,
+			data proto1.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*PolygonMessageReceived); ok {
 				return NewPolygonMessageReceivedWrapper(
 					cancelCtx,
@@ -780,7 +780,7 @@ var _ = stream.Register(
 //false
 //false
 type PolygonMessageSendWrapper struct {
-	stream.BaseMessageWrapper
+	goprotoextra.BaseMessageWrapper
 	Data *PolygonMessageSend
 }
 
@@ -788,18 +788,18 @@ func (self *PolygonMessageSendWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *PolygonMessageSendWrapper) messageWrapper() stream.IMessageWrapper {
+func (self *PolygonMessageSendWrapper) messageWrapper() goprotoextra.IMessageWrapper {
 	return self
 }
 
 func NewPolygonMessageSendWrapper(
 	cancelCtx context.Context,
 	cancelFunc context.CancelFunc,
-	toReactor stream.ToReactorFunc,
-	toConnection stream.ToConnectionFunc,
+	toReactor goprotoextra.ToReactorFunc,
+	toConnection goprotoextra.ToConnectionFunc,
 	data *PolygonMessageSend) *PolygonMessageSendWrapper {
 	return &PolygonMessageSendWrapper{
-		BaseMessageWrapper: stream.NewBaseMessageWrapper(
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
 			cancelCtx,
 			cancelFunc,
 			toReactor,
@@ -808,18 +808,18 @@ func NewPolygonMessageSendWrapper(
 	}
 }
 
-var _ = stream.Register(
+var _ = goprotoextra.Register(
 	PolygonMessageSendTypeCode,
-	stream.TypeCodeData{
+	goprotoextra.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &PolygonMessageSend{}
 		},
 		CreateWrapper: func(
 			cancelCtx context.Context,
 			cancelFunc context.CancelFunc,
-			toReactor stream.ToReactorFunc,
-			toConnection stream.ToConnectionFunc,
-			data proto1.Message) (stream.IMessageWrapper, error) {
+			toReactor goprotoextra.ToReactorFunc,
+			toConnection goprotoextra.ToConnectionFunc,
+			data proto1.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*PolygonMessageSend); ok {
 				return NewPolygonMessageSendWrapper(
 					cancelCtx,
@@ -836,7 +836,7 @@ var _ = stream.Register(
 //false
 //false
 type PolygonForexQuoteWrapper struct {
-	stream.BaseMessageWrapper
+	goprotoextra.BaseMessageWrapper
 	Data *PolygonForexQuote
 }
 
@@ -844,18 +844,18 @@ func (self *PolygonForexQuoteWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *PolygonForexQuoteWrapper) messageWrapper() stream.IMessageWrapper {
+func (self *PolygonForexQuoteWrapper) messageWrapper() goprotoextra.IMessageWrapper {
 	return self
 }
 
 func NewPolygonForexQuoteWrapper(
 	cancelCtx context.Context,
 	cancelFunc context.CancelFunc,
-	toReactor stream.ToReactorFunc,
-	toConnection stream.ToConnectionFunc,
+	toReactor goprotoextra.ToReactorFunc,
+	toConnection goprotoextra.ToConnectionFunc,
 	data *PolygonForexQuote) *PolygonForexQuoteWrapper {
 	return &PolygonForexQuoteWrapper{
-		BaseMessageWrapper: stream.NewBaseMessageWrapper(
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
 			cancelCtx,
 			cancelFunc,
 			toReactor,
@@ -864,18 +864,18 @@ func NewPolygonForexQuoteWrapper(
 	}
 }
 
-var _ = stream.Register(
+var _ = goprotoextra.Register(
 	PolygonForexQuoteTypeCode,
-	stream.TypeCodeData{
+	goprotoextra.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &PolygonForexQuote{}
 		},
 		CreateWrapper: func(
 			cancelCtx context.Context,
 			cancelFunc context.CancelFunc,
-			toReactor stream.ToReactorFunc,
-			toConnection stream.ToConnectionFunc,
-			data proto1.Message) (stream.IMessageWrapper, error) {
+			toReactor goprotoextra.ToReactorFunc,
+			toConnection goprotoextra.ToConnectionFunc,
+			data proto1.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*PolygonForexQuote); ok {
 				return NewPolygonForexQuoteWrapper(
 					cancelCtx,
@@ -892,7 +892,7 @@ var _ = stream.Register(
 //false
 //false
 type PolygonForexAggregateWrapper struct {
-	stream.BaseMessageWrapper
+	goprotoextra.BaseMessageWrapper
 	Data *PolygonForexAggregate
 }
 
@@ -900,18 +900,18 @@ func (self *PolygonForexAggregateWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *PolygonForexAggregateWrapper) messageWrapper() stream.IMessageWrapper {
+func (self *PolygonForexAggregateWrapper) messageWrapper() goprotoextra.IMessageWrapper {
 	return self
 }
 
 func NewPolygonForexAggregateWrapper(
 	cancelCtx context.Context,
 	cancelFunc context.CancelFunc,
-	toReactor stream.ToReactorFunc,
-	toConnection stream.ToConnectionFunc,
+	toReactor goprotoextra.ToReactorFunc,
+	toConnection goprotoextra.ToConnectionFunc,
 	data *PolygonForexAggregate) *PolygonForexAggregateWrapper {
 	return &PolygonForexAggregateWrapper{
-		BaseMessageWrapper: stream.NewBaseMessageWrapper(
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
 			cancelCtx,
 			cancelFunc,
 			toReactor,
@@ -920,18 +920,18 @@ func NewPolygonForexAggregateWrapper(
 	}
 }
 
-var _ = stream.Register(
+var _ = goprotoextra.Register(
 	PolygonForexAggregateTypeCode,
-	stream.TypeCodeData{
+	goprotoextra.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &PolygonForexAggregate{}
 		},
 		CreateWrapper: func(
 			cancelCtx context.Context,
 			cancelFunc context.CancelFunc,
-			toReactor stream.ToReactorFunc,
-			toConnection stream.ToConnectionFunc,
-			data proto1.Message) (stream.IMessageWrapper, error) {
+			toReactor goprotoextra.ToReactorFunc,
+			toConnection goprotoextra.ToConnectionFunc,
+			data proto1.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*PolygonForexAggregate); ok {
 				return NewPolygonForexAggregateWrapper(
 					cancelCtx,
@@ -948,7 +948,7 @@ var _ = stream.Register(
 //false
 //false
 type PolygonForexCombinedWrapper struct {
-	stream.BaseMessageWrapper
+	goprotoextra.BaseMessageWrapper
 	Data *PolygonForexCombined
 }
 
@@ -956,18 +956,18 @@ func (self *PolygonForexCombinedWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *PolygonForexCombinedWrapper) messageWrapper() stream.IMessageWrapper {
+func (self *PolygonForexCombinedWrapper) messageWrapper() goprotoextra.IMessageWrapper {
 	return self
 }
 
 func NewPolygonForexCombinedWrapper(
 	cancelCtx context.Context,
 	cancelFunc context.CancelFunc,
-	toReactor stream.ToReactorFunc,
-	toConnection stream.ToConnectionFunc,
+	toReactor goprotoextra.ToReactorFunc,
+	toConnection goprotoextra.ToConnectionFunc,
 	data *PolygonForexCombined) *PolygonForexCombinedWrapper {
 	return &PolygonForexCombinedWrapper{
-		BaseMessageWrapper: stream.NewBaseMessageWrapper(
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
 			cancelCtx,
 			cancelFunc,
 			toReactor,
@@ -976,18 +976,18 @@ func NewPolygonForexCombinedWrapper(
 	}
 }
 
-var _ = stream.Register(
+var _ = goprotoextra.Register(
 	PolygonForexCombinedTypeCode,
-	stream.TypeCodeData{
+	goprotoextra.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &PolygonForexCombined{}
 		},
 		CreateWrapper: func(
 			cancelCtx context.Context,
 			cancelFunc context.CancelFunc,
-			toReactor stream.ToReactorFunc,
-			toConnection stream.ToConnectionFunc,
-			data proto1.Message) (stream.IMessageWrapper, error) {
+			toReactor goprotoextra.ToReactorFunc,
+			toConnection goprotoextra.ToConnectionFunc,
+			data proto1.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*PolygonForexCombined); ok {
 				return NewPolygonForexCombinedWrapper(
 					cancelCtx,

@@ -9,7 +9,7 @@ package stream
 import (
 	context "context"
 	constants "github.com/bhbosman/gocommon/constants"
-	stream "github.com/bhbosman/gocommon/stream"
+	goprotoextra "github.com/bhbosman/goprotoextra"
 	proto "github.com/golang/protobuf/proto"
 	empty "github.com/golang/protobuf/ptypes/empty"
 	proto1 "google.golang.org/protobuf/proto"
@@ -310,7 +310,7 @@ const PublishTop5TypeCode uint32 = 2016047094
 //false
 //false
 type PointWrapper struct {
-	stream.BaseMessageWrapper
+	goprotoextra.BaseMessageWrapper
 	Data *Point
 }
 
@@ -318,18 +318,18 @@ func (self *PointWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *PointWrapper) messageWrapper() stream.IMessageWrapper {
+func (self *PointWrapper) messageWrapper() goprotoextra.IMessageWrapper {
 	return self
 }
 
 func NewPointWrapper(
 	cancelCtx context.Context,
 	cancelFunc context.CancelFunc,
-	toReactor stream.ToReactorFunc,
-	toConnection stream.ToConnectionFunc,
+	toReactor goprotoextra.ToReactorFunc,
+	toConnection goprotoextra.ToConnectionFunc,
 	data *Point) *PointWrapper {
 	return &PointWrapper{
-		BaseMessageWrapper: stream.NewBaseMessageWrapper(
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
 			cancelCtx,
 			cancelFunc,
 			toReactor,
@@ -338,18 +338,18 @@ func NewPointWrapper(
 	}
 }
 
-var _ = stream.Register(
+var _ = goprotoextra.Register(
 	PointTypeCode,
-	stream.TypeCodeData{
+	goprotoextra.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &Point{}
 		},
 		CreateWrapper: func(
 			cancelCtx context.Context,
 			cancelFunc context.CancelFunc,
-			toReactor stream.ToReactorFunc,
-			toConnection stream.ToConnectionFunc,
-			data proto1.Message) (stream.IMessageWrapper, error) {
+			toReactor goprotoextra.ToReactorFunc,
+			toConnection goprotoextra.ToConnectionFunc,
+			data proto1.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*Point); ok {
 				return NewPointWrapper(
 					cancelCtx,
@@ -366,7 +366,7 @@ var _ = stream.Register(
 //false
 //false
 type PublishTop5Wrapper struct {
-	stream.BaseMessageWrapper
+	goprotoextra.BaseMessageWrapper
 	Data *PublishTop5
 }
 
@@ -374,18 +374,18 @@ func (self *PublishTop5Wrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *PublishTop5Wrapper) messageWrapper() stream.IMessageWrapper {
+func (self *PublishTop5Wrapper) messageWrapper() goprotoextra.IMessageWrapper {
 	return self
 }
 
 func NewPublishTop5Wrapper(
 	cancelCtx context.Context,
 	cancelFunc context.CancelFunc,
-	toReactor stream.ToReactorFunc,
-	toConnection stream.ToConnectionFunc,
+	toReactor goprotoextra.ToReactorFunc,
+	toConnection goprotoextra.ToConnectionFunc,
 	data *PublishTop5) *PublishTop5Wrapper {
 	return &PublishTop5Wrapper{
-		BaseMessageWrapper: stream.NewBaseMessageWrapper(
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
 			cancelCtx,
 			cancelFunc,
 			toReactor,
@@ -394,18 +394,18 @@ func NewPublishTop5Wrapper(
 	}
 }
 
-var _ = stream.Register(
+var _ = goprotoextra.Register(
 	PublishTop5TypeCode,
-	stream.TypeCodeData{
+	goprotoextra.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &PublishTop5{}
 		},
 		CreateWrapper: func(
 			cancelCtx context.Context,
 			cancelFunc context.CancelFunc,
-			toReactor stream.ToReactorFunc,
-			toConnection stream.ToConnectionFunc,
-			data proto1.Message) (stream.IMessageWrapper, error) {
+			toReactor goprotoextra.ToReactorFunc,
+			toConnection goprotoextra.ToConnectionFunc,
+			data proto1.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*PublishTop5); ok {
 				return NewPublishTop5Wrapper(
 					cancelCtx,

@@ -9,7 +9,7 @@ package stream
 import (
 	context "context"
 	constants "github.com/bhbosman/gocommon/constants"
-	stream "github.com/bhbosman/gocommon/stream"
+	goprotoextra "github.com/bhbosman/goprotoextra"
 	proto "github.com/golang/protobuf/proto"
 	_ "github.com/golang/protobuf/protoc-gen-go/descriptor"
 	proto1 "google.golang.org/protobuf/proto"
@@ -705,7 +705,7 @@ const LunoStreamDataTypeCode uint32 = 2554079916
 //false
 //false
 type CredentialsWrapper struct {
-	stream.BaseMessageWrapper
+	goprotoextra.BaseMessageWrapper
 	Data *Credentials
 }
 
@@ -713,18 +713,18 @@ func (self *CredentialsWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *CredentialsWrapper) messageWrapper() stream.IMessageWrapper {
+func (self *CredentialsWrapper) messageWrapper() goprotoextra.IMessageWrapper {
 	return self
 }
 
 func NewCredentialsWrapper(
 	cancelCtx context.Context,
 	cancelFunc context.CancelFunc,
-	toReactor stream.ToReactorFunc,
-	toConnection stream.ToConnectionFunc,
+	toReactor goprotoextra.ToReactorFunc,
+	toConnection goprotoextra.ToConnectionFunc,
 	data *Credentials) *CredentialsWrapper {
 	return &CredentialsWrapper{
-		BaseMessageWrapper: stream.NewBaseMessageWrapper(
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
 			cancelCtx,
 			cancelFunc,
 			toReactor,
@@ -733,18 +733,18 @@ func NewCredentialsWrapper(
 	}
 }
 
-var _ = stream.Register(
+var _ = goprotoextra.Register(
 	CredentialsTypeCode,
-	stream.TypeCodeData{
+	goprotoextra.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &Credentials{}
 		},
 		CreateWrapper: func(
 			cancelCtx context.Context,
 			cancelFunc context.CancelFunc,
-			toReactor stream.ToReactorFunc,
-			toConnection stream.ToConnectionFunc,
-			data proto1.Message) (stream.IMessageWrapper, error) {
+			toReactor goprotoextra.ToReactorFunc,
+			toConnection goprotoextra.ToConnectionFunc,
+			data proto1.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*Credentials); ok {
 				return NewCredentialsWrapper(
 					cancelCtx,
@@ -761,7 +761,7 @@ var _ = stream.Register(
 //false
 //false
 type OrderWrapper struct {
-	stream.BaseMessageWrapper
+	goprotoextra.BaseMessageWrapper
 	Data *Order
 }
 
@@ -769,18 +769,18 @@ func (self *OrderWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *OrderWrapper) messageWrapper() stream.IMessageWrapper {
+func (self *OrderWrapper) messageWrapper() goprotoextra.IMessageWrapper {
 	return self
 }
 
 func NewOrderWrapper(
 	cancelCtx context.Context,
 	cancelFunc context.CancelFunc,
-	toReactor stream.ToReactorFunc,
-	toConnection stream.ToConnectionFunc,
+	toReactor goprotoextra.ToReactorFunc,
+	toConnection goprotoextra.ToConnectionFunc,
 	data *Order) *OrderWrapper {
 	return &OrderWrapper{
-		BaseMessageWrapper: stream.NewBaseMessageWrapper(
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
 			cancelCtx,
 			cancelFunc,
 			toReactor,
@@ -789,18 +789,18 @@ func NewOrderWrapper(
 	}
 }
 
-var _ = stream.Register(
+var _ = goprotoextra.Register(
 	OrderTypeCode,
-	stream.TypeCodeData{
+	goprotoextra.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &Order{}
 		},
 		CreateWrapper: func(
 			cancelCtx context.Context,
 			cancelFunc context.CancelFunc,
-			toReactor stream.ToReactorFunc,
-			toConnection stream.ToConnectionFunc,
-			data proto1.Message) (stream.IMessageWrapper, error) {
+			toReactor goprotoextra.ToReactorFunc,
+			toConnection goprotoextra.ToConnectionFunc,
+			data proto1.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*Order); ok {
 				return NewOrderWrapper(
 					cancelCtx,
@@ -817,7 +817,7 @@ var _ = stream.Register(
 //false
 //false
 type TradeUpdateWrapper struct {
-	stream.BaseMessageWrapper
+	goprotoextra.BaseMessageWrapper
 	Data *TradeUpdate
 }
 
@@ -825,18 +825,18 @@ func (self *TradeUpdateWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *TradeUpdateWrapper) messageWrapper() stream.IMessageWrapper {
+func (self *TradeUpdateWrapper) messageWrapper() goprotoextra.IMessageWrapper {
 	return self
 }
 
 func NewTradeUpdateWrapper(
 	cancelCtx context.Context,
 	cancelFunc context.CancelFunc,
-	toReactor stream.ToReactorFunc,
-	toConnection stream.ToConnectionFunc,
+	toReactor goprotoextra.ToReactorFunc,
+	toConnection goprotoextra.ToConnectionFunc,
 	data *TradeUpdate) *TradeUpdateWrapper {
 	return &TradeUpdateWrapper{
-		BaseMessageWrapper: stream.NewBaseMessageWrapper(
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
 			cancelCtx,
 			cancelFunc,
 			toReactor,
@@ -845,18 +845,18 @@ func NewTradeUpdateWrapper(
 	}
 }
 
-var _ = stream.Register(
+var _ = goprotoextra.Register(
 	TradeUpdateTypeCode,
-	stream.TypeCodeData{
+	goprotoextra.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &TradeUpdate{}
 		},
 		CreateWrapper: func(
 			cancelCtx context.Context,
 			cancelFunc context.CancelFunc,
-			toReactor stream.ToReactorFunc,
-			toConnection stream.ToConnectionFunc,
-			data proto1.Message) (stream.IMessageWrapper, error) {
+			toReactor goprotoextra.ToReactorFunc,
+			toConnection goprotoextra.ToConnectionFunc,
+			data proto1.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*TradeUpdate); ok {
 				return NewTradeUpdateWrapper(
 					cancelCtx,
@@ -873,7 +873,7 @@ var _ = stream.Register(
 //false
 //false
 type DeleteUpdateWrapper struct {
-	stream.BaseMessageWrapper
+	goprotoextra.BaseMessageWrapper
 	Data *DeleteUpdate
 }
 
@@ -881,18 +881,18 @@ func (self *DeleteUpdateWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *DeleteUpdateWrapper) messageWrapper() stream.IMessageWrapper {
+func (self *DeleteUpdateWrapper) messageWrapper() goprotoextra.IMessageWrapper {
 	return self
 }
 
 func NewDeleteUpdateWrapper(
 	cancelCtx context.Context,
 	cancelFunc context.CancelFunc,
-	toReactor stream.ToReactorFunc,
-	toConnection stream.ToConnectionFunc,
+	toReactor goprotoextra.ToReactorFunc,
+	toConnection goprotoextra.ToConnectionFunc,
 	data *DeleteUpdate) *DeleteUpdateWrapper {
 	return &DeleteUpdateWrapper{
-		BaseMessageWrapper: stream.NewBaseMessageWrapper(
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
 			cancelCtx,
 			cancelFunc,
 			toReactor,
@@ -901,18 +901,18 @@ func NewDeleteUpdateWrapper(
 	}
 }
 
-var _ = stream.Register(
+var _ = goprotoextra.Register(
 	DeleteUpdateTypeCode,
-	stream.TypeCodeData{
+	goprotoextra.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &DeleteUpdate{}
 		},
 		CreateWrapper: func(
 			cancelCtx context.Context,
 			cancelFunc context.CancelFunc,
-			toReactor stream.ToReactorFunc,
-			toConnection stream.ToConnectionFunc,
-			data proto1.Message) (stream.IMessageWrapper, error) {
+			toReactor goprotoextra.ToReactorFunc,
+			toConnection goprotoextra.ToConnectionFunc,
+			data proto1.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*DeleteUpdate); ok {
 				return NewDeleteUpdateWrapper(
 					cancelCtx,
@@ -929,7 +929,7 @@ var _ = stream.Register(
 //false
 //false
 type CreateUpdateWrapper struct {
-	stream.BaseMessageWrapper
+	goprotoextra.BaseMessageWrapper
 	Data *CreateUpdate
 }
 
@@ -937,18 +937,18 @@ func (self *CreateUpdateWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *CreateUpdateWrapper) messageWrapper() stream.IMessageWrapper {
+func (self *CreateUpdateWrapper) messageWrapper() goprotoextra.IMessageWrapper {
 	return self
 }
 
 func NewCreateUpdateWrapper(
 	cancelCtx context.Context,
 	cancelFunc context.CancelFunc,
-	toReactor stream.ToReactorFunc,
-	toConnection stream.ToConnectionFunc,
+	toReactor goprotoextra.ToReactorFunc,
+	toConnection goprotoextra.ToConnectionFunc,
 	data *CreateUpdate) *CreateUpdateWrapper {
 	return &CreateUpdateWrapper{
-		BaseMessageWrapper: stream.NewBaseMessageWrapper(
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
 			cancelCtx,
 			cancelFunc,
 			toReactor,
@@ -957,18 +957,18 @@ func NewCreateUpdateWrapper(
 	}
 }
 
-var _ = stream.Register(
+var _ = goprotoextra.Register(
 	CreateUpdateTypeCode,
-	stream.TypeCodeData{
+	goprotoextra.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &CreateUpdate{}
 		},
 		CreateWrapper: func(
 			cancelCtx context.Context,
 			cancelFunc context.CancelFunc,
-			toReactor stream.ToReactorFunc,
-			toConnection stream.ToConnectionFunc,
-			data proto1.Message) (stream.IMessageWrapper, error) {
+			toReactor goprotoextra.ToReactorFunc,
+			toConnection goprotoextra.ToConnectionFunc,
+			data proto1.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*CreateUpdate); ok {
 				return NewCreateUpdateWrapper(
 					cancelCtx,
@@ -985,7 +985,7 @@ var _ = stream.Register(
 //false
 //false
 type LunoStreamDataWrapper struct {
-	stream.BaseMessageWrapper
+	goprotoextra.BaseMessageWrapper
 	Data *LunoStreamData
 }
 
@@ -993,18 +993,18 @@ func (self *LunoStreamDataWrapper) Message() proto1.Message {
 	return self.Data
 }
 
-func (self *LunoStreamDataWrapper) messageWrapper() stream.IMessageWrapper {
+func (self *LunoStreamDataWrapper) messageWrapper() goprotoextra.IMessageWrapper {
 	return self
 }
 
 func NewLunoStreamDataWrapper(
 	cancelCtx context.Context,
 	cancelFunc context.CancelFunc,
-	toReactor stream.ToReactorFunc,
-	toConnection stream.ToConnectionFunc,
+	toReactor goprotoextra.ToReactorFunc,
+	toConnection goprotoextra.ToConnectionFunc,
 	data *LunoStreamData) *LunoStreamDataWrapper {
 	return &LunoStreamDataWrapper{
-		BaseMessageWrapper: stream.NewBaseMessageWrapper(
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
 			cancelCtx,
 			cancelFunc,
 			toReactor,
@@ -1013,18 +1013,18 @@ func NewLunoStreamDataWrapper(
 	}
 }
 
-var _ = stream.Register(
+var _ = goprotoextra.Register(
 	LunoStreamDataTypeCode,
-	stream.TypeCodeData{
+	goprotoextra.TypeCodeData{
 		CreateMessage: func() proto1.Message {
 			return &LunoStreamData{}
 		},
 		CreateWrapper: func(
 			cancelCtx context.Context,
 			cancelFunc context.CancelFunc,
-			toReactor stream.ToReactorFunc,
-			toConnection stream.ToConnectionFunc,
-			data proto1.Message) (stream.IMessageWrapper, error) {
+			toReactor goprotoextra.ToReactorFunc,
+			toConnection goprotoextra.ToConnectionFunc,
+			data proto1.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*LunoStreamData); ok {
 				return NewLunoStreamDataWrapper(
 					cancelCtx,
