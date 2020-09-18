@@ -9,7 +9,7 @@ package stream
 import (
 	context "context"
 	stream "github.com/bhbosman/gocommon/stream"
-	"github.com/bhbosman/goerrors"
+	goerrors "github.com/bhbosman/goerrors"
 	goprotoextra "github.com/bhbosman/goprotoextra"
 	proto "github.com/golang/protobuf/proto"
 	empty "github.com/golang/protobuf/ptypes/empty"
