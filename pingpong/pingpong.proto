@@ -1,0 +1,15 @@
+syntax = "proto3";
+option go_package = "/stream";
+
+import "google/protobuf/timestamp.proto";
+
+message Ping {
+  int64 RequestId = 1;
+  google.protobuf.Timestamp RequestTimeStamp = 2;
+}
+
+message Pong {
+  int64 RequestId = 1;
+  google.protobuf.Timestamp RequestTimeStamp = 2;
+  google.protobuf.Timestamp ResponseTimeStamp = 3;
+}
