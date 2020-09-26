@@ -1,0 +1,32 @@
+syntax = "proto3";
+import "google/protobuf/descriptor.proto";
+package golang.example.policy;
+option go_package = "/stream";
+
+
+message Subscribe
+{
+  uint32 reqid = 1;
+  string pair = 2;
+  string name = 3;
+};
+
+
+
+message Price
+{
+    double Open = 1;
+    double Close = 2;
+    double Volume = 3;
+    double High = 4;
+    double Low = 5;
+    double Bid = 6;
+    double Ask = 7;
+    string Pair = 8;
+}
+
+
+
+
+
+

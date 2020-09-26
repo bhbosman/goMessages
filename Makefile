@@ -1,4 +1,4 @@
-.PHONY: polygon marketData luno pingpong
+.PHONY: polygon marketData luno pingpong kraken
 all: polygon luno marketData
 
 polygon:
@@ -15,3 +15,5 @@ marketData:
 pingpong:
 	protoc ./pingpong/pingpong.proto --go_out=./pingpong
 
+kraken:
+	protoc ./kraken/kraken.proto --go_out=./kraken
