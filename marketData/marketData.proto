@@ -18,6 +18,7 @@ message PublishTop5{
   int64 UpdateCount = 5;
   repeated Point Bid = 6;
   repeated Point Ask = 7;
+  string Source = 8;
 };
 
 
