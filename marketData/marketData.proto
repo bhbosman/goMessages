@@ -19,6 +19,7 @@ message PublishTop5{
   repeated Point Bid = 6;
   repeated Point Ask = 7;
   string Source = 8;
+  string UniqueName = 9;
 };
 
 
