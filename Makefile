@@ -1,5 +1,5 @@
-.PHONY: polygon marketData luno pingpong kraken
-all: polygon luno marketData
+.PHONY: polygon marketData luno pingpong kraken valr
+all: polygon luno marketData pingpong
 
 polygon:
 	protoc ./polygon/rest.proto --go_out=./polygon
@@ -17,3 +17,7 @@ pingpong:
 
 kraken:
 	protoc ./kraken/kraken.proto --go_out=./kraken
+
+valr:
+	protoc ./valr/valr.proto --go_out=./valr
+
