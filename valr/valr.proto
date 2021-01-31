@@ -4,7 +4,14 @@ syntax = "proto3";
 //import "google/protobuf/empty.proto";
 option go_package = "/stream";
 
-message Point{
-  double Price = 1;
-  double volume = 2;
+message Subscriptions
+{
+  string event = 1;
+  repeated string pairs = 2;
+
+};
+message Subscribe
+{
+  string type = 1;
+
 };
