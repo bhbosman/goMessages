@@ -10,6 +10,7 @@ luno:
 
 marketData:
 	protoc ./marketData/marketData.proto --go_out=./marketData
+	protoc ./marketData/marketData.proto --csharp_out=./marketData
 
 
 pingpong:
