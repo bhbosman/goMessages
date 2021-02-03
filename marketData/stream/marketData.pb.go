@@ -322,8 +322,11 @@ func file_marketData_marketData_proto_init() {
 	file_marketData_marketData_proto_depIdxs = nil
 }
 
-const PointTypeCode uint32 = 2882114659
-const PublishTop5TypeCode uint32 = 2016047094
+// Typecode generated from: "Point"
+const PointTypeCode uint32 = 1986321440
+
+// Typecode generated from: "PublishTop5"
+const PublishTop5TypeCode uint32 = 2990202154
 
 //true
 //true

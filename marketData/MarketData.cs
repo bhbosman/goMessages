@@ -248,6 +248,9 @@ public sealed partial class Point : pb::IMessage<Point>
   }
   #endif
 
+  public const UInt32 TypeCodeValue = 2457524295; // global::Point 
+  public const UInt32 TypeCodeValue = 1986321440; // Point 
+  public const UInt32 TypeCode => TypeCodeValue;
 }
 
 public sealed partial class PublishTop5 : pb::IMessage<PublishTop5>
@@ -686,6 +689,9 @@ public sealed partial class PublishTop5 : pb::IMessage<PublishTop5>
   }
   #endif
 
+  public const UInt32 TypeCodeValue = 1281760472; // global::PublishTop5 
+  public const UInt32 TypeCodeValue = 2990202154; // PublishTop5 
+  public const UInt32 TypeCode => TypeCodeValue;
 }
 
 #endregion
