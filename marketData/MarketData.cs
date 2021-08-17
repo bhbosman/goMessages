@@ -42,7 +42,7 @@ public static partial class MarketDataReflection {
 
 }
 #region Messages
-public sealed partial class Point : pb::IMessage<Point>
+public sealed partial class Point : pb::IMessage<Point>, pb::ITypeCodeMessage<Point>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     , pb::IBufferMessage
 #endif
@@ -248,12 +248,11 @@ public sealed partial class Point : pb::IMessage<Point>
   }
   #endif
 
-  public const UInt32 TypeCodeValue = 2457524295; // global::Point 
-  public const UInt32 TypeCodeValue = 1986321440; // Point 
-  public const UInt32 TypeCode => TypeCodeValue;
+  public const System.UInt32 TypeCodeValue = 1986321440; // TypeCode generated from: "Point"
+  public System.UInt32 TypeCode => TypeCodeValue;
 }
 
-public sealed partial class PublishTop5 : pb::IMessage<PublishTop5>
+public sealed partial class PublishTop5 : pb::IMessage<PublishTop5>, pb::ITypeCodeMessage<PublishTop5>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     , pb::IBufferMessage
 #endif
@@ -689,9 +688,8 @@ public sealed partial class PublishTop5 : pb::IMessage<PublishTop5>
   }
   #endif
 
-  public const UInt32 TypeCodeValue = 1281760472; // global::PublishTop5 
-  public const UInt32 TypeCodeValue = 2990202154; // PublishTop5 
-  public const UInt32 TypeCode => TypeCodeValue;
+  public const System.UInt32 TypeCodeValue = 2990202154; // TypeCode generated from: "PublishTop5"
+  public System.UInt32 TypeCode => TypeCodeValue;
 }
 
 #endregion

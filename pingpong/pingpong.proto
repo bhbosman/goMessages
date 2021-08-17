@@ -13,3 +13,7 @@ message Pong {
   google.protobuf.Timestamp RequestTimeStamp = 2;
   google.protobuf.Timestamp ResponseTimeStamp = 3;
 }
+
+message TestMessageForPingPong{
+  string AString = 1;
+}
