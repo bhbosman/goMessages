@@ -8,3 +8,9 @@ require (
 	github.com/bhbosman/goprotoextra v0.0.2-0.20210817141206-117becbef7c7
 	google.golang.org/protobuf v1.25.0
 )
+
+//replace github.com/bhbosman/gocomms => ../gocomms
+
+replace github.com/golang/mock => ../gomock
+
+replace github.com/bhbosman/gocommon => ../gocommon
