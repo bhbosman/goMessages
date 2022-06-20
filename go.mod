@@ -9,6 +9,8 @@ require (
 	google.golang.org/protobuf v1.25.0
 )
 
+require github.com/bhbosman/gologging v0.0.0-20200921180328-d29fc55c00bc // indirect
+
 require (
 	//github.com/bhbosman/gologging v0.0.0-20200921180328-d29fc55c00bc // indirect
 	github.com/bhbosman/gomessageblock v0.0.0-20210901070622-be36a3f8d303 // indirect
