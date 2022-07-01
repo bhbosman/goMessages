@@ -9,10 +9,10 @@
 package stream
 
 import (
-	context "context"
 	stream "github.com/bhbosman/gocommon/stream"
 	goerrors "github.com/bhbosman/goerrors"
 	goprotoextra "github.com/bhbosman/goprotoextra"
+	v2 "github.com/reactivex/rxgo/v2"
 	proto "google.golang.org/protobuf/proto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
@@ -741,15 +741,11 @@ func (self *PolygonMessageReceivedWrapper) messageWrapper() interface{} {
 }
 
 func NewPolygonMessageReceivedWrapper(
-	cancelCtx context.Context,
-	cancelFunc context.CancelFunc,
-	toReactor goprotoextra.ToReactorFunc,
-	toConnection goprotoextra.ToConnectionFunc,
+	toReactor v2.NextFunc,
+	toConnection v2.NextFunc,
 	data *PolygonMessageReceived) *PolygonMessageReceivedWrapper {
 	return &PolygonMessageReceivedWrapper{
 		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			cancelCtx,
-			cancelFunc,
 			toReactor,
 			toConnection),
 		Data: data,
@@ -763,15 +759,11 @@ var _ = stream.Register(
 			return &PolygonMessageReceived{}
 		},
 		CreateWrapper: func(
-			cancelCtx context.Context,
-			cancelFunc context.CancelFunc,
-			toReactor goprotoextra.ToReactorFunc,
-			toConnection goprotoextra.ToConnectionFunc,
+			toReactor v2.NextFunc,
+			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*PolygonMessageReceived); ok {
 				return NewPolygonMessageReceivedWrapper(
-					cancelCtx,
-					cancelFunc,
 					toReactor,
 					toConnection,
 					msg), nil
@@ -797,15 +789,11 @@ func (self *PolygonMessageSendWrapper) messageWrapper() interface{} {
 }
 
 func NewPolygonMessageSendWrapper(
-	cancelCtx context.Context,
-	cancelFunc context.CancelFunc,
-	toReactor goprotoextra.ToReactorFunc,
-	toConnection goprotoextra.ToConnectionFunc,
+	toReactor v2.NextFunc,
+	toConnection v2.NextFunc,
 	data *PolygonMessageSend) *PolygonMessageSendWrapper {
 	return &PolygonMessageSendWrapper{
 		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			cancelCtx,
-			cancelFunc,
 			toReactor,
 			toConnection),
 		Data: data,
@@ -819,15 +807,11 @@ var _ = stream.Register(
 			return &PolygonMessageSend{}
 		},
 		CreateWrapper: func(
-			cancelCtx context.Context,
-			cancelFunc context.CancelFunc,
-			toReactor goprotoextra.ToReactorFunc,
-			toConnection goprotoextra.ToConnectionFunc,
+			toReactor v2.NextFunc,
+			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*PolygonMessageSend); ok {
 				return NewPolygonMessageSendWrapper(
-					cancelCtx,
-					cancelFunc,
 					toReactor,
 					toConnection,
 					msg), nil
@@ -853,15 +837,11 @@ func (self *PolygonForexQuoteWrapper) messageWrapper() interface{} {
 }
 
 func NewPolygonForexQuoteWrapper(
-	cancelCtx context.Context,
-	cancelFunc context.CancelFunc,
-	toReactor goprotoextra.ToReactorFunc,
-	toConnection goprotoextra.ToConnectionFunc,
+	toReactor v2.NextFunc,
+	toConnection v2.NextFunc,
 	data *PolygonForexQuote) *PolygonForexQuoteWrapper {
 	return &PolygonForexQuoteWrapper{
 		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			cancelCtx,
-			cancelFunc,
 			toReactor,
 			toConnection),
 		Data: data,
@@ -875,15 +855,11 @@ var _ = stream.Register(
 			return &PolygonForexQuote{}
 		},
 		CreateWrapper: func(
-			cancelCtx context.Context,
-			cancelFunc context.CancelFunc,
-			toReactor goprotoextra.ToReactorFunc,
-			toConnection goprotoextra.ToConnectionFunc,
+			toReactor v2.NextFunc,
+			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*PolygonForexQuote); ok {
 				return NewPolygonForexQuoteWrapper(
-					cancelCtx,
-					cancelFunc,
 					toReactor,
 					toConnection,
 					msg), nil
@@ -909,15 +885,11 @@ func (self *PolygonForexAggregateWrapper) messageWrapper() interface{} {
 }
 
 func NewPolygonForexAggregateWrapper(
-	cancelCtx context.Context,
-	cancelFunc context.CancelFunc,
-	toReactor goprotoextra.ToReactorFunc,
-	toConnection goprotoextra.ToConnectionFunc,
+	toReactor v2.NextFunc,
+	toConnection v2.NextFunc,
 	data *PolygonForexAggregate) *PolygonForexAggregateWrapper {
 	return &PolygonForexAggregateWrapper{
 		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			cancelCtx,
-			cancelFunc,
 			toReactor,
 			toConnection),
 		Data: data,
@@ -931,15 +903,11 @@ var _ = stream.Register(
 			return &PolygonForexAggregate{}
 		},
 		CreateWrapper: func(
-			cancelCtx context.Context,
-			cancelFunc context.CancelFunc,
-			toReactor goprotoextra.ToReactorFunc,
-			toConnection goprotoextra.ToConnectionFunc,
+			toReactor v2.NextFunc,
+			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*PolygonForexAggregate); ok {
 				return NewPolygonForexAggregateWrapper(
-					cancelCtx,
-					cancelFunc,
 					toReactor,
 					toConnection,
 					msg), nil
@@ -965,15 +933,11 @@ func (self *PolygonForexCombinedWrapper) messageWrapper() interface{} {
 }
 
 func NewPolygonForexCombinedWrapper(
-	cancelCtx context.Context,
-	cancelFunc context.CancelFunc,
-	toReactor goprotoextra.ToReactorFunc,
-	toConnection goprotoextra.ToConnectionFunc,
+	toReactor v2.NextFunc,
+	toConnection v2.NextFunc,
 	data *PolygonForexCombined) *PolygonForexCombinedWrapper {
 	return &PolygonForexCombinedWrapper{
 		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			cancelCtx,
-			cancelFunc,
 			toReactor,
 			toConnection),
 		Data: data,
@@ -987,15 +951,11 @@ var _ = stream.Register(
 			return &PolygonForexCombined{}
 		},
 		CreateWrapper: func(
-			cancelCtx context.Context,
-			cancelFunc context.CancelFunc,
-			toReactor goprotoextra.ToReactorFunc,
-			toConnection goprotoextra.ToConnectionFunc,
+			toReactor v2.NextFunc,
+			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*PolygonForexCombined); ok {
 				return NewPolygonForexCombinedWrapper(
-					cancelCtx,
-					cancelFunc,
 					toReactor,
 					toConnection,
 					msg), nil

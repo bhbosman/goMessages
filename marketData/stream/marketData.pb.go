@@ -7,10 +7,10 @@
 package stream
 
 import (
-	context "context"
 	stream "github.com/bhbosman/gocommon/stream"
 	goerrors "github.com/bhbosman/goerrors"
 	goprotoextra "github.com/bhbosman/goprotoextra"
+	v2 "github.com/reactivex/rxgo/v2"
 	proto "google.golang.org/protobuf/proto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
@@ -341,15 +341,11 @@ func (self *PointWrapper) messageWrapper() interface{} {
 }
 
 func NewPointWrapper(
-	cancelCtx context.Context,
-	cancelFunc context.CancelFunc,
-	toReactor goprotoextra.ToReactorFunc,
-	toConnection goprotoextra.ToConnectionFunc,
+	toReactor v2.NextFunc,
+	toConnection v2.NextFunc,
 	data *Point) *PointWrapper {
 	return &PointWrapper{
 		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			cancelCtx,
-			cancelFunc,
 			toReactor,
 			toConnection),
 		Data: data,
@@ -363,15 +359,11 @@ var _ = stream.Register(
 			return &Point{}
 		},
 		CreateWrapper: func(
-			cancelCtx context.Context,
-			cancelFunc context.CancelFunc,
-			toReactor goprotoextra.ToReactorFunc,
-			toConnection goprotoextra.ToConnectionFunc,
+			toReactor v2.NextFunc,
+			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*Point); ok {
 				return NewPointWrapper(
-					cancelCtx,
-					cancelFunc,
 					toReactor,
 					toConnection,
 					msg), nil
@@ -397,15 +389,11 @@ func (self *PublishTop5Wrapper) messageWrapper() interface{} {
 }
 
 func NewPublishTop5Wrapper(
-	cancelCtx context.Context,
-	cancelFunc context.CancelFunc,
-	toReactor goprotoextra.ToReactorFunc,
-	toConnection goprotoextra.ToConnectionFunc,
+	toReactor v2.NextFunc,
+	toConnection v2.NextFunc,
 	data *PublishTop5) *PublishTop5Wrapper {
 	return &PublishTop5Wrapper{
 		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			cancelCtx,
-			cancelFunc,
 			toReactor,
 			toConnection),
 		Data: data,
@@ -419,15 +407,11 @@ var _ = stream.Register(
 			return &PublishTop5{}
 		},
 		CreateWrapper: func(
-			cancelCtx context.Context,
-			cancelFunc context.CancelFunc,
-			toReactor goprotoextra.ToReactorFunc,
-			toConnection goprotoextra.ToConnectionFunc,
+			toReactor v2.NextFunc,
+			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*PublishTop5); ok {
 				return NewPublishTop5Wrapper(
-					cancelCtx,
-					cancelFunc,
 					toReactor,
 					toConnection,
 					msg), nil

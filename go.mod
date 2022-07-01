@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/bhbosman/gocommon v0.0.0-20220620062839-d40b45675900
-	github.com/bhbosman/goerrors v0.0.0-20210201065523-bb3e832fa9ab
+	github.com/bhbosman/goerrors v0.0.0-20220623084908-4d7bbcd178cf
 	github.com/bhbosman/goprotoextra v0.0.2-0.20210817141206-117becbef7c7
 	google.golang.org/protobuf v1.25.0
 )
@@ -27,3 +27,5 @@ require (
 replace github.com/golang/mock => ../gomock
 
 replace github.com/bhbosman/gocommon => ../gocommon
+
+replace github.com/bhbosman/goprotoextra => ../goprotoextra

@@ -7,10 +7,10 @@
 package stream
 
 import (
-	context "context"
 	stream "github.com/bhbosman/gocommon/stream"
 	goerrors "github.com/bhbosman/goerrors"
 	goprotoextra "github.com/bhbosman/goprotoextra"
+	v2 "github.com/reactivex/rxgo/v2"
 	proto "google.golang.org/protobuf/proto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
@@ -249,15 +249,11 @@ func (self *SubscriptionsWrapper) messageWrapper() interface{} {
 }
 
 func NewSubscriptionsWrapper(
-	cancelCtx context.Context,
-	cancelFunc context.CancelFunc,
-	toReactor goprotoextra.ToReactorFunc,
-	toConnection goprotoextra.ToConnectionFunc,
+	toReactor v2.NextFunc,
+	toConnection v2.NextFunc,
 	data *Subscriptions) *SubscriptionsWrapper {
 	return &SubscriptionsWrapper{
 		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			cancelCtx,
-			cancelFunc,
 			toReactor,
 			toConnection),
 		Data: data,
@@ -271,15 +267,11 @@ var _ = stream.Register(
 			return &Subscriptions{}
 		},
 		CreateWrapper: func(
-			cancelCtx context.Context,
-			cancelFunc context.CancelFunc,
-			toReactor goprotoextra.ToReactorFunc,
-			toConnection goprotoextra.ToConnectionFunc,
+			toReactor v2.NextFunc,
+			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*Subscriptions); ok {
 				return NewSubscriptionsWrapper(
-					cancelCtx,
-					cancelFunc,
 					toReactor,
 					toConnection,
 					msg), nil
@@ -305,15 +297,11 @@ func (self *SubscribeWrapper) messageWrapper() interface{} {
 }
 
 func NewSubscribeWrapper(
-	cancelCtx context.Context,
-	cancelFunc context.CancelFunc,
-	toReactor goprotoextra.ToReactorFunc,
-	toConnection goprotoextra.ToConnectionFunc,
+	toReactor v2.NextFunc,
+	toConnection v2.NextFunc,
 	data *Subscribe) *SubscribeWrapper {
 	return &SubscribeWrapper{
 		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			cancelCtx,
-			cancelFunc,
 			toReactor,
 			toConnection),
 		Data: data,
@@ -327,15 +315,11 @@ var _ = stream.Register(
 			return &Subscribe{}
 		},
 		CreateWrapper: func(
-			cancelCtx context.Context,
-			cancelFunc context.CancelFunc,
-			toReactor goprotoextra.ToReactorFunc,
-			toConnection goprotoextra.ToConnectionFunc,
+			toReactor v2.NextFunc,
+			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*Subscribe); ok {
 				return NewSubscribeWrapper(
-					cancelCtx,
-					cancelFunc,
 					toReactor,
 					toConnection,
 					msg), nil
