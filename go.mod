@@ -6,14 +6,20 @@ require (
 	github.com/bhbosman/gocommon v0.0.0-20220620062839-d40b45675900
 	github.com/bhbosman/goerrors v0.0.0-20220623084908-4d7bbcd178cf
 	github.com/bhbosman/goprotoextra v0.0.2-0.20210817141206-117becbef7c7
+	github.com/reactivex/rxgo/v2 v2.5.0
 	google.golang.org/protobuf v1.25.0
 )
 
-require github.com/bhbosman/gologging v0.0.0-20200921180328-d29fc55c00bc // indirect
-
 require (
-	//github.com/bhbosman/gologging v0.0.0-20200921180328-d29fc55c00bc // indirect
-	github.com/bhbosman/gomessageblock v0.0.0-20210901070622-be36a3f8d303 // indirect
+	github.com/cenkalti/backoff/v4 v4.0.0 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/emirpasic/gods v1.12.0 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/stretchr/objx v0.1.0 // indirect
+	github.com/stretchr/testify v1.7.0 // indirect
+	github.com/teivah/onecontext v0.0.0-20200513185103-40f981bfd775 // indirect
+	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
+	github.com/bhbosman/gomessageblock v0.0.0-20220617132215-32f430d7de62 // indirect
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/dig v1.12.0 // indirect
 	go.uber.org/fx v1.14.2 // indirect
