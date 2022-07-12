@@ -29,5 +29,3 @@ message FullMarketDataRegister {
 message FullMarketDataUnRegister {
   string Instrument = 1;
 };
-
-
