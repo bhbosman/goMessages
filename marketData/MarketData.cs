@@ -28,14 +28,17 @@ public static partial class MarketDataReflection {
           "DgoGU3ByZWFkGAIgASgBEhcKD1NvdXJjZVRpbWVTdGFtcBgDIAEoAxIaChJT",
           "b3VyY2VNZXNzYWdlQ291bnQYBCABKAMSEwoLVXBkYXRlQ291bnQYBSABKAMS",
           "EwoDQmlkGAYgAygLMgYuUG9pbnQSEwoDQXNrGAcgAygLMgYuUG9pbnQSDgoG",
-          "U291cmNlGAggASgJEhIKClVuaXF1ZU5hbWUYCSABKAkyOgoJTXlTZXJ2aWNl",
-          "Ei0KBUNoZWNrEgwuUHVibGlzaFRvcDUaFi5nb29nbGUucHJvdG9idWYuRW1w",
-          "dHlCCVoHL3N0cmVhbWIGcHJvdG8z"));
+          "U291cmNlGAggASgJEhIKClVuaXF1ZU5hbWUYCSABKAkiLAoWRnVsbE1hcmtl",
+          "dERhdGFSZWdpc3RlchISCgpJbnN0cnVtZW50GAEgASgJIi4KGEZ1bGxNYXJr",
+          "ZXREYXRhVW5SZWdpc3RlchISCgpJbnN0cnVtZW50GAEgASgJQglaBy9zdHJl",
+          "YW1iBnByb3RvMw=="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
           new pbr::GeneratedClrTypeInfo(typeof(global::Point), global::Point.Parser, new[]{ "Price", "Volume" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::PublishTop5), global::PublishTop5.Parser, new[]{ "Instrument", "Spread", "SourceTimeStamp", "SourceMessageCount", "UpdateCount", "Bid", "Ask", "Source", "UniqueName" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(global::PublishTop5), global::PublishTop5.Parser, new[]{ "Instrument", "Spread", "SourceTimeStamp", "SourceMessageCount", "UpdateCount", "Bid", "Ask", "Source", "UniqueName" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::FullMarketDataRegister), global::FullMarketDataRegister.Parser, new[]{ "Instrument" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::FullMarketDataUnRegister), global::FullMarketDataUnRegister.Parser, new[]{ "Instrument" }, null, null, null, null)
         }));
   }
   #endregion
@@ -689,6 +692,354 @@ public sealed partial class PublishTop5 : pb::IMessage<PublishTop5>, pb::ITypeCo
   #endif
 
   public const System.UInt32 TypeCodeValue = 2990202154; // TypeCode generated from: "PublishTop5"
+  public System.UInt32 TypeCode => TypeCodeValue;
+}
+
+public sealed partial class FullMarketDataRegister : pb::IMessage<FullMarketDataRegister>, pb::ITypeCodeMessage<FullMarketDataRegister>
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    , pb::IBufferMessage
+#endif
+{
+  private static readonly pb::MessageParser<FullMarketDataRegister> _parser = new pb::MessageParser<FullMarketDataRegister>(() => new FullMarketDataRegister());
+  private pb::UnknownFieldSet _unknownFields;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pb::MessageParser<FullMarketDataRegister> Parser { get { return _parser; } }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pbr::MessageDescriptor Descriptor {
+    get { return global::MarketDataReflection.Descriptor.MessageTypes[2]; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  pbr::MessageDescriptor pb::IMessage.Descriptor {
+    get { return Descriptor; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public FullMarketDataRegister() {
+    OnConstruction();
+  }
+
+  partial void OnConstruction();
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public FullMarketDataRegister(FullMarketDataRegister other) : this() {
+    instrument_ = other.instrument_;
+    _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public FullMarketDataRegister Clone() {
+    return new FullMarketDataRegister(this);
+  }
+
+  /// <summary>Field number for the "Instrument" field.</summary>
+  public const int InstrumentFieldNumber = 1;
+  private string instrument_ = "";
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public string Instrument {
+    get { return instrument_; }
+    set {
+      instrument_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+    }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override bool Equals(object other) {
+    return Equals(other as FullMarketDataRegister);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool Equals(FullMarketDataRegister other) {
+    if (ReferenceEquals(other, null)) {
+      return false;
+    }
+    if (ReferenceEquals(other, this)) {
+      return true;
+    }
+    if (Instrument != other.Instrument) return false;
+    return Equals(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override int GetHashCode() {
+    int hash = 1;
+    if (Instrument.Length != 0) hash ^= Instrument.GetHashCode();
+    if (_unknownFields != null) {
+      hash ^= _unknownFields.GetHashCode();
+    }
+    return hash;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override string ToString() {
+    return pb::JsonFormatter.ToDiagnosticString(this);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void WriteTo(pb::CodedOutputStream output) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    output.WriteRawMessage(this);
+  #else
+    if (Instrument.Length != 0) {
+      output.WriteRawTag(10);
+      output.WriteString(Instrument);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(output);
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+    if (Instrument.Length != 0) {
+      output.WriteRawTag(10);
+      output.WriteString(Instrument);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(ref output);
+    }
+  }
+  #endif
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public int CalculateSize() {
+    int size = 0;
+    if (Instrument.Length != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Instrument);
+    }
+    if (_unknownFields != null) {
+      size += _unknownFields.CalculateSize();
+    }
+    return size;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(FullMarketDataRegister other) {
+    if (other == null) {
+      return;
+    }
+    if (other.Instrument.Length != 0) {
+      Instrument = other.Instrument;
+    }
+    _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(pb::CodedInputStream input) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    input.ReadRawMessage(this);
+  #else
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+          break;
+        case 10: {
+          Instrument = input.ReadString();
+          break;
+        }
+      }
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+          break;
+        case 10: {
+          Instrument = input.ReadString();
+          break;
+        }
+      }
+    }
+  }
+  #endif
+
+  public const System.UInt32 TypeCodeValue = 477977412; // TypeCode generated from: "FullMarketDataRegister"
+  public System.UInt32 TypeCode => TypeCodeValue;
+}
+
+public sealed partial class FullMarketDataUnRegister : pb::IMessage<FullMarketDataUnRegister>, pb::ITypeCodeMessage<FullMarketDataUnRegister>
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    , pb::IBufferMessage
+#endif
+{
+  private static readonly pb::MessageParser<FullMarketDataUnRegister> _parser = new pb::MessageParser<FullMarketDataUnRegister>(() => new FullMarketDataUnRegister());
+  private pb::UnknownFieldSet _unknownFields;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pb::MessageParser<FullMarketDataUnRegister> Parser { get { return _parser; } }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pbr::MessageDescriptor Descriptor {
+    get { return global::MarketDataReflection.Descriptor.MessageTypes[3]; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  pbr::MessageDescriptor pb::IMessage.Descriptor {
+    get { return Descriptor; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public FullMarketDataUnRegister() {
+    OnConstruction();
+  }
+
+  partial void OnConstruction();
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public FullMarketDataUnRegister(FullMarketDataUnRegister other) : this() {
+    instrument_ = other.instrument_;
+    _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public FullMarketDataUnRegister Clone() {
+    return new FullMarketDataUnRegister(this);
+  }
+
+  /// <summary>Field number for the "Instrument" field.</summary>
+  public const int InstrumentFieldNumber = 1;
+  private string instrument_ = "";
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public string Instrument {
+    get { return instrument_; }
+    set {
+      instrument_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+    }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override bool Equals(object other) {
+    return Equals(other as FullMarketDataUnRegister);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool Equals(FullMarketDataUnRegister other) {
+    if (ReferenceEquals(other, null)) {
+      return false;
+    }
+    if (ReferenceEquals(other, this)) {
+      return true;
+    }
+    if (Instrument != other.Instrument) return false;
+    return Equals(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override int GetHashCode() {
+    int hash = 1;
+    if (Instrument.Length != 0) hash ^= Instrument.GetHashCode();
+    if (_unknownFields != null) {
+      hash ^= _unknownFields.GetHashCode();
+    }
+    return hash;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override string ToString() {
+    return pb::JsonFormatter.ToDiagnosticString(this);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void WriteTo(pb::CodedOutputStream output) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    output.WriteRawMessage(this);
+  #else
+    if (Instrument.Length != 0) {
+      output.WriteRawTag(10);
+      output.WriteString(Instrument);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(output);
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+    if (Instrument.Length != 0) {
+      output.WriteRawTag(10);
+      output.WriteString(Instrument);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(ref output);
+    }
+  }
+  #endif
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public int CalculateSize() {
+    int size = 0;
+    if (Instrument.Length != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Instrument);
+    }
+    if (_unknownFields != null) {
+      size += _unknownFields.CalculateSize();
+    }
+    return size;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(FullMarketDataUnRegister other) {
+    if (other == null) {
+      return;
+    }
+    if (other.Instrument.Length != 0) {
+      Instrument = other.Instrument;
+    }
+    _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(pb::CodedInputStream input) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    input.ReadRawMessage(this);
+  #else
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+          break;
+        case 10: {
+          Instrument = input.ReadString();
+          break;
+        }
+      }
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+          break;
+        case 10: {
+          Instrument = input.ReadString();
+          break;
+        }
+      }
+    }
+  }
+  #endif
+
+  public const System.UInt32 TypeCodeValue = 2486720139; // TypeCode generated from: "FullMarketDataUnRegister"
   public System.UInt32 TypeCode => TypeCodeValue;
 }
 
