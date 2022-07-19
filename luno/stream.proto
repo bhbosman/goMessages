@@ -48,5 +48,10 @@ message LunoStreamData{
     CreateUpdate create_update = 9          [json_name="create_update"];
     DeleteUpdate delete_update = 10         [json_name="delete_update"];
     string status_update = 11               [json_name="status_update"];
+
+    string error_code = 12               [json_name="error_code"];
+    string error = 13               [json_name="error"];
+
+
 }
 
