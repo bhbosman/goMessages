@@ -23,19 +23,22 @@ public static partial class MarketDataReflection {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
           "ChttYXJrZXREYXRhL21hcmtldERhdGEucHJvdG8aG2dvb2dsZS9wcm90b2J1",
-          "Zi9lbXB0eS5wcm90byImCgVQb2ludBINCgVQcmljZRgBIAEoARIOCgZ2b2x1",
-          "bWUYAiABKAEiyQEKC1B1Ymxpc2hUb3A1EhIKCkluc3RydW1lbnQYASABKAkS",
-          "DgoGU3ByZWFkGAIgASgBEhcKD1NvdXJjZVRpbWVTdGFtcBgDIAEoAxIaChJT",
-          "b3VyY2VNZXNzYWdlQ291bnQYBCABKAMSEwoLVXBkYXRlQ291bnQYBSABKAMS",
-          "EwoDQmlkGAYgAygLMgYuUG9pbnQSEwoDQXNrGAcgAygLMgYuUG9pbnQSDgoG",
-          "U291cmNlGAggASgJEhIKClVuaXF1ZU5hbWUYCSABKAkiLAoWRnVsbE1hcmtl",
-          "dERhdGFSZWdpc3RlchISCgpJbnN0cnVtZW50GAEgASgJIi4KGEZ1bGxNYXJr",
-          "ZXREYXRhVW5SZWdpc3RlchISCgpJbnN0cnVtZW50GAEgASgJQglaBy9zdHJl",
-          "YW1iBnByb3RvMw=="));
+          "Zi9lbXB0eS5wcm90byIjCgVPcmRlchIKCgJJZBgBIAEoCRIOCgZWb2x1bWUY",
+          "AiABKAEiVgoFUG9pbnQSDQoFUHJpY2UYASABKAESDgoGdm9sdW1lGAIgASgB",
+          "EhYKDk9wZW5PcmRlckNvdW50GAMgASgFEhYKBk9yZGVycxgEIAMoCzIGLk9y",
+          "ZGVyIskBCgtQdWJsaXNoVG9wNRISCgpJbnN0cnVtZW50GAEgASgJEg4KBlNw",
+          "cmVhZBgCIAEoARIXCg9Tb3VyY2VUaW1lU3RhbXAYAyABKAMSGgoSU291cmNl",
+          "TWVzc2FnZUNvdW50GAQgASgDEhMKC1VwZGF0ZUNvdW50GAUgASgDEhMKA0Jp",
+          "ZBgGIAMoCzIGLlBvaW50EhMKA0FzaxgHIAMoCzIGLlBvaW50Eg4KBlNvdXJj",
+          "ZRgIIAEoCRISCgpVbmlxdWVOYW1lGAkgASgJIiwKFkZ1bGxNYXJrZXREYXRh",
+          "UmVnaXN0ZXISEgoKSW5zdHJ1bWVudBgBIAEoCSIuChhGdWxsTWFya2V0RGF0",
+          "YVVuUmVnaXN0ZXISEgoKSW5zdHJ1bWVudBgBIAEoCUIJWgcvc3RyZWFtYgZw",
+          "cm90bzM="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-          new pbr::GeneratedClrTypeInfo(typeof(global::Point), global::Point.Parser, new[]{ "Price", "Volume" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::Order), global::Order.Parser, new[]{ "Id", "Volume" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::Point), global::Point.Parser, new[]{ "Price", "Volume", "OpenOrderCount", "Orders" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::PublishTop5), global::PublishTop5.Parser, new[]{ "Instrument", "Spread", "SourceTimeStamp", "SourceMessageCount", "UpdateCount", "Bid", "Ask", "Source", "UniqueName" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::FullMarketDataRegister), global::FullMarketDataRegister.Parser, new[]{ "Instrument" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::FullMarketDataUnRegister), global::FullMarketDataUnRegister.Parser, new[]{ "Instrument" }, null, null, null, null)
@@ -45,6 +48,216 @@ public static partial class MarketDataReflection {
 
 }
 #region Messages
+public sealed partial class Order : pb::IMessage<Order>, pb::ITypeCodeMessage<Order>
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    , pb::IBufferMessage
+#endif
+{
+  private static readonly pb::MessageParser<Order> _parser = new pb::MessageParser<Order>(() => new Order());
+  private pb::UnknownFieldSet _unknownFields;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pb::MessageParser<Order> Parser { get { return _parser; } }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pbr::MessageDescriptor Descriptor {
+    get { return global::MarketDataReflection.Descriptor.MessageTypes[0]; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  pbr::MessageDescriptor pb::IMessage.Descriptor {
+    get { return Descriptor; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public Order() {
+    OnConstruction();
+  }
+
+  partial void OnConstruction();
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public Order(Order other) : this() {
+    id_ = other.id_;
+    volume_ = other.volume_;
+    _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public Order Clone() {
+    return new Order(this);
+  }
+
+  /// <summary>Field number for the "Id" field.</summary>
+  public const int IdFieldNumber = 1;
+  private string id_ = "";
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public string Id {
+    get { return id_; }
+    set {
+      id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+    }
+  }
+
+  /// <summary>Field number for the "Volume" field.</summary>
+  public const int VolumeFieldNumber = 2;
+  private double volume_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public double Volume {
+    get { return volume_; }
+    set {
+      volume_ = value;
+    }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override bool Equals(object other) {
+    return Equals(other as Order);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool Equals(Order other) {
+    if (ReferenceEquals(other, null)) {
+      return false;
+    }
+    if (ReferenceEquals(other, this)) {
+      return true;
+    }
+    if (Id != other.Id) return false;
+    if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Volume, other.Volume)) return false;
+    return Equals(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override int GetHashCode() {
+    int hash = 1;
+    if (Id.Length != 0) hash ^= Id.GetHashCode();
+    if (Volume != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Volume);
+    if (_unknownFields != null) {
+      hash ^= _unknownFields.GetHashCode();
+    }
+    return hash;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override string ToString() {
+    return pb::JsonFormatter.ToDiagnosticString(this);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void WriteTo(pb::CodedOutputStream output) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    output.WriteRawMessage(this);
+  #else
+    if (Id.Length != 0) {
+      output.WriteRawTag(10);
+      output.WriteString(Id);
+    }
+    if (Volume != 0D) {
+      output.WriteRawTag(17);
+      output.WriteDouble(Volume);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(output);
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+    if (Id.Length != 0) {
+      output.WriteRawTag(10);
+      output.WriteString(Id);
+    }
+    if (Volume != 0D) {
+      output.WriteRawTag(17);
+      output.WriteDouble(Volume);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(ref output);
+    }
+  }
+  #endif
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public int CalculateSize() {
+    int size = 0;
+    if (Id.Length != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+    }
+    if (Volume != 0D) {
+      size += 1 + 8;
+    }
+    if (_unknownFields != null) {
+      size += _unknownFields.CalculateSize();
+    }
+    return size;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(Order other) {
+    if (other == null) {
+      return;
+    }
+    if (other.Id.Length != 0) {
+      Id = other.Id;
+    }
+    if (other.Volume != 0D) {
+      Volume = other.Volume;
+    }
+    _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(pb::CodedInputStream input) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    input.ReadRawMessage(this);
+  #else
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+          break;
+        case 10: {
+          Id = input.ReadString();
+          break;
+        }
+        case 17: {
+          Volume = input.ReadDouble();
+          break;
+        }
+      }
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+          break;
+        case 10: {
+          Id = input.ReadString();
+          break;
+        }
+        case 17: {
+          Volume = input.ReadDouble();
+          break;
+        }
+      }
+    }
+  }
+  #endif
+
+  public const System.UInt32 TypeCodeValue = 887667868; // TypeCode generated from: "Order"
+  public System.UInt32 TypeCode => TypeCodeValue;
+}
+
 public sealed partial class Point : pb::IMessage<Point>, pb::ITypeCodeMessage<Point>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     , pb::IBufferMessage
@@ -57,7 +270,7 @@ public sealed partial class Point : pb::IMessage<Point>, pb::ITypeCodeMessage<Po
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::MarketDataReflection.Descriptor.MessageTypes[0]; }
+    get { return global::MarketDataReflection.Descriptor.MessageTypes[1]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -76,6 +289,8 @@ public sealed partial class Point : pb::IMessage<Point>, pb::ITypeCodeMessage<Po
   public Point(Point other) : this() {
     price_ = other.price_;
     volume_ = other.volume_;
+    openOrderCount_ = other.openOrderCount_;
+    orders_ = other.orders_.Clone();
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
@@ -106,6 +321,27 @@ public sealed partial class Point : pb::IMessage<Point>, pb::ITypeCodeMessage<Po
     }
   }
 
+  /// <summary>Field number for the "OpenOrderCount" field.</summary>
+  public const int OpenOrderCountFieldNumber = 3;
+  private int openOrderCount_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public int OpenOrderCount {
+    get { return openOrderCount_; }
+    set {
+      openOrderCount_ = value;
+    }
+  }
+
+  /// <summary>Field number for the "Orders" field.</summary>
+  public const int OrdersFieldNumber = 4;
+  private static readonly pb::FieldCodec<global::Order> _repeated_orders_codec
+      = pb::FieldCodec.ForMessage(34, global::Order.Parser);
+  private readonly pbc::RepeatedField<global::Order> orders_ = new pbc::RepeatedField<global::Order>();
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public pbc::RepeatedField<global::Order> Orders {
+    get { return orders_; }
+  }
+
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public override bool Equals(object other) {
     return Equals(other as Point);
@@ -121,6 +357,8 @@ public sealed partial class Point : pb::IMessage<Point>, pb::ITypeCodeMessage<Po
     }
     if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Price, other.Price)) return false;
     if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Volume, other.Volume)) return false;
+    if (OpenOrderCount != other.OpenOrderCount) return false;
+    if(!orders_.Equals(other.orders_)) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
 
@@ -129,6 +367,8 @@ public sealed partial class Point : pb::IMessage<Point>, pb::ITypeCodeMessage<Po
     int hash = 1;
     if (Price != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Price);
     if (Volume != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Volume);
+    if (OpenOrderCount != 0) hash ^= OpenOrderCount.GetHashCode();
+    hash ^= orders_.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -153,6 +393,11 @@ public sealed partial class Point : pb::IMessage<Point>, pb::ITypeCodeMessage<Po
       output.WriteRawTag(17);
       output.WriteDouble(Volume);
     }
+    if (OpenOrderCount != 0) {
+      output.WriteRawTag(24);
+      output.WriteInt32(OpenOrderCount);
+    }
+    orders_.WriteTo(output, _repeated_orders_codec);
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
     }
@@ -170,6 +415,11 @@ public sealed partial class Point : pb::IMessage<Point>, pb::ITypeCodeMessage<Po
       output.WriteRawTag(17);
       output.WriteDouble(Volume);
     }
+    if (OpenOrderCount != 0) {
+      output.WriteRawTag(24);
+      output.WriteInt32(OpenOrderCount);
+    }
+    orders_.WriteTo(ref output, _repeated_orders_codec);
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
     }
@@ -185,6 +435,10 @@ public sealed partial class Point : pb::IMessage<Point>, pb::ITypeCodeMessage<Po
     if (Volume != 0D) {
       size += 1 + 8;
     }
+    if (OpenOrderCount != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(OpenOrderCount);
+    }
+    size += orders_.CalculateSize(_repeated_orders_codec);
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
     }
@@ -202,6 +456,10 @@ public sealed partial class Point : pb::IMessage<Point>, pb::ITypeCodeMessage<Po
     if (other.Volume != 0D) {
       Volume = other.Volume;
     }
+    if (other.OpenOrderCount != 0) {
+      OpenOrderCount = other.OpenOrderCount;
+    }
+    orders_.Add(other.orders_);
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
 
@@ -222,6 +480,14 @@ public sealed partial class Point : pb::IMessage<Point>, pb::ITypeCodeMessage<Po
         }
         case 17: {
           Volume = input.ReadDouble();
+          break;
+        }
+        case 24: {
+          OpenOrderCount = input.ReadInt32();
+          break;
+        }
+        case 34: {
+          orders_.AddEntriesFrom(input, _repeated_orders_codec);
           break;
         }
       }
@@ -246,6 +512,14 @@ public sealed partial class Point : pb::IMessage<Point>, pb::ITypeCodeMessage<Po
           Volume = input.ReadDouble();
           break;
         }
+        case 24: {
+          OpenOrderCount = input.ReadInt32();
+          break;
+        }
+        case 34: {
+          orders_.AddEntriesFrom(ref input, _repeated_orders_codec);
+          break;
+        }
       }
     }
   }
@@ -267,7 +541,7 @@ public sealed partial class PublishTop5 : pb::IMessage<PublishTop5>, pb::ITypeCo
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::MarketDataReflection.Descriptor.MessageTypes[1]; }
+    get { return global::MarketDataReflection.Descriptor.MessageTypes[2]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -707,7 +981,7 @@ public sealed partial class FullMarketDataRegister : pb::IMessage<FullMarketData
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::MarketDataReflection.Descriptor.MessageTypes[2]; }
+    get { return global::MarketDataReflection.Descriptor.MessageTypes[3]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -881,7 +1155,7 @@ public sealed partial class FullMarketDataUnRegister : pb::IMessage<FullMarketDa
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::MarketDataReflection.Descriptor.MessageTypes[3]; }
+    get { return global::MarketDataReflection.Descriptor.MessageTypes[4]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

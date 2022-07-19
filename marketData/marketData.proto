@@ -4,9 +4,17 @@ syntax = "proto3";
 import "google/protobuf/empty.proto";
 option go_package = "/stream";
 
+
+message Order
+{
+  string Id =1 ;
+  double Volume = 2;
+}
 message Point{
   double Price = 1;
   double volume = 2;
+  int32 OpenOrderCount = 3;
+  repeated Order Orders = 4;
 };
 
 
