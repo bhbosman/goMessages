@@ -10,7 +10,6 @@ import (
 	stream "github.com/bhbosman/gocommon/stream"
 	goerrors "github.com/bhbosman/goerrors"
 	goprotoextra "github.com/bhbosman/goprotoextra"
-	v2 "github.com/reactivex/rxgo/v2"
 	proto "google.golang.org/protobuf/proto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
@@ -355,14 +354,10 @@ func (self *PingWrapper) messageWrapper() interface{} {
 }
 
 func NewPingWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *Ping) *PingWrapper {
 	return &PingWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -373,13 +368,9 @@ var _ = stream.Register(
 			return &Ping{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*Ping); ok {
 				return NewPingWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -403,14 +394,10 @@ func (self *PongWrapper) messageWrapper() interface{} {
 }
 
 func NewPongWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *Pong) *PongWrapper {
 	return &PongWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -421,13 +408,9 @@ var _ = stream.Register(
 			return &Pong{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*Pong); ok {
 				return NewPongWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -451,14 +434,10 @@ func (self *TestMessageForPingPongWrapper) messageWrapper() interface{} {
 }
 
 func NewTestMessageForPingPongWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *TestMessageForPingPong) *TestMessageForPingPongWrapper {
 	return &TestMessageForPingPongWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -469,13 +448,9 @@ var _ = stream.Register(
 			return &TestMessageForPingPong{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*TestMessageForPingPong); ok {
 				return NewTestMessageForPingPongWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam

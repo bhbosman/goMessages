@@ -29,11 +29,3 @@ message PublishTop5{
   string Source = 8;
   string UniqueName = 9;
 };
-
-message FullMarketDataRegister {
-  string Instrument = 1;
-};
-
-message FullMarketDataUnRegister {
-  string Instrument = 1;
-};

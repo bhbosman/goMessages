@@ -10,7 +10,6 @@ import (
 	stream "github.com/bhbosman/gocommon/stream"
 	goerrors "github.com/bhbosman/goerrors"
 	goprotoextra "github.com/bhbosman/goprotoextra"
-	v2 "github.com/reactivex/rxgo/v2"
 	proto "google.golang.org/protobuf/proto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
@@ -7532,14 +7531,10 @@ func (self *GetErrorResponseWrapper) messageWrapper() interface{} {
 }
 
 func NewGetErrorResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetErrorResponse) *GetErrorResponseWrapper {
 	return &GetErrorResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -7550,13 +7545,9 @@ var _ = stream.Register(
 			return &GetErrorResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetErrorResponse); ok {
 				return NewGetErrorResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -7580,14 +7571,10 @@ func (self *GetTickerQueryRequestWrapper) messageWrapper() interface{} {
 }
 
 func NewGetTickerQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetTickerQueryRequest) *GetTickerQueryRequestWrapper {
 	return &GetTickerQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -7598,13 +7585,9 @@ var _ = stream.Register(
 			return &GetTickerQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetTickerQueryRequest); ok {
 				return NewGetTickerQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -7628,14 +7611,10 @@ func (self *SymbolWrapper) messageWrapper() interface{} {
 }
 
 func NewSymbolWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *Symbol) *SymbolWrapper {
 	return &SymbolWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -7646,13 +7625,9 @@ var _ = stream.Register(
 			return &Symbol{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*Symbol); ok {
 				return NewSymbolWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -7676,14 +7651,10 @@ func (self *GetTickerResponseWrapper) messageWrapper() interface{} {
 }
 
 func NewGetTickerResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetTickerResponse) *GetTickerResponseWrapper {
 	return &GetTickerResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -7694,13 +7665,9 @@ var _ = stream.Register(
 			return &GetTickerResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetTickerResponse); ok {
 				return NewGetTickerResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -7724,14 +7691,10 @@ func (self *GetTickerTypesResponseWrapper) messageWrapper() interface{} {
 }
 
 func NewGetTickerTypesResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetTickerTypesResponse) *GetTickerTypesResponseWrapper {
 	return &GetTickerTypesResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -7742,13 +7705,9 @@ var _ = stream.Register(
 			return &GetTickerTypesResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetTickerTypesResponse); ok {
 				return NewGetTickerTypesResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -7772,14 +7731,10 @@ func (self *GetTickerDetailsResponseWrapper) messageWrapper() interface{} {
 }
 
 func NewGetTickerDetailsResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetTickerDetailsResponse) *GetTickerDetailsResponseWrapper {
 	return &GetTickerDetailsResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -7790,13 +7745,9 @@ var _ = stream.Register(
 			return &GetTickerDetailsResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetTickerDetailsResponse); ok {
 				return NewGetTickerDetailsResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -7820,14 +7771,10 @@ func (self *GetTickerNewsQueryRequestWrapper) messageWrapper() interface{} {
 }
 
 func NewGetTickerNewsQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetTickerNewsQueryRequest) *GetTickerNewsQueryRequestWrapper {
 	return &GetTickerNewsQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -7838,13 +7785,9 @@ var _ = stream.Register(
 			return &GetTickerNewsQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetTickerNewsQueryRequest); ok {
 				return NewGetTickerNewsQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -7868,14 +7811,10 @@ func (self *NewsWrapper) messageWrapper() interface{} {
 }
 
 func NewNewsWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *News) *NewsWrapper {
 	return &NewsWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -7886,13 +7825,9 @@ var _ = stream.Register(
 			return &News{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*News); ok {
 				return NewNewsWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -7916,14 +7851,10 @@ func (self *GetTickerNewsResponseWrapper) messageWrapper() interface{} {
 }
 
 func NewGetTickerNewsResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetTickerNewsResponse) *GetTickerNewsResponseWrapper {
 	return &GetTickerNewsResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -7934,13 +7865,9 @@ var _ = stream.Register(
 			return &GetTickerNewsResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetTickerNewsResponse); ok {
 				return NewGetTickerNewsResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -7964,14 +7891,10 @@ func (self *MarketWrapper) messageWrapper() interface{} {
 }
 
 func NewMarketWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *Market) *MarketWrapper {
 	return &MarketWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -7982,13 +7905,9 @@ var _ = stream.Register(
 			return &Market{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*Market); ok {
 				return NewMarketWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8012,14 +7931,10 @@ func (self *GetMarketsResponseWrapper) messageWrapper() interface{} {
 }
 
 func NewGetMarketsResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetMarketsResponse) *GetMarketsResponseWrapper {
 	return &GetMarketsResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8030,13 +7945,9 @@ var _ = stream.Register(
 			return &GetMarketsResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetMarketsResponse); ok {
 				return NewGetMarketsResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8060,14 +7971,10 @@ func (self *LocaleWrapper) messageWrapper() interface{} {
 }
 
 func NewLocaleWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *Locale) *LocaleWrapper {
 	return &LocaleWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8078,13 +7985,9 @@ var _ = stream.Register(
 			return &Locale{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*Locale); ok {
 				return NewLocaleWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8108,14 +8011,10 @@ func (self *GetLocalesResponseWrapper) messageWrapper() interface{} {
 }
 
 func NewGetLocalesResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetLocalesResponse) *GetLocalesResponseWrapper {
 	return &GetLocalesResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8126,13 +8025,9 @@ var _ = stream.Register(
 			return &GetLocalesResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetLocalesResponse); ok {
 				return NewGetLocalesResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8156,14 +8051,10 @@ func (self *SplitWrapper) messageWrapper() interface{} {
 }
 
 func NewSplitWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *Split) *SplitWrapper {
 	return &SplitWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8174,13 +8065,9 @@ var _ = stream.Register(
 			return &Split{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*Split); ok {
 				return NewSplitWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8204,14 +8091,10 @@ func (self *GetStockSplitsResponseWrapper) messageWrapper() interface{} {
 }
 
 func NewGetStockSplitsResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetStockSplitsResponse) *GetStockSplitsResponseWrapper {
 	return &GetStockSplitsResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8222,13 +8105,9 @@ var _ = stream.Register(
 			return &GetStockSplitsResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetStockSplitsResponse); ok {
 				return NewGetStockSplitsResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8252,14 +8131,10 @@ func (self *DividendWrapper) messageWrapper() interface{} {
 }
 
 func NewDividendWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *Dividend) *DividendWrapper {
 	return &DividendWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8270,13 +8145,9 @@ var _ = stream.Register(
 			return &Dividend{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*Dividend); ok {
 				return NewDividendWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8300,14 +8171,10 @@ func (self *GetStockDividendsResponseWrapper) messageWrapper() interface{} {
 }
 
 func NewGetStockDividendsResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetStockDividendsResponse) *GetStockDividendsResponseWrapper {
 	return &GetStockDividendsResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8318,13 +8185,9 @@ var _ = stream.Register(
 			return &GetStockDividendsResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetStockDividendsResponse); ok {
 				return NewGetStockDividendsResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8348,14 +8211,10 @@ func (self *GetStockFinancialsQueryRequestWrapper) messageWrapper() interface{} 
 }
 
 func NewGetStockFinancialsQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetStockFinancialsQueryRequest) *GetStockFinancialsQueryRequestWrapper {
 	return &GetStockFinancialsQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8366,13 +8225,9 @@ var _ = stream.Register(
 			return &GetStockFinancialsQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetStockFinancialsQueryRequest); ok {
 				return NewGetStockFinancialsQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8396,14 +8251,10 @@ func (self *FinancialWrapper) messageWrapper() interface{} {
 }
 
 func NewFinancialWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *Financial) *FinancialWrapper {
 	return &FinancialWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8414,13 +8265,9 @@ var _ = stream.Register(
 			return &Financial{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*Financial); ok {
 				return NewFinancialWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8444,14 +8291,10 @@ func (self *GetStockFinancialsResponseWrapper) messageWrapper() interface{} {
 }
 
 func NewGetStockFinancialsResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetStockFinancialsResponse) *GetStockFinancialsResponseWrapper {
 	return &GetStockFinancialsResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8462,13 +8305,9 @@ var _ = stream.Register(
 			return &GetStockFinancialsResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetStockFinancialsResponse); ok {
 				return NewGetStockFinancialsResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8492,14 +8331,10 @@ func (self *GetMarketStatusResponseWrapper) messageWrapper() interface{} {
 }
 
 func NewGetMarketStatusResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetMarketStatusResponse) *GetMarketStatusResponseWrapper {
 	return &GetMarketStatusResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8510,13 +8345,9 @@ var _ = stream.Register(
 			return &GetMarketStatusResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetMarketStatusResponse); ok {
 				return NewGetMarketStatusResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8540,14 +8371,10 @@ func (self *MarketHolidayWrapper) messageWrapper() interface{} {
 }
 
 func NewMarketHolidayWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *MarketHoliday) *MarketHolidayWrapper {
 	return &MarketHolidayWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8558,13 +8385,9 @@ var _ = stream.Register(
 			return &MarketHoliday{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*MarketHoliday); ok {
 				return NewMarketHolidayWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8588,14 +8411,10 @@ func (self *GetMarketHolidaysResponseWrapper) messageWrapper() interface{} {
 }
 
 func NewGetMarketHolidaysResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetMarketHolidaysResponse) *GetMarketHolidaysResponseWrapper {
 	return &GetMarketHolidaysResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8606,13 +8425,9 @@ var _ = stream.Register(
 			return &GetMarketHolidaysResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetMarketHolidaysResponse); ok {
 				return NewGetMarketHolidaysResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8636,14 +8451,10 @@ func (self *GetEquityExchangesQueryRequestWrapper) messageWrapper() interface{} 
 }
 
 func NewGetEquityExchangesQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityExchangesQueryRequest) *GetEquityExchangesQueryRequestWrapper {
 	return &GetEquityExchangesQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8654,13 +8465,9 @@ var _ = stream.Register(
 			return &GetEquityExchangesQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityExchangesQueryRequest); ok {
 				return NewGetEquityExchangesQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8684,14 +8491,10 @@ func (self *GetEquityExchangesResponseWrapper) messageWrapper() interface{} {
 }
 
 func NewGetEquityExchangesResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityExchangesResponse) *GetEquityExchangesResponseWrapper {
 	return &GetEquityExchangesResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8702,13 +8505,9 @@ var _ = stream.Register(
 			return &GetEquityExchangesResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityExchangesResponse); ok {
 				return NewGetEquityExchangesResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8732,14 +8531,10 @@ func (self *GetEquityPreviousCloseQueryRequestWrapper) messageWrapper() interfac
 }
 
 func NewGetEquityPreviousCloseQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityPreviousCloseQueryRequest) *GetEquityPreviousCloseQueryRequestWrapper {
 	return &GetEquityPreviousCloseQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8750,13 +8545,9 @@ var _ = stream.Register(
 			return &GetEquityPreviousCloseQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityPreviousCloseQueryRequest); ok {
 				return NewGetEquityPreviousCloseQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8780,14 +8571,10 @@ func (self *GetEquityPreviousCloseResponseWrapper) messageWrapper() interface{} 
 }
 
 func NewGetEquityPreviousCloseResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityPreviousCloseResponse) *GetEquityPreviousCloseResponseWrapper {
 	return &GetEquityPreviousCloseResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8798,13 +8585,9 @@ var _ = stream.Register(
 			return &GetEquityPreviousCloseResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityPreviousCloseResponse); ok {
 				return NewGetEquityPreviousCloseResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8828,14 +8611,10 @@ func (self *GetEquityAggregatesBarsQueryRequestWrapper) messageWrapper() interfa
 }
 
 func NewGetEquityAggregatesBarsQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityAggregatesBarsQueryRequest) *GetEquityAggregatesBarsQueryRequestWrapper {
 	return &GetEquityAggregatesBarsQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8846,13 +8625,9 @@ var _ = stream.Register(
 			return &GetEquityAggregatesBarsQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityAggregatesBarsQueryRequest); ok {
 				return NewGetEquityAggregatesBarsQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8876,14 +8651,10 @@ func (self *GetEquityAggregatesBarsResponseWrapper) messageWrapper() interface{}
 }
 
 func NewGetEquityAggregatesBarsResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityAggregatesBarsResponse) *GetEquityAggregatesBarsResponseWrapper {
 	return &GetEquityAggregatesBarsResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8894,13 +8665,9 @@ var _ = stream.Register(
 			return &GetEquityAggregatesBarsResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityAggregatesBarsResponse); ok {
 				return NewGetEquityAggregatesBarsResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8924,14 +8691,10 @@ func (self *GetEquityGroupedDailyBarsQueryRequestWrapper) messageWrapper() inter
 }
 
 func NewGetEquityGroupedDailyBarsQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityGroupedDailyBarsQueryRequest) *GetEquityGroupedDailyBarsQueryRequestWrapper {
 	return &GetEquityGroupedDailyBarsQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8942,13 +8705,9 @@ var _ = stream.Register(
 			return &GetEquityGroupedDailyBarsQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityGroupedDailyBarsQueryRequest); ok {
 				return NewGetEquityGroupedDailyBarsQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -8972,14 +8731,10 @@ func (self *GetEquityGroupedDailyBarsResponseWrapper) messageWrapper() interface
 }
 
 func NewGetEquityGroupedDailyBarsResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityGroupedDailyBarsResponse) *GetEquityGroupedDailyBarsResponseWrapper {
 	return &GetEquityGroupedDailyBarsResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -8990,13 +8745,9 @@ var _ = stream.Register(
 			return &GetEquityGroupedDailyBarsResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityGroupedDailyBarsResponse); ok {
 				return NewGetEquityGroupedDailyBarsResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9020,14 +8771,10 @@ func (self *GetEquityHistoricTradesQueryRequestWrapper) messageWrapper() interfa
 }
 
 func NewGetEquityHistoricTradesQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityHistoricTradesQueryRequest) *GetEquityHistoricTradesQueryRequestWrapper {
 	return &GetEquityHistoricTradesQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9038,13 +8785,9 @@ var _ = stream.Register(
 			return &GetEquityHistoricTradesQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityHistoricTradesQueryRequest); ok {
 				return NewGetEquityHistoricTradesQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9068,14 +8811,10 @@ func (self *GetEquityHistoricTradesResponseWrapper) messageWrapper() interface{}
 }
 
 func NewGetEquityHistoricTradesResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityHistoricTradesResponse) *GetEquityHistoricTradesResponseWrapper {
 	return &GetEquityHistoricTradesResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9086,13 +8825,9 @@ var _ = stream.Register(
 			return &GetEquityHistoricTradesResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityHistoricTradesResponse); ok {
 				return NewGetEquityHistoricTradesResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9116,14 +8851,10 @@ func (self *GetEquityHistoricQuotesNBBOQueryRequestWrapper) messageWrapper() int
 }
 
 func NewGetEquityHistoricQuotesNBBOQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityHistoricQuotesNBBOQueryRequest) *GetEquityHistoricQuotesNBBOQueryRequestWrapper {
 	return &GetEquityHistoricQuotesNBBOQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9134,13 +8865,9 @@ var _ = stream.Register(
 			return &GetEquityHistoricQuotesNBBOQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityHistoricQuotesNBBOQueryRequest); ok {
 				return NewGetEquityHistoricQuotesNBBOQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9164,14 +8891,10 @@ func (self *GetEquityHistoricQuotesNBBOResponseWrapper) messageWrapper() interfa
 }
 
 func NewGetEquityHistoricQuotesNBBOResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityHistoricQuotesNBBOResponse) *GetEquityHistoricQuotesNBBOResponseWrapper {
 	return &GetEquityHistoricQuotesNBBOResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9182,13 +8905,9 @@ var _ = stream.Register(
 			return &GetEquityHistoricQuotesNBBOResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityHistoricQuotesNBBOResponse); ok {
 				return NewGetEquityHistoricQuotesNBBOResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9212,14 +8931,10 @@ func (self *GetEquityLastTradeForSymbolQueryRequestWrapper) messageWrapper() int
 }
 
 func NewGetEquityLastTradeForSymbolQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityLastTradeForSymbolQueryRequest) *GetEquityLastTradeForSymbolQueryRequestWrapper {
 	return &GetEquityLastTradeForSymbolQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9230,13 +8945,9 @@ var _ = stream.Register(
 			return &GetEquityLastTradeForSymbolQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityLastTradeForSymbolQueryRequest); ok {
 				return NewGetEquityLastTradeForSymbolQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9260,14 +8971,10 @@ func (self *GetEquityLastTradeForSymbolResponseWrapper) messageWrapper() interfa
 }
 
 func NewGetEquityLastTradeForSymbolResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityLastTradeForSymbolResponse) *GetEquityLastTradeForSymbolResponseWrapper {
 	return &GetEquityLastTradeForSymbolResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9278,13 +8985,9 @@ var _ = stream.Register(
 			return &GetEquityLastTradeForSymbolResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityLastTradeForSymbolResponse); ok {
 				return NewGetEquityLastTradeForSymbolResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9308,14 +9011,10 @@ func (self *GetEquityLastQuoteForSymbolQueryRequestWrapper) messageWrapper() int
 }
 
 func NewGetEquityLastQuoteForSymbolQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityLastQuoteForSymbolQueryRequest) *GetEquityLastQuoteForSymbolQueryRequestWrapper {
 	return &GetEquityLastQuoteForSymbolQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9326,13 +9025,9 @@ var _ = stream.Register(
 			return &GetEquityLastQuoteForSymbolQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityLastQuoteForSymbolQueryRequest); ok {
 				return NewGetEquityLastQuoteForSymbolQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9356,14 +9051,10 @@ func (self *GetEquityLastQuoteForSymbolResponseWrapper) messageWrapper() interfa
 }
 
 func NewGetEquityLastQuoteForSymbolResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityLastQuoteForSymbolResponse) *GetEquityLastQuoteForSymbolResponseWrapper {
 	return &GetEquityLastQuoteForSymbolResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9374,13 +9065,9 @@ var _ = stream.Register(
 			return &GetEquityLastQuoteForSymbolResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityLastQuoteForSymbolResponse); ok {
 				return NewGetEquityLastQuoteForSymbolResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9404,14 +9091,10 @@ func (self *GetEquityDailyOpenCloseQueryRequestWrapper) messageWrapper() interfa
 }
 
 func NewGetEquityDailyOpenCloseQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityDailyOpenCloseQueryRequest) *GetEquityDailyOpenCloseQueryRequestWrapper {
 	return &GetEquityDailyOpenCloseQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9422,13 +9105,9 @@ var _ = stream.Register(
 			return &GetEquityDailyOpenCloseQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityDailyOpenCloseQueryRequest); ok {
 				return NewGetEquityDailyOpenCloseQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9452,14 +9131,10 @@ func (self *GetEquityDailyOpenCloseResponseWrapper) messageWrapper() interface{}
 }
 
 func NewGetEquityDailyOpenCloseResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityDailyOpenCloseResponse) *GetEquityDailyOpenCloseResponseWrapper {
 	return &GetEquityDailyOpenCloseResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9470,13 +9145,9 @@ var _ = stream.Register(
 			return &GetEquityDailyOpenCloseResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityDailyOpenCloseResponse); ok {
 				return NewGetEquityDailyOpenCloseResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9500,14 +9171,10 @@ func (self *GetEquityConditionMappingsQueryRequestWrapper) messageWrapper() inte
 }
 
 func NewGetEquityConditionMappingsQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityConditionMappingsQueryRequest) *GetEquityConditionMappingsQueryRequestWrapper {
 	return &GetEquityConditionMappingsQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9518,13 +9185,9 @@ var _ = stream.Register(
 			return &GetEquityConditionMappingsQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityConditionMappingsQueryRequest); ok {
 				return NewGetEquityConditionMappingsQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9548,14 +9211,10 @@ func (self *GetEquityConditionMappingsResponseWrapper) messageWrapper() interfac
 }
 
 func NewGetEquityConditionMappingsResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquityConditionMappingsResponse) *GetEquityConditionMappingsResponseWrapper {
 	return &GetEquityConditionMappingsResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9566,13 +9225,9 @@ var _ = stream.Register(
 			return &GetEquityConditionMappingsResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquityConditionMappingsResponse); ok {
 				return NewGetEquityConditionMappingsResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9596,14 +9251,10 @@ func (self *GetEquitySnapshotAllTickersQueryRequestWrapper) messageWrapper() int
 }
 
 func NewGetEquitySnapshotAllTickersQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquitySnapshotAllTickersQueryRequest) *GetEquitySnapshotAllTickersQueryRequestWrapper {
 	return &GetEquitySnapshotAllTickersQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9614,13 +9265,9 @@ var _ = stream.Register(
 			return &GetEquitySnapshotAllTickersQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquitySnapshotAllTickersQueryRequest); ok {
 				return NewGetEquitySnapshotAllTickersQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9644,14 +9291,10 @@ func (self *GetEquitySnapshotAllTickersResponseWrapper) messageWrapper() interfa
 }
 
 func NewGetEquitySnapshotAllTickersResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquitySnapshotAllTickersResponse) *GetEquitySnapshotAllTickersResponseWrapper {
 	return &GetEquitySnapshotAllTickersResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9662,13 +9305,9 @@ var _ = stream.Register(
 			return &GetEquitySnapshotAllTickersResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquitySnapshotAllTickersResponse); ok {
 				return NewGetEquitySnapshotAllTickersResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9692,14 +9331,10 @@ func (self *GetEquitySnapshotSingleTickerQueryRequestWrapper) messageWrapper() i
 }
 
 func NewGetEquitySnapshotSingleTickerQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquitySnapshotSingleTickerQueryRequest) *GetEquitySnapshotSingleTickerQueryRequestWrapper {
 	return &GetEquitySnapshotSingleTickerQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9710,13 +9345,9 @@ var _ = stream.Register(
 			return &GetEquitySnapshotSingleTickerQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquitySnapshotSingleTickerQueryRequest); ok {
 				return NewGetEquitySnapshotSingleTickerQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9740,14 +9371,10 @@ func (self *GetEquitySnapshotSingleTickerResponseWrapper) messageWrapper() inter
 }
 
 func NewGetEquitySnapshotSingleTickerResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquitySnapshotSingleTickerResponse) *GetEquitySnapshotSingleTickerResponseWrapper {
 	return &GetEquitySnapshotSingleTickerResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9758,13 +9385,9 @@ var _ = stream.Register(
 			return &GetEquitySnapshotSingleTickerResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquitySnapshotSingleTickerResponse); ok {
 				return NewGetEquitySnapshotSingleTickerResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9788,14 +9411,10 @@ func (self *GetEquitySnapshotGainersLosersQueryRequestWrapper) messageWrapper() 
 }
 
 func NewGetEquitySnapshotGainersLosersQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquitySnapshotGainersLosersQueryRequest) *GetEquitySnapshotGainersLosersQueryRequestWrapper {
 	return &GetEquitySnapshotGainersLosersQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9806,13 +9425,9 @@ var _ = stream.Register(
 			return &GetEquitySnapshotGainersLosersQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquitySnapshotGainersLosersQueryRequest); ok {
 				return NewGetEquitySnapshotGainersLosersQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9836,14 +9451,10 @@ func (self *GetEquitySnapshotGainersLosersResponseWrapper) messageWrapper() inte
 }
 
 func NewGetEquitySnapshotGainersLosersResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetEquitySnapshotGainersLosersResponse) *GetEquitySnapshotGainersLosersResponseWrapper {
 	return &GetEquitySnapshotGainersLosersResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9854,13 +9465,9 @@ var _ = stream.Register(
 			return &GetEquitySnapshotGainersLosersResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetEquitySnapshotGainersLosersResponse); ok {
 				return NewGetEquitySnapshotGainersLosersResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9884,14 +9491,10 @@ func (self *GetForexPreviousCloseQueryRequestWrapper) messageWrapper() interface
 }
 
 func NewGetForexPreviousCloseQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetForexPreviousCloseQueryRequest) *GetForexPreviousCloseQueryRequestWrapper {
 	return &GetForexPreviousCloseQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9902,13 +9505,9 @@ var _ = stream.Register(
 			return &GetForexPreviousCloseQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetForexPreviousCloseQueryRequest); ok {
 				return NewGetForexPreviousCloseQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9932,14 +9531,10 @@ func (self *GetForexPreviousCloseResponseWrapper) messageWrapper() interface{} {
 }
 
 func NewGetForexPreviousCloseResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetForexPreviousCloseResponse) *GetForexPreviousCloseResponseWrapper {
 	return &GetForexPreviousCloseResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9950,13 +9545,9 @@ var _ = stream.Register(
 			return &GetForexPreviousCloseResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetForexPreviousCloseResponse); ok {
 				return NewGetForexPreviousCloseResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -9980,14 +9571,10 @@ func (self *GetForexAggregatesBarsQueryRequestWrapper) messageWrapper() interfac
 }
 
 func NewGetForexAggregatesBarsQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetForexAggregatesBarsQueryRequest) *GetForexAggregatesBarsQueryRequestWrapper {
 	return &GetForexAggregatesBarsQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -9998,13 +9585,9 @@ var _ = stream.Register(
 			return &GetForexAggregatesBarsQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetForexAggregatesBarsQueryRequest); ok {
 				return NewGetForexAggregatesBarsQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10028,14 +9611,10 @@ func (self *GetForexAggregatesBarsResponseWrapper) messageWrapper() interface{} 
 }
 
 func NewGetForexAggregatesBarsResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetForexAggregatesBarsResponse) *GetForexAggregatesBarsResponseWrapper {
 	return &GetForexAggregatesBarsResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10046,13 +9625,9 @@ var _ = stream.Register(
 			return &GetForexAggregatesBarsResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetForexAggregatesBarsResponse); ok {
 				return NewGetForexAggregatesBarsResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10076,14 +9651,10 @@ func (self *GetForexGroupedDailyBarsQueryRequestWrapper) messageWrapper() interf
 }
 
 func NewGetForexGroupedDailyBarsQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetForexGroupedDailyBarsQueryRequest) *GetForexGroupedDailyBarsQueryRequestWrapper {
 	return &GetForexGroupedDailyBarsQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10094,13 +9665,9 @@ var _ = stream.Register(
 			return &GetForexGroupedDailyBarsQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetForexGroupedDailyBarsQueryRequest); ok {
 				return NewGetForexGroupedDailyBarsQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10124,14 +9691,10 @@ func (self *GetForexGroupedDailyBarsResponseWrapper) messageWrapper() interface{
 }
 
 func NewGetForexGroupedDailyBarsResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetForexGroupedDailyBarsResponse) *GetForexGroupedDailyBarsResponseWrapper {
 	return &GetForexGroupedDailyBarsResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10142,13 +9705,9 @@ var _ = stream.Register(
 			return &GetForexGroupedDailyBarsResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetForexGroupedDailyBarsResponse); ok {
 				return NewGetForexGroupedDailyBarsResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10172,14 +9731,10 @@ func (self *GetForexHistoricForexTicksQueryRequestWrapper) messageWrapper() inte
 }
 
 func NewGetForexHistoricForexTicksQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetForexHistoricForexTicksQueryRequest) *GetForexHistoricForexTicksQueryRequestWrapper {
 	return &GetForexHistoricForexTicksQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10190,13 +9745,9 @@ var _ = stream.Register(
 			return &GetForexHistoricForexTicksQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetForexHistoricForexTicksQueryRequest); ok {
 				return NewGetForexHistoricForexTicksQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10220,14 +9771,10 @@ func (self *GetForexHistoricForexTicksResponseWrapper) messageWrapper() interfac
 }
 
 func NewGetForexHistoricForexTicksResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetForexHistoricForexTicksResponse) *GetForexHistoricForexTicksResponseWrapper {
 	return &GetForexHistoricForexTicksResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10238,13 +9785,9 @@ var _ = stream.Register(
 			return &GetForexHistoricForexTicksResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetForexHistoricForexTicksResponse); ok {
 				return NewGetForexHistoricForexTicksResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10268,14 +9811,10 @@ func (self *GetForexRealTimeCurrencyConversionQueryRequestWrapper) messageWrappe
 }
 
 func NewGetForexRealTimeCurrencyConversionQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetForexRealTimeCurrencyConversionQueryRequest) *GetForexRealTimeCurrencyConversionQueryRequestWrapper {
 	return &GetForexRealTimeCurrencyConversionQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10286,13 +9825,9 @@ var _ = stream.Register(
 			return &GetForexRealTimeCurrencyConversionQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetForexRealTimeCurrencyConversionQueryRequest); ok {
 				return NewGetForexRealTimeCurrencyConversionQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10316,14 +9851,10 @@ func (self *GetForexRealTimeCurrencyConversionResponseWrapper) messageWrapper() 
 }
 
 func NewGetForexRealTimeCurrencyConversionResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetForexRealTimeCurrencyConversionResponse) *GetForexRealTimeCurrencyConversionResponseWrapper {
 	return &GetForexRealTimeCurrencyConversionResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10334,13 +9865,9 @@ var _ = stream.Register(
 			return &GetForexRealTimeCurrencyConversionResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetForexRealTimeCurrencyConversionResponse); ok {
 				return NewGetForexRealTimeCurrencyConversionResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10364,14 +9891,10 @@ func (self *GetForexLastQuoteForCurrencyPairQueryRequestWrapper) messageWrapper(
 }
 
 func NewGetForexLastQuoteForCurrencyPairQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetForexLastQuoteForCurrencyPairQueryRequest) *GetForexLastQuoteForCurrencyPairQueryRequestWrapper {
 	return &GetForexLastQuoteForCurrencyPairQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10382,13 +9905,9 @@ var _ = stream.Register(
 			return &GetForexLastQuoteForCurrencyPairQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetForexLastQuoteForCurrencyPairQueryRequest); ok {
 				return NewGetForexLastQuoteForCurrencyPairQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10412,14 +9931,10 @@ func (self *GetForexLastQuoteForCurrencyPairResponseWrapper) messageWrapper() in
 }
 
 func NewGetForexLastQuoteForCurrencyPairResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetForexLastQuoteForCurrencyPairResponse) *GetForexLastQuoteForCurrencyPairResponseWrapper {
 	return &GetForexLastQuoteForCurrencyPairResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10430,13 +9945,9 @@ var _ = stream.Register(
 			return &GetForexLastQuoteForCurrencyPairResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetForexLastQuoteForCurrencyPairResponse); ok {
 				return NewGetForexLastQuoteForCurrencyPairResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10460,14 +9971,10 @@ func (self *GetForexSnapshotAllTickersQueryRequestWrapper) messageWrapper() inte
 }
 
 func NewGetForexSnapshotAllTickersQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetForexSnapshotAllTickersQueryRequest) *GetForexSnapshotAllTickersQueryRequestWrapper {
 	return &GetForexSnapshotAllTickersQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10478,13 +9985,9 @@ var _ = stream.Register(
 			return &GetForexSnapshotAllTickersQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetForexSnapshotAllTickersQueryRequest); ok {
 				return NewGetForexSnapshotAllTickersQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10508,14 +10011,10 @@ func (self *GetForexSnapshotAllTickersResponseWrapper) messageWrapper() interfac
 }
 
 func NewGetForexSnapshotAllTickersResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetForexSnapshotAllTickersResponse) *GetForexSnapshotAllTickersResponseWrapper {
 	return &GetForexSnapshotAllTickersResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10526,13 +10025,9 @@ var _ = stream.Register(
 			return &GetForexSnapshotAllTickersResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetForexSnapshotAllTickersResponse); ok {
 				return NewGetForexSnapshotAllTickersResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10556,14 +10051,10 @@ func (self *GetForexSnapshotGainersLosersQueryRequestWrapper) messageWrapper() i
 }
 
 func NewGetForexSnapshotGainersLosersQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetForexSnapshotGainersLosersQueryRequest) *GetForexSnapshotGainersLosersQueryRequestWrapper {
 	return &GetForexSnapshotGainersLosersQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10574,13 +10065,9 @@ var _ = stream.Register(
 			return &GetForexSnapshotGainersLosersQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetForexSnapshotGainersLosersQueryRequest); ok {
 				return NewGetForexSnapshotGainersLosersQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10604,14 +10091,10 @@ func (self *GetForexSnapshotGainersLosersResponseWrapper) messageWrapper() inter
 }
 
 func NewGetForexSnapshotGainersLosersResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetForexSnapshotGainersLosersResponse) *GetForexSnapshotGainersLosersResponseWrapper {
 	return &GetForexSnapshotGainersLosersResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10622,13 +10105,9 @@ var _ = stream.Register(
 			return &GetForexSnapshotGainersLosersResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetForexSnapshotGainersLosersResponse); ok {
 				return NewGetForexSnapshotGainersLosersResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10652,14 +10131,10 @@ func (self *GetCryptoPreviousCloseQueryRequestWrapper) messageWrapper() interfac
 }
 
 func NewGetCryptoPreviousCloseQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoPreviousCloseQueryRequest) *GetCryptoPreviousCloseQueryRequestWrapper {
 	return &GetCryptoPreviousCloseQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10670,13 +10145,9 @@ var _ = stream.Register(
 			return &GetCryptoPreviousCloseQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoPreviousCloseQueryRequest); ok {
 				return NewGetCryptoPreviousCloseQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10700,14 +10171,10 @@ func (self *GetCryptoPreviousCloseResponseWrapper) messageWrapper() interface{} 
 }
 
 func NewGetCryptoPreviousCloseResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoPreviousCloseResponse) *GetCryptoPreviousCloseResponseWrapper {
 	return &GetCryptoPreviousCloseResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10718,13 +10185,9 @@ var _ = stream.Register(
 			return &GetCryptoPreviousCloseResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoPreviousCloseResponse); ok {
 				return NewGetCryptoPreviousCloseResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10748,14 +10211,10 @@ func (self *GetCryptoAggregatesBarsQueryRequestWrapper) messageWrapper() interfa
 }
 
 func NewGetCryptoAggregatesBarsQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoAggregatesBarsQueryRequest) *GetCryptoAggregatesBarsQueryRequestWrapper {
 	return &GetCryptoAggregatesBarsQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10766,13 +10225,9 @@ var _ = stream.Register(
 			return &GetCryptoAggregatesBarsQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoAggregatesBarsQueryRequest); ok {
 				return NewGetCryptoAggregatesBarsQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10796,14 +10251,10 @@ func (self *GetCryptoAggregatesBarsResponseWrapper) messageWrapper() interface{}
 }
 
 func NewGetCryptoAggregatesBarsResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoAggregatesBarsResponse) *GetCryptoAggregatesBarsResponseWrapper {
 	return &GetCryptoAggregatesBarsResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10814,13 +10265,9 @@ var _ = stream.Register(
 			return &GetCryptoAggregatesBarsResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoAggregatesBarsResponse); ok {
 				return NewGetCryptoAggregatesBarsResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10844,14 +10291,10 @@ func (self *GetCryptoGroupedDailyBarsQueryRequestWrapper) messageWrapper() inter
 }
 
 func NewGetCryptoGroupedDailyBarsQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoGroupedDailyBarsQueryRequest) *GetCryptoGroupedDailyBarsQueryRequestWrapper {
 	return &GetCryptoGroupedDailyBarsQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10862,13 +10305,9 @@ var _ = stream.Register(
 			return &GetCryptoGroupedDailyBarsQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoGroupedDailyBarsQueryRequest); ok {
 				return NewGetCryptoGroupedDailyBarsQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10892,14 +10331,10 @@ func (self *GetCryptoGroupedDailyBarsResponseWrapper) messageWrapper() interface
 }
 
 func NewGetCryptoGroupedDailyBarsResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoGroupedDailyBarsResponse) *GetCryptoGroupedDailyBarsResponseWrapper {
 	return &GetCryptoGroupedDailyBarsResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10910,13 +10345,9 @@ var _ = stream.Register(
 			return &GetCryptoGroupedDailyBarsResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoGroupedDailyBarsResponse); ok {
 				return NewGetCryptoGroupedDailyBarsResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10940,14 +10371,10 @@ func (self *GetCryptoCryptoExchangesQueryRequestWrapper) messageWrapper() interf
 }
 
 func NewGetCryptoCryptoExchangesQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoCryptoExchangesQueryRequest) *GetCryptoCryptoExchangesQueryRequestWrapper {
 	return &GetCryptoCryptoExchangesQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -10958,13 +10385,9 @@ var _ = stream.Register(
 			return &GetCryptoCryptoExchangesQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoCryptoExchangesQueryRequest); ok {
 				return NewGetCryptoCryptoExchangesQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -10988,14 +10411,10 @@ func (self *GetCryptoCryptoExchangesResponseWrapper) messageWrapper() interface{
 }
 
 func NewGetCryptoCryptoExchangesResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoCryptoExchangesResponse) *GetCryptoCryptoExchangesResponseWrapper {
 	return &GetCryptoCryptoExchangesResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -11006,13 +10425,9 @@ var _ = stream.Register(
 			return &GetCryptoCryptoExchangesResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoCryptoExchangesResponse); ok {
 				return NewGetCryptoCryptoExchangesResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -11036,14 +10451,10 @@ func (self *GetCryptoLastTradeForCryptoPairQueryRequestWrapper) messageWrapper()
 }
 
 func NewGetCryptoLastTradeForCryptoPairQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoLastTradeForCryptoPairQueryRequest) *GetCryptoLastTradeForCryptoPairQueryRequestWrapper {
 	return &GetCryptoLastTradeForCryptoPairQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -11054,13 +10465,9 @@ var _ = stream.Register(
 			return &GetCryptoLastTradeForCryptoPairQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoLastTradeForCryptoPairQueryRequest); ok {
 				return NewGetCryptoLastTradeForCryptoPairQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -11084,14 +10491,10 @@ func (self *GetCryptoLastTradeForCryptoPairResponseWrapper) messageWrapper() int
 }
 
 func NewGetCryptoLastTradeForCryptoPairResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoLastTradeForCryptoPairResponse) *GetCryptoLastTradeForCryptoPairResponseWrapper {
 	return &GetCryptoLastTradeForCryptoPairResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -11102,13 +10505,9 @@ var _ = stream.Register(
 			return &GetCryptoLastTradeForCryptoPairResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoLastTradeForCryptoPairResponse); ok {
 				return NewGetCryptoLastTradeForCryptoPairResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -11132,14 +10531,10 @@ func (self *GetCryptoDailyOpenCloseQueryRequestWrapper) messageWrapper() interfa
 }
 
 func NewGetCryptoDailyOpenCloseQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoDailyOpenCloseQueryRequest) *GetCryptoDailyOpenCloseQueryRequestWrapper {
 	return &GetCryptoDailyOpenCloseQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -11150,13 +10545,9 @@ var _ = stream.Register(
 			return &GetCryptoDailyOpenCloseQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoDailyOpenCloseQueryRequest); ok {
 				return NewGetCryptoDailyOpenCloseQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -11180,14 +10571,10 @@ func (self *GetCryptoDailyOpenCloseResponseWrapper) messageWrapper() interface{}
 }
 
 func NewGetCryptoDailyOpenCloseResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoDailyOpenCloseResponse) *GetCryptoDailyOpenCloseResponseWrapper {
 	return &GetCryptoDailyOpenCloseResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -11198,13 +10585,9 @@ var _ = stream.Register(
 			return &GetCryptoDailyOpenCloseResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoDailyOpenCloseResponse); ok {
 				return NewGetCryptoDailyOpenCloseResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -11228,14 +10611,10 @@ func (self *GetCryptoHistoricCryptoTradesQueryRequestWrapper) messageWrapper() i
 }
 
 func NewGetCryptoHistoricCryptoTradesQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoHistoricCryptoTradesQueryRequest) *GetCryptoHistoricCryptoTradesQueryRequestWrapper {
 	return &GetCryptoHistoricCryptoTradesQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -11246,13 +10625,9 @@ var _ = stream.Register(
 			return &GetCryptoHistoricCryptoTradesQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoHistoricCryptoTradesQueryRequest); ok {
 				return NewGetCryptoHistoricCryptoTradesQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -11276,14 +10651,10 @@ func (self *GetCryptoHistoricCryptoTradesResponseWrapper) messageWrapper() inter
 }
 
 func NewGetCryptoHistoricCryptoTradesResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoHistoricCryptoTradesResponse) *GetCryptoHistoricCryptoTradesResponseWrapper {
 	return &GetCryptoHistoricCryptoTradesResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -11294,13 +10665,9 @@ var _ = stream.Register(
 			return &GetCryptoHistoricCryptoTradesResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoHistoricCryptoTradesResponse); ok {
 				return NewGetCryptoHistoricCryptoTradesResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -11324,14 +10691,10 @@ func (self *GetCryptoSnapshotAllTickersQueryRequestWrapper) messageWrapper() int
 }
 
 func NewGetCryptoSnapshotAllTickersQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoSnapshotAllTickersQueryRequest) *GetCryptoSnapshotAllTickersQueryRequestWrapper {
 	return &GetCryptoSnapshotAllTickersQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -11342,13 +10705,9 @@ var _ = stream.Register(
 			return &GetCryptoSnapshotAllTickersQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoSnapshotAllTickersQueryRequest); ok {
 				return NewGetCryptoSnapshotAllTickersQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -11372,14 +10731,10 @@ func (self *GetCryptoSnapshotAllTickersResponseWrapper) messageWrapper() interfa
 }
 
 func NewGetCryptoSnapshotAllTickersResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoSnapshotAllTickersResponse) *GetCryptoSnapshotAllTickersResponseWrapper {
 	return &GetCryptoSnapshotAllTickersResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -11390,13 +10745,9 @@ var _ = stream.Register(
 			return &GetCryptoSnapshotAllTickersResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoSnapshotAllTickersResponse); ok {
 				return NewGetCryptoSnapshotAllTickersResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -11420,14 +10771,10 @@ func (self *GetCryptoSnapshotSingleTickerQueryRequestWrapper) messageWrapper() i
 }
 
 func NewGetCryptoSnapshotSingleTickerQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoSnapshotSingleTickerQueryRequest) *GetCryptoSnapshotSingleTickerQueryRequestWrapper {
 	return &GetCryptoSnapshotSingleTickerQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -11438,13 +10785,9 @@ var _ = stream.Register(
 			return &GetCryptoSnapshotSingleTickerQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoSnapshotSingleTickerQueryRequest); ok {
 				return NewGetCryptoSnapshotSingleTickerQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -11468,14 +10811,10 @@ func (self *GetCryptoSnapshotSingleTickerResponseWrapper) messageWrapper() inter
 }
 
 func NewGetCryptoSnapshotSingleTickerResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoSnapshotSingleTickerResponse) *GetCryptoSnapshotSingleTickerResponseWrapper {
 	return &GetCryptoSnapshotSingleTickerResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -11486,13 +10825,9 @@ var _ = stream.Register(
 			return &GetCryptoSnapshotSingleTickerResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoSnapshotSingleTickerResponse); ok {
 				return NewGetCryptoSnapshotSingleTickerResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -11516,14 +10851,10 @@ func (self *GetCryptoSnapshotSingleTickerFullBookL2QueryRequestWrapper) messageW
 }
 
 func NewGetCryptoSnapshotSingleTickerFullBookL2QueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoSnapshotSingleTickerFullBookL2QueryRequest) *GetCryptoSnapshotSingleTickerFullBookL2QueryRequestWrapper {
 	return &GetCryptoSnapshotSingleTickerFullBookL2QueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -11534,13 +10865,9 @@ var _ = stream.Register(
 			return &GetCryptoSnapshotSingleTickerFullBookL2QueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoSnapshotSingleTickerFullBookL2QueryRequest); ok {
 				return NewGetCryptoSnapshotSingleTickerFullBookL2QueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -11564,14 +10891,10 @@ func (self *GetCryptoSnapshotSingleTickerFullBookL2ResponseWrapper) messageWrapp
 }
 
 func NewGetCryptoSnapshotSingleTickerFullBookL2ResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoSnapshotSingleTickerFullBookL2Response) *GetCryptoSnapshotSingleTickerFullBookL2ResponseWrapper {
 	return &GetCryptoSnapshotSingleTickerFullBookL2ResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -11582,13 +10905,9 @@ var _ = stream.Register(
 			return &GetCryptoSnapshotSingleTickerFullBookL2Response{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoSnapshotSingleTickerFullBookL2Response); ok {
 				return NewGetCryptoSnapshotSingleTickerFullBookL2ResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -11612,14 +10931,10 @@ func (self *GetCryptoSnapshotGainersLosersQueryRequestWrapper) messageWrapper() 
 }
 
 func NewGetCryptoSnapshotGainersLosersQueryRequestWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoSnapshotGainersLosersQueryRequest) *GetCryptoSnapshotGainersLosersQueryRequestWrapper {
 	return &GetCryptoSnapshotGainersLosersQueryRequestWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -11630,13 +10945,9 @@ var _ = stream.Register(
 			return &GetCryptoSnapshotGainersLosersQueryRequest{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoSnapshotGainersLosersQueryRequest); ok {
 				return NewGetCryptoSnapshotGainersLosersQueryRequestWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -11660,14 +10971,10 @@ func (self *GetCryptoSnapshotGainersLosersResponseWrapper) messageWrapper() inte
 }
 
 func NewGetCryptoSnapshotGainersLosersResponseWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *GetCryptoSnapshotGainersLosersResponse) *GetCryptoSnapshotGainersLosersResponseWrapper {
 	return &GetCryptoSnapshotGainersLosersResponseWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -11678,13 +10985,9 @@ var _ = stream.Register(
 			return &GetCryptoSnapshotGainersLosersResponse{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*GetCryptoSnapshotGainersLosersResponse); ok {
 				return NewGetCryptoSnapshotGainersLosersResponseWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam

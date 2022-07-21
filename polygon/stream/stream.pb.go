@@ -12,7 +12,6 @@ import (
 	stream "github.com/bhbosman/gocommon/stream"
 	goerrors "github.com/bhbosman/goerrors"
 	goprotoextra "github.com/bhbosman/goprotoextra"
-	v2 "github.com/reactivex/rxgo/v2"
 	proto "google.golang.org/protobuf/proto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
@@ -741,14 +740,10 @@ func (self *PolygonMessageReceivedWrapper) messageWrapper() interface{} {
 }
 
 func NewPolygonMessageReceivedWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *PolygonMessageReceived) *PolygonMessageReceivedWrapper {
 	return &PolygonMessageReceivedWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -759,13 +754,9 @@ var _ = stream.Register(
 			return &PolygonMessageReceived{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*PolygonMessageReceived); ok {
 				return NewPolygonMessageReceivedWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -789,14 +780,10 @@ func (self *PolygonMessageSendWrapper) messageWrapper() interface{} {
 }
 
 func NewPolygonMessageSendWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *PolygonMessageSend) *PolygonMessageSendWrapper {
 	return &PolygonMessageSendWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -807,13 +794,9 @@ var _ = stream.Register(
 			return &PolygonMessageSend{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*PolygonMessageSend); ok {
 				return NewPolygonMessageSendWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -837,14 +820,10 @@ func (self *PolygonForexQuoteWrapper) messageWrapper() interface{} {
 }
 
 func NewPolygonForexQuoteWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *PolygonForexQuote) *PolygonForexQuoteWrapper {
 	return &PolygonForexQuoteWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -855,13 +834,9 @@ var _ = stream.Register(
 			return &PolygonForexQuote{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*PolygonForexQuote); ok {
 				return NewPolygonForexQuoteWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -885,14 +860,10 @@ func (self *PolygonForexAggregateWrapper) messageWrapper() interface{} {
 }
 
 func NewPolygonForexAggregateWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *PolygonForexAggregate) *PolygonForexAggregateWrapper {
 	return &PolygonForexAggregateWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -903,13 +874,9 @@ var _ = stream.Register(
 			return &PolygonForexAggregate{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*PolygonForexAggregate); ok {
 				return NewPolygonForexAggregateWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -933,14 +900,10 @@ func (self *PolygonForexCombinedWrapper) messageWrapper() interface{} {
 }
 
 func NewPolygonForexCombinedWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *PolygonForexCombined) *PolygonForexCombinedWrapper {
 	return &PolygonForexCombinedWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -951,13 +914,9 @@ var _ = stream.Register(
 			return &PolygonForexCombined{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*PolygonForexCombined); ok {
 				return NewPolygonForexCombinedWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam

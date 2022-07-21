@@ -10,7 +10,6 @@ import (
 	stream "github.com/bhbosman/gocommon/stream"
 	goerrors "github.com/bhbosman/goerrors"
 	goprotoextra "github.com/bhbosman/goprotoextra"
-	v2 "github.com/reactivex/rxgo/v2"
 	proto "google.golang.org/protobuf/proto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
@@ -327,14 +326,10 @@ func (self *SubscribeWrapper) messageWrapper() interface{} {
 }
 
 func NewSubscribeWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *Subscribe) *SubscribeWrapper {
 	return &SubscribeWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -345,13 +340,9 @@ var _ = stream.Register(
 			return &Subscribe{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*Subscribe); ok {
 				return NewSubscribeWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
@@ -375,14 +366,10 @@ func (self *PriceWrapper) messageWrapper() interface{} {
 }
 
 func NewPriceWrapper(
-	toReactor v2.NextFunc,
-	toConnection v2.NextFunc,
 	data *Price) *PriceWrapper {
 	return &PriceWrapper{
-		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(
-			toReactor,
-			toConnection),
-		Data: data,
+		BaseMessageWrapper: goprotoextra.NewBaseMessageWrapper(),
+		Data:               data,
 	}
 }
 
@@ -393,13 +380,9 @@ var _ = stream.Register(
 			return &Price{}
 		},
 		CreateWrapper: func(
-			toReactor v2.NextFunc,
-			toConnection v2.NextFunc,
 			data proto.Message) (goprotoextra.IMessageWrapper, error) {
 			if msg, ok := data.(*Price); ok {
 				return NewPriceWrapper(
-					toReactor,
-					toConnection,
 					msg), nil
 			}
 			return nil, goerrors.InvalidParam
