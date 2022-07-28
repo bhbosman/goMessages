@@ -4,12 +4,12 @@ package golang.example.policy;
 option go_package = "/stream";
 
 
-message Subscribe
-{
-  uint32 reqid = 1;
-  string pair = 2;
-  string name = 3;
-};
+//message Subscribe
+//{
+//  uint32 reqid = 1;
+//  string pair = 2;
+//  string name = 3;
+//};
 
 
 
