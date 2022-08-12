@@ -10,7 +10,7 @@ require (
 )
 
 require (
-	github.com/bhbosman/goCommsDefinitions v0.0.0-20220718082038-833ca2ad99e2 // indirect
+	github.com/bhbosman/goCommsDefinitions v0.0.0-20220724214237-63eea03e3695 // indirect
 	github.com/bhbosman/gomessageblock v0.0.0-20220617132215-32f430d7de62 // indirect
 	github.com/cenkalti/backoff/v4 v4.0.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
@@ -38,3 +38,5 @@ replace github.com/bhbosman/gocommon => ../gocommon
 replace github.com/bhbosman/goprotoextra => ../goprotoextra
 
 replace github.com/bhbosman/goCommsDefinitions => ../goCommsDefinitions
+
+replace github.com/bhbosman/goCommsNetListener => ../goCommsNetListener
