@@ -40,3 +40,5 @@ replace github.com/bhbosman/goprotoextra => ../goprotoextra
 replace github.com/bhbosman/goCommsDefinitions => ../goCommsDefinitions
 
 replace github.com/bhbosman/goCommsNetListener => ../goCommsNetListener
+
+replace github.com/bhbosman/goConn => ../goConn
