@@ -31,7 +31,6 @@ require (
 
 //replace github.com/bhbosman/gocomms => ../gocomms
 
-
 //replace github.com/bhbosman/gocommon => ../gocommon
 
 replace github.com/bhbosman/goprotoextra => ../goprotoextra
