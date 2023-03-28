@@ -35,7 +35,7 @@ replace github.com/golang/mock => ../gomock
 
 replace github.com/bhbosman/gocommon => ../gocommon
 
-replace github.com/bhbosman/goprotoextra => ../goprotoextra
+//replace github.com/bhbosman/goprotoextra => ../goprotoextra
 
 replace github.com/bhbosman/goCommsDefinitions => ../goCommsDefinitions
 
