@@ -3,7 +3,7 @@ module github.com/bhbosman/goMessages
 go 1.18
 
 require (
-	github.com/bhbosman/gocommon v0.0.0-20230320083256-4088c43f62a7
+	github.com/bhbosman/gocommon v0.0.0-20230328150634-566a0f916878
 	github.com/bhbosman/goerrors v0.0.0-20220623084908-4d7bbcd178cf
 	github.com/bhbosman/goprotoextra v0.0.2
 	google.golang.org/protobuf v1.28.0
@@ -33,7 +33,7 @@ require (
 
 replace github.com/golang/mock => ../gomock
 
-replace github.com/bhbosman/gocommon => ../gocommon
+//replace github.com/bhbosman/gocommon => ../gocommon
 
 replace github.com/bhbosman/goprotoextra => ../goprotoextra
 
