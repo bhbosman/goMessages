@@ -44,7 +44,7 @@ public static partial class MarketDataReflection {
 
 }
 #region Messages
-public sealed partial class Order : pb::IMessage<Order>, pb::ITypeCodeMessage<Order>
+public sealed partial class Order : pb::IMessage<Order>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     , pb::IBufferMessage
 #endif
@@ -250,11 +250,9 @@ public sealed partial class Order : pb::IMessage<Order>, pb::ITypeCodeMessage<Or
   }
   #endif
 
-  public const System.UInt32 TypeCodeValue = 887667868; // TypeCode generated from: "Order"
-  public System.UInt32 TypeCode => TypeCodeValue;
 }
 
-public sealed partial class Point : pb::IMessage<Point>, pb::ITypeCodeMessage<Point>
+public sealed partial class Point : pb::IMessage<Point>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     , pb::IBufferMessage
 #endif
@@ -521,11 +519,9 @@ public sealed partial class Point : pb::IMessage<Point>, pb::ITypeCodeMessage<Po
   }
   #endif
 
-  public const System.UInt32 TypeCodeValue = 1986321440; // TypeCode generated from: "Point"
-  public System.UInt32 TypeCode => TypeCodeValue;
 }
 
-public sealed partial class PublishTop5 : pb::IMessage<PublishTop5>, pb::ITypeCodeMessage<PublishTop5>
+public sealed partial class PublishTop5 : pb::IMessage<PublishTop5>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     , pb::IBufferMessage
 #endif
@@ -961,8 +957,6 @@ public sealed partial class PublishTop5 : pb::IMessage<PublishTop5>, pb::ITypeCo
   }
   #endif
 
-  public const System.UInt32 TypeCodeValue = 2990202154; // TypeCode generated from: "PublishTop5"
-  public System.UInt32 TypeCode => TypeCodeValue;
 }
 
 #endregion
