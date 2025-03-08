@@ -5,14 +5,14 @@ go 1.23.0
 toolchain go1.24.0
 
 require (
-	github.com/bhbosman/gocommon v0.0.0-20250307235859-f370cb0a3bac
+	github.com/bhbosman/gocommon v0.0.0-20250308052839-0ebeb121f996
 	github.com/bhbosman/goerrors v0.0.0-20250307194237-312d070c8e38
 	github.com/bhbosman/goprotoextra v0.0.2
 	google.golang.org/protobuf v1.28.0
 )
 
 require (
-	github.com/bhbosman/goCommsDefinitions v0.0.0-20230730212737-00ad0cf16194 // indirect
+	github.com/bhbosman/goCommsDefinitions v0.0.0-20250308000247-4306925b3dfd // indirect
 	github.com/bhbosman/gomessageblock v0.0.0-20250307141417-ab783e8e2eba // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
