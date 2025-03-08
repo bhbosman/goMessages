@@ -6,7 +6,7 @@ require (
 	github.com/bhbosman/gocommon v0.0.0-20250308052839-0ebeb121f996
 	github.com/bhbosman/goerrors v0.0.0-20250307194237-312d070c8e38
 	github.com/bhbosman/goprotoextra v0.0.2
-	google.golang.org/protobuf v1.28.0
+	google.golang.org/protobuf v1.36.5
 )
 
 require (
