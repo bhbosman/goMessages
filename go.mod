@@ -5,7 +5,7 @@ go 1.23.0
 toolchain go1.24.0
 
 require (
-	github.com/bhbosman/gocommon v0.0.0-20230507180205-b30f653fb84c
+	github.com/bhbosman/gocommon v0.0.0-20250307235859-f370cb0a3bac
 	github.com/bhbosman/goerrors v0.0.0-20250307194237-312d070c8e38
 	github.com/bhbosman/goprotoextra v0.0.2
 	google.golang.org/protobuf v1.28.0
