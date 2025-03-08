@@ -10,7 +10,7 @@ require (
 )
 
 require (
-	github.com/bhbosman/goCommsDefinitions v0.0.0-20250308074916-3e7c0d32b971 // indirect
+	github.com/bhbosman/goCommsDefinitions v0.0.0-20250308144130-64993b60920c // indirect
 	github.com/bhbosman/gomessageblock v0.0.0-20250308073733-0b3daca12e3a // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
