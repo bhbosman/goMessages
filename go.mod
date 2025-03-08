@@ -3,7 +3,7 @@ module github.com/bhbosman/goMessages
 go 1.24.0
 
 require (
-	github.com/bhbosman/gocommon v0.0.0-20250308131803-28622f55deb1
+	github.com/bhbosman/gocommon v0.0.0-20250308150148-56b7e6e14bff
 	github.com/bhbosman/goerrors v0.0.0-20250307194237-312d070c8e38
 	github.com/bhbosman/goprotoextra v0.0.2
 	google.golang.org/protobuf v1.36.5
